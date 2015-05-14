@@ -1,0 +1,2 @@
+#!/bin/sh
+java -cp cljs.jar:`lein classpath` clojure.main build.clj $@
