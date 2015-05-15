@@ -5,8 +5,8 @@
             [ cljs_draw.util :refer [listen]])
   (:require-macros [cljs.core.async.macros :refer [go]]))
 
-(defonce conn (repl/connect "http://localhost:9000/repl"))
-(enable-console-print!)
+;; (defonce conn (repl/connect "http://localhost:9000/repl"))
+;; (enable-console-print!)
 
 (def canvas (dom/createElement "canvas"))
 (def ctx (.getContext canvas "2d"))
