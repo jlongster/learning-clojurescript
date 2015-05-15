@@ -18,4 +18,3 @@
                   :watch "01-pressure-draw"
                   :output-dir "out"
                   :output-to "out/main.js"))
-
