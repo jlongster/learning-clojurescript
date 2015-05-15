@@ -1,0 +1,129 @@
+Building ...
+... done. Elapsed 0.0824123 seconds
+Watching path: src
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/protocols.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/buffers.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/dispatch.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/channels.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/ioc_helpers.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/timers.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async.cljs
+Reading analysis cache for file:/Users/james/projects/cljs-draw/src/cljs_draw/util.cljs
+... done. Elapsed 1.329316671 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/x at line 34 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 34 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/pressure at line 34 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/pressure at line 34 src/cljs_draw/core.cljs
+... done. Elapsed 0.164594694 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.073777015 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/yp at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/yp at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+... done. Elapsed 0.167326782 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/yp at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/yp at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+... done. Elapsed 0.187606529 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/yp at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/yp at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+... done. Elapsed 0.129408849 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+... done. Elapsed 0.141416226 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 36 src/cljs_draw/core.cljs
+... done. Elapsed 0.125356259 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+... done. Elapsed 0.127069355 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+... done. Elapsed 0.12138102 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+... done. Elapsed 0.107594282 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/y at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+... done. Elapsed 0.103127969 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/width at line 37 src/cljs_draw/core.cljs
+... done. Elapsed 0.11178993 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+... done. Elapsed 0.100530534 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+... done. Elapsed 0.097290018 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+... done. Elapsed 0.090776409 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+... done. Elapsed 0.124065828 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+... done. Elapsed 0.089873776 seconds
+Change detected, recompiling ...
+Compiling src/cljs_draw/core.cljs
+... done. Elapsed 0.096312992 seconds

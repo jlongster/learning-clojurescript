@@ -1,4 +1,2 @@
-out/*
-!out/frontend.js
 .repl*
 .DS_Store
