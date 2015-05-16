@@ -1,8 +1,9 @@
 Building ...
-... done. Elapsed 0.094832134 seconds
+... done. Elapsed 0.075829428 seconds
 Watching path: 01-pressure-draw
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/omcljs/om/0.8.8/om-0.8.8.jar!/om/dom.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/protocols.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/buffers.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/dispatch.cljs
@@ -11,51 +12,40 @@ Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/timers.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async.cljs
 Reading analysis cache for file:/Users/james/projects/cljs-draw/01-pressure-draw/cljs_draw/util.cljs
-... done. Elapsed 1.271709451 seconds
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/omcljs/om/0.8.8/om-0.8.8.jar!/om/core.cljs
+WARNING: Wrong number of args (1) passed to cljs_draw.core/set-canvas-size! at line 63 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Wrong number of args (1) passed to cljs_draw.core/set-canvas-size! at line 67 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 1.842972564 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.186135685 seconds
+... done. Elapsed 0.24353277 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.181298036 seconds
+... done. Elapsed 0.323875968 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.108164414 seconds
+... done. Elapsed 0.314773294 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.118562311 seconds
+... done. Elapsed 0.265661207 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.114519256 seconds
+... done. Elapsed 0.278458515 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.139634093 seconds
+... done. Elapsed 0.262423589 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.169262786 seconds
+... done. Elapsed 0.218545634 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.147392216 seconds
+... done. Elapsed 0.157451587 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.135176174 seconds
+... done. Elapsed 0.190303381 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.110779755 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.121284297 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.096372224 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.152535354 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.128922139 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Bad method signature in protocol implementation, om/IRender does not declare method called dom/ul at line 51 01-pressure-draw/cljs_draw/core.cljs
 clojure.lang.ExceptionInfo: failed compiling file:01-pressure-draw/cljs_draw/core.cljs {:file #<File 01-pressure-draw/cljs_draw/core.cljs>}
 	at clojure.core$ex_info.invoke(core.clj:4403)
 	at cljs.compiler$compile_file$fn__2426.invoke(compiler.clj:1122)
@@ -77,12 +67,33 @@ clojure.lang.ExceptionInfo: failed compiling file:01-pressure-draw/cljs_draw/cor
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-Caused by: clojure.lang.ExceptionInfo: Assert failed: Wrong number of arguments to recur
-(= (count val-ids) (count recurs)) at line 28 01-pressure-draw/cljs_draw/core.cljs {:tag :cljs/analysis-error, :file "01-pressure-draw/cljs_draw/core.cljs", :line 28, :column 3}
+Caused by: clojure.lang.ExceptionInfo: count not supported on this type: JSValue at line 51 01-pressure-draw/cljs_draw/core.cljs {:tag :cljs/analysis-error, :file "01-pressure-draw/cljs_draw/core.cljs", :line 51, :column 3}
 	at clojure.core$ex_info.invoke(core.clj:4403)
 	at cljs.analyzer$error.invoke(analyzer.clj:379)
 	at cljs.analyzer$macroexpand_1.invoke(analyzer.clj:1786)
 	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1829)
+	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1911)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1910)
+	at cljs.analyzer$parse_type.invoke(analyzer.clj:1575)
+	at cljs.analyzer$fn__1302.invoke(analyzer.clj:1579)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:249)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1833)
+	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1911)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1910)
+	at cljs.analyzer$fn__1078$fn__1080$fn__1081.invoke(analyzer.clj:1055)
+	at clojure.core$map$fn__4245.invoke(core.clj:2557)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:484)
+	at clojure.core$seq.invoke(core.clj:133)
+	at cljs.analyzer$fn__1078$fn__1080.invoke(analyzer.clj:1055)
+	at cljs.analyzer$fn__1078.invoke(analyzer.clj:1054)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:249)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1833)
 	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
 	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
 	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1835)
@@ -97,9 +108,66 @@ Caused by: clojure.lang.ExceptionInfo: Assert failed: Wrong number of arguments 
 	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
 	at cljs.analyzer$analyze.invoke(analyzer.clj:1911)
 	at cljs.analyzer$analyze.invoke(analyzer.clj:1910)
-	at cljs.analyzer$analyze_let$fn__1097.invoke(analyzer.clj:1115)
-	at cljs.analyzer$analyze_let.invoke(analyzer.clj:1111)
-	at cljs.analyzer$fn__1101.invoke(analyzer.clj:1122)
+	at cljs.analyzer$fn__935$fn__941.invoke(analyzer.clj:678)
+	at cljs.analyzer$fn__935.invoke(analyzer.clj:678)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:249)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1833)
+	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1835)
+	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1911)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1910)
+	at cljs.analyzer$fn__1078$fn__1080$fn__1081.invoke(analyzer.clj:1055)
+	at clojure.core$map$fn__4245.invoke(core.clj:2557)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:484)
+	at clojure.core$seq.invoke(core.clj:133)
+	at cljs.analyzer$fn__1078$fn__1080.invoke(analyzer.clj:1055)
+	at cljs.analyzer$fn__1078.invoke(analyzer.clj:1054)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:249)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1833)
+	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1835)
+	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1911)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1910)
+	at cljs.analyzer$fn__1078.invoke(analyzer.clj:1057)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:249)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1833)
+	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1911)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1910)
+	at cljs.analyzer$analyze_fn_method$fn__1035.invoke(analyzer.clj:933)
+	at cljs.analyzer$analyze_fn_method.invoke(analyzer.clj:932)
+	at cljs.analyzer$fn__1041$fn__1044.invoke(analyzer.clj:969)
+	at clojure.core$map$fn__4245.invoke(core.clj:2559)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:484)
+	at clojure.core$seq.invoke(core.clj:133)
+	at clojure.core$map$fn__4245.invoke(core.clj:2551)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:484)
+	at clojure.core$seq.invoke(core.clj:133)
+	at clojure.core$apply.invoke(core.clj:624)
+	at cljs.analyzer$fn__1041.invoke(analyzer.clj:970)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:249)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1833)
+	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1835)
+	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
+	at cljs.analyzer$analyze.invoke(analyzer.clj:1911)
+	at cljs.analyzer$fn__998$fn__1001.invoke(analyzer.clj:826)
+	at cljs.analyzer$fn__998.invoke(analyzer.clj:825)
 	at clojure.lang.MultiFn.invoke(MultiFn.java:249)
 	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1833)
 	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
@@ -112,129 +180,100 @@ Caused by: clojure.lang.ExceptionInfo: Assert failed: Wrong number of arguments 
 	at cljs.compiler$compile_file_STAR_.invoke(compiler.clj:970)
 	at cljs.compiler$compile_file$fn__2426.invoke(compiler.clj:1107)
 	... 18 more
-Caused by: java.lang.AssertionError: Assert failed: Wrong number of arguments to recur
-(= (count val-ids) (count recurs))
-	at cljs.core.async.impl.ioc_macros$eval1098$fn__1100$fn__1103.invoke(ioc_macros.clj:608)
-	at cljs.core.async.impl.ioc_macros$eval1167$fn__1168$fn__1170.invoke(ioc_macros.clj:710)
-	at cljs.core.async.impl.ioc_macros$all$fn__399$fn__401.invoke(ioc_macros.clj:112)
-	at clojure.core.protocols$fn__6086.invoke(protocols.clj:143)
-	at clojure.core.protocols$fn__6057$G__6052__6066.invoke(protocols.clj:19)
-	at clojure.core.protocols$seq_reduce.invoke(protocols.clj:31)
-	at clojure.core.protocols$fn__6078.invoke(protocols.clj:54)
-	at clojure.core.protocols$fn__6031$G__6026__6044.invoke(protocols.clj:13)
-	at clojure.core$reduce.invoke(core.clj:6289)
-	at cljs.core.async.impl.ioc_macros$all$fn__399.invoke(ioc_macros.clj:110)
-	at cljs.core.async.impl.ioc_macros$eval926$fn__928$fn__931.invoke(ioc_macros.clj:459)
-	at cljs.core.async.impl.ioc_macros$eval1167$fn__1168$fn__1170.invoke(ioc_macros.clj:710)
-	at cljs.core.async.impl.ioc_macros$all$fn__399$fn__401.invoke(ioc_macros.clj:112)
-	at clojure.core.protocols$fn__6086.invoke(protocols.clj:143)
-	at clojure.core.protocols$fn__6057$G__6052__6066.invoke(protocols.clj:19)
-	at clojure.core.protocols$seq_reduce.invoke(protocols.clj:31)
-	at clojure.core.protocols$fn__6078.invoke(protocols.clj:54)
-	at clojure.core.protocols$fn__6031$G__6026__6044.invoke(protocols.clj:13)
-	at clojure.core$reduce.invoke(core.clj:6289)
-	at cljs.core.async.impl.ioc_macros$all$fn__399.invoke(ioc_macros.clj:110)
-	at cljs.core.async.impl.ioc_macros$parse_to_state_machine$fn__1210.invoke(ioc_macros.clj:752)
-	at cljs.core.async.impl.ioc_macros$get_plan.invoke(ioc_macros.clj:70)
-	at cljs.core.async.impl.ioc_macros$parse_to_state_machine.invoke(ioc_macros.clj:746)
-	at cljs.core.async.impl.ioc_macros$state_machine.invoke(ioc_macros.clj:881)
-	at cljs.core.async.macros$go.doInvoke(macros.clj:18)
-	at clojure.lang.RestFn.applyTo(RestFn.java:142)
+Caused by: java.lang.UnsupportedOperationException: count not supported on this type: JSValue
+	at clojure.lang.RT.countFrom(RT.java:556)
+	at clojure.lang.RT.count(RT.java:530)
+	at cljs.core$validate_impl_sigs.invoke(core.clj:861)
+	at cljs.core$validate_impls.invoke(core.clj:882)
+	at cljs.core$extend_type.doInvoke(core.clj:899)
+	at clojure.lang.RestFn.applyTo(RestFn.java:146)
 	at clojure.lang.AFunction$1.doInvoke(AFunction.java:29)
 	at clojure.lang.RestFn.applyTo(RestFn.java:137)
 	at clojure.core$apply.invoke(core.clj:628)
 	at cljs.analyzer$macroexpand_1.invoke(analyzer.clj:1792)
-	... 47 more
+	... 126 more
 
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-clojure.lang.ExceptionInfo: failed compiling file:01-pressure-draw/cljs_draw/core.cljs {:file #<File 01-pressure-draw/cljs_draw/core.cljs>}
-	at clojure.core$ex_info.invoke(core.clj:4403)
-	at cljs.compiler$compile_file$fn__2426.invoke(compiler.clj:1122)
-	at cljs.compiler$compile_file.invoke(compiler.clj:1090)
-	at cljs.compiler$compile_root.invoke(compiler.clj:1152)
-	at cljs.closure$compile_dir.invoke(closure.clj:367)
-	at cljs.closure$fn__2725.invoke(closure.clj:407)
-	at cljs.closure$fn__2675$G__2670__2682.invoke(closure.clj:315)
-	at cljs.closure$fn__2718.invoke(closure.clj:421)
-	at cljs.closure$fn__2675$G__2670__2682.invoke(closure.clj:315)
-	at cljs.closure$build.invoke(closure.clj:1413)
-	at cljs.closure$watch$buildf__3026.invoke(closure.clj:1498)
-	at cljs.closure$watch.invoke(closure.clj:1542)
-	at cljs.closure$watch.invoke(closure.clj:1487)
-	at cljs.repl$repl_STAR_$fn__4003$fn__4006.invoke(repl.clj:755)
-	at clojure.core$binding_conveyor_fn$fn__4145.invoke(core.clj:1910)
-	at clojure.lang.AFn.call(AFn.java:18)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: clojure.lang.ExceptionInfo: Assert failed: Wrong number of arguments to recur
-(= (count val-ids) (count recurs)) at line 28 01-pressure-draw/cljs_draw/core.cljs {:tag :cljs/analysis-error, :file "01-pressure-draw/cljs_draw/core.cljs", :line 28, :column 3}
-	at clojure.core$ex_info.invoke(core.clj:4403)
-	at cljs.analyzer$error.invoke(analyzer.clj:379)
-	at cljs.analyzer$macroexpand_1.invoke(analyzer.clj:1786)
-	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1829)
-	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
-	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
-	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1835)
-	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
-	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
-	at cljs.analyzer$analyze.invoke(analyzer.clj:1911)
-	at cljs.analyzer$analyze.invoke(analyzer.clj:1910)
-	at cljs.analyzer$fn__1078.invoke(analyzer.clj:1057)
-	at clojure.lang.MultiFn.invoke(MultiFn.java:249)
-	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1833)
-	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
-	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
-	at cljs.analyzer$analyze.invoke(analyzer.clj:1911)
-	at cljs.analyzer$analyze.invoke(analyzer.clj:1910)
-	at cljs.analyzer$analyze_let$fn__1097.invoke(analyzer.clj:1115)
-	at cljs.analyzer$analyze_let.invoke(analyzer.clj:1111)
-	at cljs.analyzer$fn__1101.invoke(analyzer.clj:1122)
-	at clojure.lang.MultiFn.invoke(MultiFn.java:249)
-	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1833)
-	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
-	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
-	at cljs.analyzer$analyze_seq.invoke(analyzer.clj:1835)
-	at cljs.analyzer$analyze$fn__1466.invoke(analyzer.clj:1925)
-	at cljs.analyzer$analyze.invoke(analyzer.clj:1918)
-	at cljs.compiler$compile_file_STAR_$fn__2394.invoke(compiler.clj:1008)
-	at cljs.compiler$with_core_cljs.invoke(compiler.clj:950)
-	at cljs.compiler$compile_file_STAR_.invoke(compiler.clj:970)
-	at cljs.compiler$compile_file$fn__2426.invoke(compiler.clj:1107)
-	... 18 more
-Caused by: java.lang.AssertionError: Assert failed: Wrong number of arguments to recur
-(= (count val-ids) (count recurs))
-	at cljs.core.async.impl.ioc_macros$eval1098$fn__1100$fn__1103.invoke(ioc_macros.clj:608)
-	at cljs.core.async.impl.ioc_macros$eval1167$fn__1168$fn__1170.invoke(ioc_macros.clj:710)
-	at cljs.core.async.impl.ioc_macros$all$fn__399$fn__401.invoke(ioc_macros.clj:112)
-	at clojure.core.protocols$fn__6086.invoke(protocols.clj:143)
-	at clojure.core.protocols$fn__6057$G__6052__6066.invoke(protocols.clj:19)
-	at clojure.core.protocols$seq_reduce.invoke(protocols.clj:31)
-	at clojure.core.protocols$fn__6078.invoke(protocols.clj:54)
-	at clojure.core.protocols$fn__6031$G__6026__6044.invoke(protocols.clj:13)
-	at clojure.core$reduce.invoke(core.clj:6289)
-	at cljs.core.async.impl.ioc_macros$all$fn__399.invoke(ioc_macros.clj:110)
-	at cljs.core.async.impl.ioc_macros$eval926$fn__928$fn__931.invoke(ioc_macros.clj:459)
-	at cljs.core.async.impl.ioc_macros$eval1167$fn__1168$fn__1170.invoke(ioc_macros.clj:710)
-	at cljs.core.async.impl.ioc_macros$all$fn__399$fn__401.invoke(ioc_macros.clj:112)
-	at clojure.core.protocols$fn__6086.invoke(protocols.clj:143)
-	at clojure.core.protocols$fn__6057$G__6052__6066.invoke(protocols.clj:19)
-	at clojure.core.protocols$seq_reduce.invoke(protocols.clj:31)
-	at clojure.core.protocols$fn__6078.invoke(protocols.clj:54)
-	at clojure.core.protocols$fn__6031$G__6026__6044.invoke(protocols.clj:13)
-	at clojure.core$reduce.invoke(core.clj:6289)
-	at cljs.core.async.impl.ioc_macros$all$fn__399.invoke(ioc_macros.clj:110)
-	at cljs.core.async.impl.ioc_macros$parse_to_state_machine$fn__1210.invoke(ioc_macros.clj:752)
-	at cljs.core.async.impl.ioc_macros$get_plan.invoke(ioc_macros.clj:70)
-	at cljs.core.async.impl.ioc_macros$parse_to_state_machine.invoke(ioc_macros.clj:746)
-	at cljs.core.async.impl.ioc_macros$state_machine.invoke(ioc_macros.clj:881)
-	at cljs.core.async.macros$go.doInvoke(macros.clj:18)
-	at clojure.lang.RestFn.applyTo(RestFn.java:142)
-	at clojure.lang.AFunction$1.doInvoke(AFunction.java:29)
-	at clojure.lang.RestFn.applyTo(RestFn.java:137)
-	at clojure.core$apply.invoke(core.clj:628)
-	at cljs.analyzer$macroexpand_1.invoke(analyzer.clj:1792)
-	... 47 more
-
+WARNING: Wrong number of args (1) passed to cljs_draw.core/color-chooser at line 86 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.193991499 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.164046536 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.172411653 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.287329203 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.2790236 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.131974904 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.226108259 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.239780264 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.160337431 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.230942935 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.225483309 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.135443566 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.143370344 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.19563779 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.186503579 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/app-state at line 34 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.216392258 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/app-state at line 34 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.217918179 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/app-state at line 34 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.227544876 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/app-state at line 34 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.134228145 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/app-state at line 34 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.173232366 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.171029422 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.14721931 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.163907745 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.197613131 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.221342193 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.353570987 seconds
