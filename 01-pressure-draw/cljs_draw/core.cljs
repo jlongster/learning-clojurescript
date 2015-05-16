@@ -32,9 +32,7 @@
                 (not= (.-mozPressure e) .5))
           (swap! points conj {:x (.-clientX e)
                               :y (.-clientY e)
-                              :pressure (if (= (.-pointerType e) "mouse")
-                                          1
-                                          (.-mozPressure e))
+                              :pressure (.-mozPressure e)
                               :color (:current-color @app-state)}))
         (recur)))))
 
