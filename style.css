@@ -1,6 +1,17 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 body, .mount {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
+}
+
+a, a:active {
+       color: #cccccc;
+       text-decoration: none;
 }

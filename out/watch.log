@@ -10,42 +10,188 @@ Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async.cljs
 Reading analysis cache for file:/Users/james/projects/cljs-draw/01-pressure-draw/cljs_draw/util.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/omcljs/om/0.8.8/om-0.8.8.jar!/om/core.cljs
-WARNING: Wrong number of args (2) passed to cljs_draw.core/render-loop at line 162 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 2.257631947 seconds
+WARNING: Wrong number of args (1) passed to cljs.core.async/>! at line 157 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 3.436008629 seconds
 Watching path: 01-pressure-draw
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Wrong number of args (2) passed to cljs_draw.core/render-loop at line 162 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.669144922 seconds
+... done. Elapsed 0.802441949 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Wrong number of args (2) passed to cljs_draw.core/render-loop at line 162 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.525789021 seconds
+... done. Elapsed 0.845746921 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Wrong number of args (2) passed to cljs_draw.core/render-loop at line 163 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.245852938 seconds
+... done. Elapsed 0.587523109 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.311414018 seconds
+... done. Elapsed 0.381485535 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.242690628 seconds
+... done. Elapsed 0.323723789 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.240861529 seconds
+... done. Elapsed 0.371366492 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.280416885 seconds
+... done. Elapsed 0.393269604 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.483421849 seconds
+... done. Elapsed 0.439441667 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.250741763 seconds
+... done. Elapsed 0.399080655 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.266460879 seconds
+... done. Elapsed 0.42768854 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.210655376 seconds
+... done. Elapsed 0.400448398 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.383418167 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.419890752 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.459966793 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.364908439 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.418607068 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.389100773 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.432302616 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.396722714 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.445328907 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.638405077 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.348406188 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.376060662 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.390116879 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.358995864 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.34875911 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.513425578 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.350850329 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.428028037 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Bad method signature in protocol implementation, om/IDidUnmount does not declare method called did-unmount at line 150 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var om.core/IDidUnmount at line 150 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Symbol om/IDidUnmount is not a protocol at line 150 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.324421786 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.316651079 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.344842657 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.371747144 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.353786532 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.378070975 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.306405697 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.310672445 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.376109793 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.472792045 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.397268723 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/set-cursor at line 280 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.401305264 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/set-cursor at line 281 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.405501351 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.341428635 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ctx at line 93 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ctx at line 95 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ctx at line 96 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ctx at line 97 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.329288295 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/recectx at line 96 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.320749646 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.317627123 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.433089493 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.380289655 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.362575093 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/clear-canvas at line 322 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.417675838 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/reset-canvas at line 58 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/baked-canvas at line 58 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.356893902 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/reset-canvas at line 58 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.356428889 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/reset-canvas at line 59 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.413377922 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/reset-canvas at line 59 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.37169197 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/reset-canvas at line 59 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.341229915 seconds
