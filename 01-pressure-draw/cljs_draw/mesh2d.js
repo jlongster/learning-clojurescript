@@ -2,7 +2,8 @@
 function Mesh2d(color) {
   this._arr = new Float32Array(200);
   this._ptr = 0;
-  this._color = color;
+  this._color = goog.color.hexToRgb(color).map(function(x) { return x / 255; });
+  this._rawColor = color;
 }
 
 Mesh2d.prototype.addFace = function(x1, y1, x2, y2, x3, y3) {
@@ -38,4 +39,8 @@ Mesh2d.prototype.getVertices = function() {
 
 Mesh2d.prototype.getColor = function() {
   return this._color;
-}
+};
+
+Mesh2d.prototype.isColor = function(color) {
+  return this._rawColor === color;
+};

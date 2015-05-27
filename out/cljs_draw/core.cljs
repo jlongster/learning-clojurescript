@@ -17,7 +17,7 @@
             [thi.ng.geom.core.matrix :as mat :refer [M44]])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
 
-(defonce conn (repl/connect "http://localhost:9000/repl"))
+;; (defonce conn (repl/connect "http://localhost:9000/repl"))
 (enable-console-print!)
 
 (defonce app-state
@@ -54,7 +54,7 @@
 (defn renderable [p mv color vertices]
   {u-p-matrix p
    u-mv-matrix mv
-   u-color {:data color :count 3}
+   u-color (vec color)
    a-position {:data vertices :count (/ (.-length vertices) 2)}})
 
 (defn get-perspective-matrix [width height]
@@ -100,6 +100,11 @@
   (set! paint-meshes (conj paint-meshes current-mesh))
   (set! current-mesh nil))
 
+(defn start-stroke [point]
+  (let [[x y] point]
+    (.addFace current-mesh x y x y x y)
+    (.addFace current-mesh x y x y x y)))
+
 (defn add-to-stroke [point pressure]
   (let [width (* (.pow js/Math pressure 2) 10)
         valid (> (.getPointer current-mesh) 0)
@@ -130,8 +135,7 @@
      current-mesh
      (nth p1 0) (nth p1 1)
      (nth p2 0) (nth p2 1)
-     (nth p3 0) (nth p3 1)
-     )
+     (nth p3 0) (nth p3 1))
     (.addFace
      current-mesh
      (nth p4 0) (nth p4 1)
@@ -346,29 +350,30 @@
         (render-loop)
 
         (let [moved (listen canvas "pointermove")]
-          (go-loop [brush-pressed false]
+          (go-loop [last-pressure 0]
             (if-let [e (<! moved)]
-              (let [pressure (.-mozPressure e)]
+              (let [point (vec/vec2 (.-layerX e) (.-layerY e))
+                    pressure (.-mozPressure e)]
                 ;;(set-cursor point)
                 (cond
                   (not (:current-color @app-state))
                   nil
                   
                   (= pressure 0)
-                  (if brush-pressed (finalize-stroke))
+                  (if (and current-mesh
+                           (not
+                            (.isColor current-mesh (:current-color @app-state))))
+                    (finalize-stroke))
 
-                  ;; There seem to be random events with .5, just take 'em out
-                  ;;(not= (.-mozPressure e) .5)
-                  :else
+                  (= last-pressure 0)
                   (do
                     (if (not current-mesh)
-                      (set! current-mesh (js/Mesh2d.
-                                          (map (fn [x] (/ x 255))
-                                               (color/hexToRgb (:current-color @app-state))))))
-                    (add-to-stroke (vec/vec2 (.-layerX e) (.-layerY e))
-                                   pressure)
-                    (recur true)))
-                (recur false)))))
+                      (set! current-mesh (js/Mesh2d. (:current-color @app-state))))
+                    (start-stroke point))
+                  
+                  :else
+                  (add-to-stroke point pressure))
+                (recur pressure)))))
 
         ;; (let [keydown (listen js/window "keydown"
         ;;                       (fn [e]
