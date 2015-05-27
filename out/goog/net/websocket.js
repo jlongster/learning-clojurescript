@@ -138,6 +138,10 @@ goog.net.WebSocket.prototype.closeExpected_ = false;
 goog.net.WebSocket.prototype.reconnectAttempt_ = 0;
 
 
+/** @private {?number} */
+goog.net.WebSocket.prototype.reconnectTimer_ = null;
+
+
 /**
  * The logger for this class.
  * @type {goog.log.Logger}
@@ -316,7 +320,7 @@ goog.net.WebSocket.prototype.close = function() {
 /**
  * Sends the message over the web socket.
  *
- * @param {string} message The message to send.
+ * @param {string|!ArrayBuffer|!ArrayBufferView} message The message to send.
  */
 goog.net.WebSocket.prototype.send = function(message) {
   // Make sure the socket is ready to go before sending a message.
@@ -335,6 +339,17 @@ goog.net.WebSocket.prototype.send = function(message) {
 goog.net.WebSocket.prototype.isOpen = function() {
   return !!this.webSocket_ &&
       this.webSocket_.readyState == goog.net.WebSocket.ReadyState_.OPEN;
+};
+
+
+/**
+ * Gets the number of bytes of data that have been queued using calls to send()
+ * but not yet transmitted to the network.
+ *
+ * @return {number} Number of bytes of data that have been queued.
+ */
+goog.net.WebSocket.prototype.getBufferedAmount = function() {
+  return this.webSocket_.bufferedAmount;
 };
 
 
@@ -403,7 +418,7 @@ goog.net.WebSocket.prototype.onClose_ = function(event) {
 /**
  * Called when a new message arrives from the server.
  *
- * @param {MessageEvent.<string>} event The web socket message event.
+ * @param {MessageEvent<string>} event The web socket message event.
  * @private
  */
 goog.net.WebSocket.prototype.onMessage_ = function(event) {

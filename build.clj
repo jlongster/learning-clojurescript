@@ -1,13 +1,13 @@
 (require 'cljs.repl)
-(require 'cljs.closure)
+(require 'cljs.build.api)
 (require 'cljs.repl.browser)
 (require 'cljs.repl.node)
 
 (defonce action (first *command-line-args*))
 
 (defonce build (if (= action "watch")
-                   cljs.closure/watch
-                   cljs.closure/build))
+                   cljs.build.api/watch
+                   cljs.build.api/build))
 
 (build "01-pressure-draw/cljs_draw"
        {:main 'cljs_draw.core

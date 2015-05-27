@@ -1,6 +1,22 @@
 Building ...
+... done. Elapsed 0.212672179 seconds
+Watching paths: /Users/james/projects/cljs-draw/01-pressure-draw
+Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/impl/draw.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/impl/context.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/protocols.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/impl/bind.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/impl/variable.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/impl/resource.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/api.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/drivers/basic.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/omcljs/om/0.8.8/om-0.8.8.jar!/om/dom.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/common/0.3.1/common-0.3.1.jar!/thi/ng/common/math/core.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/common/0.3.1/common-0.3.1.jar!/thi/ng/common/error.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core/vector.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/math/0.1.0/math-0.1.0.jar!/thi/ng/math/core.cljc
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/protocols.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/buffers.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/dispatch.cljs
@@ -8,190 +24,59 @@ Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/ioc_helpers.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/timers.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/ast.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/api.cljs
 Reading analysis cache for file:/Users/james/projects/cljs-draw/01-pressure-draw/cljs_draw/util.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/org/omcljs/om/0.8.8/om-0.8.8.jar!/om/core.cljs
-WARNING: Wrong number of args (1) passed to cljs.core.async/>! at line 157 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 3.436008629 seconds
-Watching path: 01-pressure-draw
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/emit/emit.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/emit/tag.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/emit/statement.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/emit/operator.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/protocols.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/nodes.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/trees.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/transients.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/rrbt.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/interop.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/fipp/fipp/0.6.2/fipp-0.6.2.jar!/fipp/deque.cljc
+Reading analysis cache for jar:file:/Users/james/.m2/repository/fipp/fipp/0.6.2/fipp-0.6.2.jar!/fipp/engine.cljc
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/compiler/common.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/compiler/move_assignments.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/clojurescript/0.0-3291/clojurescript-0.0-3291.jar!/clojure/walk.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/compiler/flatten_ast.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/compiler/insert_variables.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/compiler/bubble_term.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/clojurescript/0.0-3291/clojurescript-0.0-3291.jar!/clojure/set.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/compiler/separate_usages.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/compiler/lift_assignments.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/compiler/insert_assignments.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/compiler/core.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/emit/construct.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/emit/fun.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135/gamma-0.0-135.jar!/gamma/program.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/clojurescript/0.0-3291/clojurescript-0.0-3291.jar!/clojure/core/reducers.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/common/0.3.1/common-0.3.1.jar!/thi/ng/common/data/core.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core/utils.cljs
+Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core/matrix.cljs
+... done. Elapsed 2.496710778 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.802441949 seconds
+... done. Elapsed 0.458489408 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.845746921 seconds
+... done. Elapsed 0.518883646 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.587523109 seconds
+... done. Elapsed 0.420645298 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.381485535 seconds
+... done. Elapsed 0.41108603 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.123001094 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.323723789 seconds
+... done. Elapsed 0.518421277 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.371366492 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.393269604 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.439441667 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.399080655 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.42768854 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.400448398 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.383418167 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.419890752 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.459966793 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.364908439 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.418607068 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.389100773 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.432302616 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.396722714 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.445328907 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.638405077 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.348406188 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.376060662 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.390116879 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.358995864 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.34875911 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.513425578 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.350850329 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.428028037 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Bad method signature in protocol implementation, om/IDidUnmount does not declare method called did-unmount at line 150 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var om.core/IDidUnmount at line 150 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Symbol om/IDidUnmount is not a protocol at line 150 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.324421786 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.316651079 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.344842657 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.371747144 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.353786532 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.378070975 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.306405697 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.310672445 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.376109793 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.472792045 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.397268723 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/set-cursor at line 280 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.401305264 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/set-cursor at line 281 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.405501351 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.341428635 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/ctx at line 93 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/ctx at line 95 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/ctx at line 96 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/ctx at line 97 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.329288295 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/recectx at line 96 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.320749646 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.317627123 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.433089493 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.380289655 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.362575093 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/clear-canvas at line 322 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.417675838 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/reset-canvas at line 58 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/baked-canvas at line 58 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.356893902 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/reset-canvas at line 58 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.356428889 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/reset-canvas at line 59 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.413377922 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/reset-canvas at line 59 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.37169197 seconds
-Change detected, recompiling ...
-Compiling 01-pressure-draw/cljs_draw/core.cljs
-WARNING: Use of undeclared Var cljs_draw.core/reset-canvas at line 59 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.341229915 seconds
+... done. Elapsed 0.423725991 seconds

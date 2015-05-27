@@ -1,2 +1,2 @@
 #!/bin/sh
-java -cp cljs.jar:01-pressure-draw:`lein classpath` clojure.main build.clj $@
+java -cp 01-pressure-draw:`lein classpath` clojure.main build.clj $@

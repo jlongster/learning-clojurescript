@@ -118,13 +118,7 @@ goog.i18n.bidi.Dir = {
   /**
    * Neither left-to-right nor right-to-left.
    */
-  NEUTRAL: 0,
-
-  /**
-   * A historical misnomer for NEUTRAL.
-   * @deprecated For "neutral", use NEUTRAL; for "unknown", use null.
-   */
-  UNKNOWN: 0
+  NEUTRAL: 0
 };
 
 
@@ -849,6 +843,26 @@ goog.i18n.bidi.setElementDirAndAlign = function(element, dir) {
           goog.i18n.bidi.RIGHT : goog.i18n.bidi.LEFT;
       element.dir = dir == goog.i18n.bidi.Dir.RTL ? 'rtl' : 'ltr';
     }
+  }
+};
+
+
+/**
+ * Sets element dir based on estimated directionality of the given text.
+ * @param {!Element} element
+ * @param {string} text
+ */
+goog.i18n.bidi.setElementDirByTextDirectionality = function(element, text) {
+  switch (goog.i18n.bidi.estimateDirection(text)) {
+    case (goog.i18n.bidi.Dir.LTR):
+      element.dir = 'ltr';
+      break;
+    case (goog.i18n.bidi.Dir.RTL):
+      element.dir = 'rtl';
+      break;
+    default:
+      // Default for no direction, inherit from document.
+      element.removeAttribute('dir');
   }
 };
 

@@ -4,7 +4,17 @@
                                      alts!]]
             [cljs_draw.util :refer [listen get-from-storage]]
             [om.core :as om]
-            [om.dom :as dom])
+            [om.dom :as dom]
+            [goog.color :as color]
+            [gamma.api :as g]
+            [gamma.program :as p]
+            [gamma-driver.drivers.basic :as driver]
+            [gamma-driver.protocols :as dp]
+            [gamma-driver.api :as gd]
+            [thi.ng.math.core :refer [PI]]
+            [thi.ng.geom.core :as geom]
+            [thi.ng.geom.core.vector :as vec]
+            [thi.ng.geom.core.matrix :as mat :refer [M44]])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
 
 (defonce conn (repl/connect "http://localhost:9000/repl"))
@@ -15,109 +25,147 @@
          :current-color "#bbffbb"
          :listening-for-color false}))
 
-(def lines [])
+(def paint-meshes [])
+(def current-mesh nil)
 (def cursor [])
 
-(def baked-cvs nil)
-(def baked-ctx nil)
-(def baked-dimen nil)
-(def recent-ctx nil)
-(def recent-dimen nil)
+(def renderer nil)
 
-(defn save-image []
-  (let [data (.getImageData baked-ctx 0 0
-                            (first baked-dimen) (second baked-dimen))]
-    (.setItem js/localforage "image" (.toDataURL baked-cvs))))
+(def u-p-matrix
+  (g/uniform "uPMatrix" :mat4))
 
-(defn load-image []
-  (go
-    (let [value (<! (get-from-storage "image"))]
-      (if value
-        (let [img (js/Image.)]
-          (.addEventListener img "load"
-                             (fn [e]
-                               (.drawImage baked-ctx img 0 0)))
-          (set! (.-src img) value))))))
+(def u-mv-matrix
+  (g/uniform "uMVMatrix" :mat4))
 
-(defn save-state []
-  (save-image)
-  (.setItem js/localforage "lines" (clj->js lines))
-  (.setItem js/localforage "app-state" (clj->js @app-state)))
+(def u-color
+  (g/uniform "uColor" :vec3))
 
-(defn load-state []
-  (load-image)
-  (go
-    (set! lines (js->clj (<! (get-from-storage "lines"))
-                         :keywordize-keys true))
-    (let [state (<! (get-from-storage "app-state"))]
-      (swap! app-state (fn [x] (js->clj state
-                                        :keywordize-keys true))))))
+(def a-position
+  (g/attribute "aVertexPosition" :vec2))
 
-(defn clear-canvas []
-  (if (js/confirm "Are you sure you want to clear the canvas?")
-    (do
-      (reset-canvas baked-ctx baked-dimen)
-      (set! lines []))))
+(def program-source
+  (p/program
+   {:vertex-shader   {(g/gl-position)   (-> u-p-matrix
+                                            (g/* u-mv-matrix)
+                                            (g/* (g/vec4 a-position 0 1)))}
+    :fragment-shader {(g/gl-frag-color) (g/vec4 u-color 1)}
+    :precision {:float :mediump}}))
 
-(defn set-cursor [x y]
-  (set! cursor [x y]))
+(defn renderable [p mv color vertices]
+  {u-p-matrix p
+   u-mv-matrix mv
+   u-color {:data color :count 3}
+   a-position {:data vertices :count (/ (.-length vertices) 2)}})
+
+(defn get-perspective-matrix [width height]
+  (mat/ortho 0 0 width height 0.1 1000))
+
+;; (defn save-image []
+;;   (let [data (.getImageData baked-ctx 0 0
+;;                             (first baked-dimen) (second baked-dimen))]
+;;     (.setItem js/localforage "image" (.toDataURL baked-cvs))))
+
+;; (defn load-image []
+;;   (go
+;;     (let [value (<! (get-from-storage "image"))]
+;;       (if value
+;;         (let [img (js/Image.)]
+;;           (.addEventListener img "load"
+;;                              (fn [e]
+;;                                (.drawImage baked-ctx img 0 0)))
+;;           (set! (.-src img) value))))))
+
+;; (defn save-state []
+;;   (save-image)
+;;   (.setItem js/localforage "lines" (clj->js lines))
+;;   (.setItem js/localforage "app-state" (clj->js @app-state)))
+
+;; (defn load-state []
+;;   (load-image)
+;;   (go
+;;     (set! lines (js->clj (<! (get-from-storage "lines"))
+;;                          :keywordize-keys true))
+;;     (let [state (<! (get-from-storage "app-state"))]
+;;       (swap! app-state (fn [x] (js->clj state
+;;                                         :keywordize-keys true))))))
+
+;; (defn clear-canvas []
+;;   (if (js/confirm "Are you sure you want to clear the canvas?")
+;;     (set! points [])))
+
+(defn set-cursor [point]
+  (set! cursor point))
 
 (defn finalize-stroke []
-  (set! lines (conj lines [])))
+  (set! paint-meshes (conj paint-meshes current-mesh))
+  (set! current-mesh nil))
 
-(defn vec2-length [x y]
-  (.sqrt js/Math (+ (* x x) (* y y))))
+(defn add-to-stroke [point pressure]
+  (let [width (* (.pow js/Math pressure 2) 10)
+        valid (> (.getPointer current-mesh) 0)
+        last-point1 (if valid
+                      (vec/vec2 (.getOffsetValue current-mesh 12)
+                                (.getOffsetValue current-mesh 11))
+                      point)
+        last-point2 (if valid
+                      (vec/vec2 (.getOffsetValue current-mesh 10)
+                                (.getOffsetValue current-mesh 9))
+                      point)
+        last-middle (geom/+ last-point1
+                            (geom/div (geom/- last-point2 last-point1) 2))
+        
+        vec (geom/- (vec/vec2 point) last-middle)
+        normalized (geom/* (geom/normalize vec) width)
+        r1 (geom/rotate normalized (/ PI 2))
+        r2 (geom/rotate normalized (/ PI -2))
 
-(defn render-line [ctx line]
-  (if (> (count line) 1)
-    (doseq [i (range (- (count line) 1))]
-      (let [p1 (nth line i)
-            p2 (nth line (+ i 1))
-            width (* (+ (:pressure p1)
-                        (:pressure p2))
-                     (* 20 2))]
-        (set! (.-lineWidth ctx) (* width 2))
-        (set! (.-strokeStyle ctx) (:color p1))
-        (.beginPath ctx)
-        (.moveTo ctx (* (:x p1) 2) (* (:y p1) 2))
-        (.lineTo ctx (* (:x p2) 2) (* (:y p2) 2))
-        (.stroke ctx)))))
+        p1 (geom/+ point r1)
+        p2 (geom/+ point r2)
+        p3 last-point1
+        
+        p4 last-point1
+        p5 (geom/+ point r2)
+        p6 last-point2]
+    (.addFace
+     current-mesh
+     (nth p1 0) (nth p1 1)
+     (nth p2 0) (nth p2 1)
+     (nth p3 0) (nth p3 1)
+     )
+    (.addFace
+     current-mesh
+     (nth p4 0) (nth p4 1)
+     (nth p5 0) (nth p5 1)
+     (nth p6 0) (nth p6 1))))
 
-(defn reset-canvas [ctx dimen]
-  (.clearRect ctx 0 0 (first dimen) (second dimen)))
+(defn render-mesh [mesh driver program pers mv]
+  (gd/draw-arrays driver
+                  (gd/bind driver program
+                           (renderable pers mv
+                                       (.getColor mesh)
+                                       (.getVertices mesh)))
+                  {:draw-mode :triangles}))
 
-(defn render [baked-ctx recent-ctx]
-  (reset-canvas recent-ctx recent-dimen)
+(defn render []
+  (let [{:keys [gl driver program pers]} renderer
+        mv (-> (mat/matrix44)
+               (geom/translate [0 0 -1]))]
+    (.clear gl (bit-or (.-COLOR_BUFFER_BIT gl) (.-DEPTH_BUFFER_BIT gl)))
 
-  (doseq [line (drop-last 10 lines)]
-    (render-line baked-ctx line))
-  (doseq [line (take-last 10 lines)]
-    (render-line recent-ctx line))
-
-
-  (let [[x y] cursor
-        ctx recent-ctx]
-    (set! (.-strokeStyle ctx) "white")
-    (set! (.-lineWidth ctx) 1)
-    (.beginPath ctx)
-    (.moveTo ctx (* (- x 5) 2) (* y 2))
-    (.lineTo ctx (* (+ x 5) 2) (* y 2))
-    
-    (.moveTo ctx (* x 2) (* (- y 5) 2))
-    (.lineTo ctx (* x 2) (* (+ y 5) 2))
-    (.stroke ctx))
-    
-  (set! lines (vec (take-last 10 lines))))
+    (doseq [mesh paint-meshes]
+      (render-mesh mesh driver program pers mv))
+    (if current-mesh
+      (render-mesh current-mesh driver program pers mv))))
 
 (defn render-loop []
-  (render baked-ctx recent-ctx)
+  (render)
   (js/requestAnimationFrame render-loop))
 
-(defn undo []
-  (set! lines (vec
-               (if (= (count (last lines)) 0)
-                 (drop-last 2 lines)
-                 (drop-last 1 lines)))))
+;; (defn undo []
+;;   (set! lines (vec
+;;                (if (= (count (last lines)) 0)
+;;                  (drop-last 2 lines)
+;;                  (drop-last 1 lines)))))
 
 ;; interface
 
@@ -272,62 +320,71 @@
                               :textAlign "center"}}
              (om/build color-input data)))))
 
+(defn init [node]
+  (let [gl (.getContext node "webgl")
+        rect (.getBoundingClientRect node)
+        w (.-width rect)
+        h (.-height rect)
+        driver (driver/basic-driver gl)
+        program (dp/program driver program-source)
+        pers (get-perspective-matrix w h)]
+    (.viewport gl 0 0 (* w 2) (* h 2))
+    (.clearColor gl 0 0 0 1)
+
+    {:gl gl :driver driver :program program :pers pers}))
+
 (defn app [data owner]
   (reify
     om/IDidMount
     (did-mount [this]
       (let [node (om.core/get-node owner)
             container (.querySelector node ".canvas-container")
-            canvases (array-seq (.querySelectorAll node "canvas"))
-            baked-canvas (first canvases)
-            recent-canvas (second canvases)]
-        (set! baked-cvs baked-canvas)
-        (set! baked-ctx (.getContext baked-canvas "2d"))
-        (set! baked-dimen [(.-width baked-canvas) (.-height baked-canvas)])
-        (set! recent-ctx (.getContext recent-canvas "2d"))
-        (set! recent-dimen [(.-width recent-canvas) (.-height recent-canvas)])
-        (load-state)
+            canvas (.querySelector node "canvas")]
+        
+        (set! renderer (init canvas))
+        ;;(load-state)
         (render-loop)
 
-        (let [moved (listen recent-canvas "pointermove")]
-          (go-loop []
+        (let [moved (listen canvas "pointermove")]
+          (go-loop [brush-pressed false]
             (if-let [e (<! moved)]
-              (do
-                (set-cursor (.-layerX e) (.-layerY e))
+              (let [pressure (.-mozPressure e)]
+                ;;(set-cursor point)
                 (cond
-                  (not (:current-color @app-state)) nil
-
-                  (= (.-mozPressure e) 0)
-                  (do
-                    (if (> (count (last lines)) 0)
-                      (finalize-stroke)))
+                  (not (:current-color @app-state))
+                  nil
+                  
+                  (= pressure 0)
+                  (if brush-pressed (finalize-stroke))
 
                   ;; There seem to be random events with .5, just take 'em out
-                  (not= (.-mozPressure e) .5)
-                  (set!
-                   lines
-                   (conj (vec (drop-last 1 lines))
-                         (conj (last lines)
-                               {:x (.-layerX e)
-                                :y (.-layerY e)
-                                :pressure (.pow js/Math (.-mozPressure e) 2)
-                                :color (:current-color @app-state)}))))
-                (recur)))))
+                  ;;(not= (.-mozPressure e) .5)
+                  :else
+                  (do
+                    (if (not current-mesh)
+                      (set! current-mesh (js/Mesh2d.
+                                          (map (fn [x] (/ x 255))
+                                               (color/hexToRgb (:current-color @app-state))))))
+                    (add-to-stroke (vec/vec2 (.-layerX e) (.-layerY e))
+                                   pressure)
+                    (recur true)))
+                (recur false)))))
 
-        (let [keydown (listen js/window "keydown"
-                              (fn [e]
-                                (let [kc (.-keyCode e)]
-                                  (if (or (= kc 83) (= kc 90))
-                                    (.preventDefault e)))))]
-          (go-loop []
-            (let [e (<! keydown)]
-              (if (.-metaKey e)
-                (case (.-keyCode e)
-                  83 (save-state)
-                  90 (undo)
-                  67 (clear-canvas)
-                  :else)))
-            (recur)))))
+        ;; (let [keydown (listen js/window "keydown"
+        ;;                       (fn [e]
+        ;;                         (let [kc (.-keyCode e)]
+        ;;                           (if (or (= kc 83) (= kc 90))
+        ;;                             (.preventDefault e)))))]
+        ;;   (go-loop []
+        ;;     (let [e (<! keydown)]
+        ;;       (if (.-metaKey e)
+        ;;         (case (.-keyCode e)
+        ;;           ;;83 (save-state)
+        ;;           ;;90 (undo)
+        ;;           67 (clear-canvas)
+        ;;           :else)))
+        ;;     (recur)))
+        ))
 
     om/IRender
     (render [this]
@@ -339,7 +396,7 @@
         #js {:className "canvas-container"
              :style
              #js {:overflow "hidden"}}
-        (let [dimen 1300
+        (let [dimen 1200
               style #js {:position "absolute"
                          :top 0
                          :left 0
@@ -349,12 +406,9 @@
                          :border "1px solid #333333"
                          :width (/ dimen 2)
                          :height (/ dimen 2)
-                         :transformOrigin "0 0"
-                         :cursor "none" }]
+                         ;;:cursor "none"
+                         }]
           #js [(dom/canvas #js {:width dimen
-                                :height dimen
-                                :style style})
-               (dom/canvas #js {:width dimen
                                 :height dimen
                                 :style style})]))
        (color-chooser data)))))

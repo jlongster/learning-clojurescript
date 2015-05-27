@@ -1,32 +1,32 @@
-// Compiled by ClojureScript 0.0-3126 {}
+// Compiled by ClojureScript 0.0-3291 {}
 goog.provide('clojure.browser.event');
 goog.require('cljs.core');
-goog.require('goog.events.EventType');
-goog.require('goog.events.EventTarget');
 goog.require('goog.events');
+goog.require('goog.events.EventTarget');
+goog.require('goog.events.EventType');
 
-clojure.browser.event.IEventType = (function (){var obj55 = {};
-return obj55;
+clojure.browser.event.IEventType = (function (){var obj20412 = {};
+return obj20412;
 })();
 
 clojure.browser.event.event_types = (function clojure$browser$event$event_types(this$){
-if((function (){var and__3134__auto__ = this$;
-if(and__3134__auto__){
+if((function (){var and__4938__auto__ = this$;
+if(and__4938__auto__){
 return this$.clojure$browser$event$IEventType$event_types$arity$1;
 } else {
-return and__3134__auto__;
+return and__4938__auto__;
 }
 })()){
 return this$.clojure$browser$event$IEventType$event_types$arity$1(this$);
 } else {
-var x__3406__auto__ = (((this$ == null))?null:this$);
-return (function (){var or__3142__auto__ = (clojure.browser.event.event_types[goog.typeOf(x__3406__auto__)]);
-if(or__3142__auto__){
-return or__3142__auto__;
+var x__5586__auto__ = (((this$ == null))?null:this$);
+return (function (){var or__4950__auto__ = (clojure.browser.event.event_types[goog.typeOf(x__5586__auto__)]);
+if(or__4950__auto__){
+return or__4950__auto__;
 } else {
-var or__3142__auto____$1 = (clojure.browser.event.event_types["_"]);
-if(or__3142__auto____$1){
-return or__3142__auto____$1;
+var or__4950__auto____$1 = (clojure.browser.event.event_types["_"]);
+if(or__4950__auto____$1){
+return or__4950__auto____$1;
 } else {
 throw cljs.core.missing_protocol.call(null,"IEventType.event-types",this$);
 }
@@ -40,10 +40,10 @@ goog.events.EventTarget.prototype.clojure$browser$event$IEventType$ = true;
 goog.events.EventTarget.prototype.clojure$browser$event$IEventType$event_types$arity$1 = (function (this$){
 var this$__$1 = this;
 return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,((function (this$__$1){
-return (function (p__56){
-var vec__57 = p__56;
-var k = cljs.core.nth.call(null,vec__57,(0),null);
-var v = cljs.core.nth.call(null,vec__57,(1),null);
+return (function (p__20413){
+var vec__20414 = p__20413;
+var k = cljs.core.nth.call(null,vec__20414,(0),null);
+var v = cljs.core.nth.call(null,vec__20414,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.call(null,k.toLowerCase()),v], null);
 });})(this$__$1))
 ,cljs.core.merge.call(null,cljs.core.js__GT_clj.call(null,goog.events.EventType))));
@@ -54,82 +54,94 @@ Element.prototype.clojure$browser$event$IEventType$ = true;
 Element.prototype.clojure$browser$event$IEventType$event_types$arity$1 = (function (this$){
 var this$__$1 = this;
 return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,((function (this$__$1){
-return (function (p__58){
-var vec__59 = p__58;
-var k = cljs.core.nth.call(null,vec__59,(0),null);
-var v = cljs.core.nth.call(null,vec__59,(1),null);
+return (function (p__20415){
+var vec__20416 = p__20415;
+var k = cljs.core.nth.call(null,vec__20416,(0),null);
+var v = cljs.core.nth.call(null,vec__20416,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.call(null,k.toLowerCase()),v], null);
 });})(this$__$1))
 ,cljs.core.merge.call(null,cljs.core.js__GT_clj.call(null,goog.events.EventType))));
 });
 } else {
 }
-clojure.browser.event.listen = (function() {
-var clojure$browser$event$listen = null;
-var clojure$browser$event$listen__3 = (function (src,type,fn){
-return clojure$browser$event$listen.call(null,src,type,fn,false);
+clojure.browser.event.listen = (function clojure$browser$event$listen(){
+var G__20418 = arguments.length;
+switch (G__20418) {
+case 3:
+return clojure.browser.event.listen.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
+
+break;
+case 4:
+return clojure.browser.event.listen.cljs$core$IFn$_invoke$arity$4((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]));
+
+break;
+default:
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.length)].join('')));
+
+}
 });
-var clojure$browser$event$listen__4 = (function (src,type,fn,capture_QMARK_){
+
+clojure.browser.event.listen.cljs$core$IFn$_invoke$arity$3 = (function (src,type,fn){
+return clojure.browser.event.listen.call(null,src,type,fn,false);
+});
+
+clojure.browser.event.listen.cljs$core$IFn$_invoke$arity$4 = (function (src,type,fn,capture_QMARK_){
 return goog.events.listen(src,cljs.core.get.call(null,clojure.browser.event.event_types.call(null,src),type,type),fn,capture_QMARK_);
 });
-clojure$browser$event$listen = function(src,type,fn,capture_QMARK_){
-switch(arguments.length){
+
+clojure.browser.event.listen.cljs$lang$maxFixedArity = 4;
+clojure.browser.event.listen_once = (function clojure$browser$event$listen_once(){
+var G__20421 = arguments.length;
+switch (G__20421) {
 case 3:
-return clojure$browser$event$listen__3.call(this,src,type,fn);
+return clojure.browser.event.listen_once.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
+
+break;
 case 4:
-return clojure$browser$event$listen__4.call(this,src,type,fn,capture_QMARK_);
+return clojure.browser.event.listen_once.cljs$core$IFn$_invoke$arity$4((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]));
+
+break;
+default:
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.length)].join('')));
+
 }
-throw(new Error('Invalid arity: ' + arguments.length));
-};
-clojure$browser$event$listen.cljs$core$IFn$_invoke$arity$3 = clojure$browser$event$listen__3;
-clojure$browser$event$listen.cljs$core$IFn$_invoke$arity$4 = clojure$browser$event$listen__4;
-return clojure$browser$event$listen;
-})()
-;
-clojure.browser.event.listen_once = (function() {
-var clojure$browser$event$listen_once = null;
-var clojure$browser$event$listen_once__3 = (function (src,type,fn){
-return clojure$browser$event$listen_once.call(null,src,type,fn,false);
 });
-var clojure$browser$event$listen_once__4 = (function (src,type,fn,capture_QMARK_){
+
+clojure.browser.event.listen_once.cljs$core$IFn$_invoke$arity$3 = (function (src,type,fn){
+return clojure.browser.event.listen_once.call(null,src,type,fn,false);
+});
+
+clojure.browser.event.listen_once.cljs$core$IFn$_invoke$arity$4 = (function (src,type,fn,capture_QMARK_){
 return goog.events.listenOnce(src,cljs.core.get.call(null,clojure.browser.event.event_types.call(null,src),type,type),fn,capture_QMARK_);
 });
-clojure$browser$event$listen_once = function(src,type,fn,capture_QMARK_){
-switch(arguments.length){
+
+clojure.browser.event.listen_once.cljs$lang$maxFixedArity = 4;
+clojure.browser.event.unlisten = (function clojure$browser$event$unlisten(){
+var G__20424 = arguments.length;
+switch (G__20424) {
 case 3:
-return clojure$browser$event$listen_once__3.call(this,src,type,fn);
+return clojure.browser.event.unlisten.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
+
+break;
 case 4:
-return clojure$browser$event$listen_once__4.call(this,src,type,fn,capture_QMARK_);
+return clojure.browser.event.unlisten.cljs$core$IFn$_invoke$arity$4((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]));
+
+break;
+default:
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.length)].join('')));
+
 }
-throw(new Error('Invalid arity: ' + arguments.length));
-};
-clojure$browser$event$listen_once.cljs$core$IFn$_invoke$arity$3 = clojure$browser$event$listen_once__3;
-clojure$browser$event$listen_once.cljs$core$IFn$_invoke$arity$4 = clojure$browser$event$listen_once__4;
-return clojure$browser$event$listen_once;
-})()
-;
-clojure.browser.event.unlisten = (function() {
-var clojure$browser$event$unlisten = null;
-var clojure$browser$event$unlisten__3 = (function (src,type,fn){
-return clojure$browser$event$unlisten.call(null,src,type,fn,false);
 });
-var clojure$browser$event$unlisten__4 = (function (src,type,fn,capture_QMARK_){
+
+clojure.browser.event.unlisten.cljs$core$IFn$_invoke$arity$3 = (function (src,type,fn){
+return clojure.browser.event.unlisten.call(null,src,type,fn,false);
+});
+
+clojure.browser.event.unlisten.cljs$core$IFn$_invoke$arity$4 = (function (src,type,fn,capture_QMARK_){
 return goog.events.unlisten(src,cljs.core.get.call(null,clojure.browser.event.event_types.call(null,src),type,type),fn,capture_QMARK_);
 });
-clojure$browser$event$unlisten = function(src,type,fn,capture_QMARK_){
-switch(arguments.length){
-case 3:
-return clojure$browser$event$unlisten__3.call(this,src,type,fn);
-case 4:
-return clojure$browser$event$unlisten__4.call(this,src,type,fn,capture_QMARK_);
-}
-throw(new Error('Invalid arity: ' + arguments.length));
-};
-clojure$browser$event$unlisten.cljs$core$IFn$_invoke$arity$3 = clojure$browser$event$unlisten__3;
-clojure$browser$event$unlisten.cljs$core$IFn$_invoke$arity$4 = clojure$browser$event$unlisten__4;
-return clojure$browser$event$unlisten;
-})()
-;
+
+clojure.browser.event.unlisten.cljs$lang$maxFixedArity = 4;
 clojure.browser.event.unlisten_by_key = (function clojure$browser$event$unlisten_by_key(key){
 return goog.events.unlistenByKey(key);
 });

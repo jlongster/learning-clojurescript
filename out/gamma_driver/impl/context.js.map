@@ -1,0 +1,1 @@
+{"version":3,"file":"\/Users\/james\/projects\/cljs-draw\/out\/gamma_driver\/impl\/context.js","sources":["context.cljs"],"lineCount":9,"mappings":";AAAA;;;AAGA,sCAAA,tCAAMA,oFAAWC,GAAGC;AAApB,AAAA","names":["gamma-driver.impl.context\/configure","gl","spec"]}
