@@ -1,6 +1,8 @@
 Building ...
-... done. Elapsed 0.212672179 seconds
+... done. Elapsed 0.188090924 seconds
 Watching paths: /Users/james/projects/cljs-draw/01-pressure-draw
+Change detected, recompiling ...
+... done. Elapsed 0.150498393 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core.cljs
@@ -59,24 +61,1260 @@ Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/cloj
 Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/common/0.3.1/common-0.3.1.jar!/thi/ng/common/data/core.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core/utils.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core/matrix.cljs
-... done. Elapsed 2.496710778 seconds
+... done. Elapsed 1.178467422 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.128220155 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.458489408 seconds
+... done. Elapsed 0.60255842 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.518883646 seconds
+... done. Elapsed 0.534241777 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.420645298 seconds
+... done. Elapsed 0.498697932 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.41108603 seconds
-Change detected, recompiling ...
-... done. Elapsed 0.123001094 seconds
+... done. Elapsed 0.553738367 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.518421277 seconds
+... done. Elapsed 0.5946872 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.423725991 seconds
+... done. Elapsed 0.509915271 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+clojure.lang.ExceptionInfo: failed compiling file:01-pressure-draw/cljs_draw/core.cljs {:file #object[java.io.File 0x293dc75c "01-pressure-draw/cljs_draw/core.cljs"]}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1146)
+	at cljs.compiler$compile_file.invoke(compiler.cljc:1109)
+	at cljs.compiler$compile_root.invoke(compiler.cljc:1181)
+	at cljs.closure$compile_dir.invoke(closure.clj:385)
+	at cljs.closure$eval3401$fn__3402.invoke(closure.clj:425)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$eval3414$fn__3415.invoke(closure.clj:439)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$build.invoke(closure.clj:1475)
+	at cljs.closure$watch$buildf__3746.invoke(closure.clj:1563)
+	at cljs.closure$watch.invoke(closure.clj:1612)
+	at cljs.repl$repl_STAR_$fn__4248$fn__4251.invoke(repl.cljc:836)
+	at clojure.core$binding_conveyor_fn$fn__4441.invoke(core.clj:1914)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: clojure.lang.ExceptionInfo: bindings must be vector of even number of elements at line 405 01-pressure-draw/cljs_draw/core.cljs {:file "01-pressure-draw/cljs_draw/core.cljs", :line 405, :column 11, :tag :cljs/analysis-error}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.analyzer$error.invoke(analyzer.cljc:384)
+	at cljs.analyzer$error.invoke(analyzer.cljc:382)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1104)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_invoke$fn__1977.invoke(analyzer.cljc:1796)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.Cons.next(Cons.java:39)
+	at clojure.lang.PersistentVector.create(PersistentVector.java:68)
+	at clojure.lang.LazilyPersistentVector.create(LazilyPersistentVector.java:30)
+	at clojure.core$vec.invoke(core.clj:359)
+	at cljs.analyzer$parse_invoke.invoke(analyzer.cljc:1796)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1901)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_let$fn__1624.invoke(analyzer.cljc:1152)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1148)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_invoke$fn__1977.invoke(analyzer.cljc:1796)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.Cons.next(Cons.java:39)
+	at clojure.lang.PersistentVector.create(PersistentVector.java:68)
+	at clojure.lang.LazilyPersistentVector.create(LazilyPersistentVector.java:30)
+	at clojure.core$vec.invoke(core.clj:359)
+	at cljs.analyzer$parse_invoke.invoke(analyzer.cljc:1796)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1901)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_let$fn__1624.invoke(analyzer.cljc:1152)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1148)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_fn_method$fn__1556.invoke(analyzer.cljc:974)
+	at cljs.analyzer$analyze_fn_method.invoke(analyzer.cljc:973)
+	at cljs.analyzer$eval1561$fn__1563$fn__1566.invoke(analyzer.cljc:1010)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$map$fn__4550.invoke(core.clj:2614)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$apply.invoke(core.clj:628)
+	at cljs.analyzer$eval1561$fn__1563.invoke(analyzer.cljc:1011)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1666$fn__1668.invoke(analyzer.cljc:1245)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1096)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_type.invoke(analyzer.cljc:1631)
+	at cljs.analyzer$eval1870$fn__1871.invoke(analyzer.cljc:1635)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606$fn__1607.invoke(analyzer.cljc:1093)
+	at clojure.core$map$fn__4550.invoke(core.clj:2620)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606.invoke(analyzer.cljc:1093)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1092)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1447$fn__1449$fn__1455.invoke(analyzer.cljc:721)
+	at cljs.analyzer$eval1447$fn__1449.invoke(analyzer.cljc:721)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606$fn__1607.invoke(analyzer.cljc:1093)
+	at clojure.core$map$fn__4550.invoke(core.clj:2620)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606.invoke(analyzer.cljc:1093)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1092)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_fn_method$fn__1556.invoke(analyzer.cljc:974)
+	at cljs.analyzer$analyze_fn_method.invoke(analyzer.cljc:973)
+	at cljs.analyzer$eval1561$fn__1563$fn__1566.invoke(analyzer.cljc:1010)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$map$fn__4550.invoke(core.clj:2614)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$apply.invoke(core.clj:628)
+	at cljs.analyzer$eval1561$fn__1563.invoke(analyzer.cljc:1011)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$eval1519$fn__1520$fn__1523.invoke(analyzer.cljc:869)
+	at cljs.analyzer$eval1519$fn__1520.invoke(analyzer.cljc:868)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.compiler$compile_file_STAR_$fn__2961.invoke(compiler.cljc:1027)
+	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:968)
+	at cljs.compiler$compile_file_STAR_.invoke(compiler.cljc:988)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1129)
+	... 14 more
+
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+clojure.lang.ExceptionInfo: failed compiling file:01-pressure-draw/cljs_draw/core.cljs {:file #object[java.io.File 0x60ec98e "01-pressure-draw/cljs_draw/core.cljs"]}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1146)
+	at cljs.compiler$compile_file.invoke(compiler.cljc:1109)
+	at cljs.compiler$compile_root.invoke(compiler.cljc:1181)
+	at cljs.closure$compile_dir.invoke(closure.clj:385)
+	at cljs.closure$eval3401$fn__3402.invoke(closure.clj:425)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$eval3414$fn__3415.invoke(closure.clj:439)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$build.invoke(closure.clj:1475)
+	at cljs.closure$watch$buildf__3746.invoke(closure.clj:1563)
+	at cljs.closure$watch.invoke(closure.clj:1612)
+	at cljs.repl$repl_STAR_$fn__4248$fn__4251.invoke(repl.cljc:836)
+	at clojure.core$binding_conveyor_fn$fn__4441.invoke(core.clj:1914)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: clojure.lang.ExceptionInfo: bindings must be vector of even number of elements at line 404 01-pressure-draw/cljs_draw/core.cljs {:file "01-pressure-draw/cljs_draw/core.cljs", :line 404, :column 11, :tag :cljs/analysis-error}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.analyzer$error.invoke(analyzer.cljc:384)
+	at cljs.analyzer$error.invoke(analyzer.cljc:382)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1104)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_invoke$fn__1977.invoke(analyzer.cljc:1796)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.Cons.next(Cons.java:39)
+	at clojure.lang.PersistentVector.create(PersistentVector.java:68)
+	at clojure.lang.LazilyPersistentVector.create(LazilyPersistentVector.java:30)
+	at clojure.core$vec.invoke(core.clj:359)
+	at cljs.analyzer$parse_invoke.invoke(analyzer.cljc:1796)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1901)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_let$fn__1624.invoke(analyzer.cljc:1152)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1148)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_invoke$fn__1977.invoke(analyzer.cljc:1796)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.Cons.next(Cons.java:39)
+	at clojure.lang.PersistentVector.create(PersistentVector.java:68)
+	at clojure.lang.LazilyPersistentVector.create(LazilyPersistentVector.java:30)
+	at clojure.core$vec.invoke(core.clj:359)
+	at cljs.analyzer$parse_invoke.invoke(analyzer.cljc:1796)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1901)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_let$fn__1624.invoke(analyzer.cljc:1152)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1148)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_fn_method$fn__1556.invoke(analyzer.cljc:974)
+	at cljs.analyzer$analyze_fn_method.invoke(analyzer.cljc:973)
+	at cljs.analyzer$eval1561$fn__1563$fn__1566.invoke(analyzer.cljc:1010)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$map$fn__4550.invoke(core.clj:2614)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$apply.invoke(core.clj:628)
+	at cljs.analyzer$eval1561$fn__1563.invoke(analyzer.cljc:1011)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1666$fn__1668.invoke(analyzer.cljc:1245)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1096)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_type.invoke(analyzer.cljc:1631)
+	at cljs.analyzer$eval1870$fn__1871.invoke(analyzer.cljc:1635)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606$fn__1607.invoke(analyzer.cljc:1093)
+	at clojure.core$map$fn__4550.invoke(core.clj:2620)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606.invoke(analyzer.cljc:1093)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1092)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1447$fn__1449$fn__1455.invoke(analyzer.cljc:721)
+	at cljs.analyzer$eval1447$fn__1449.invoke(analyzer.cljc:721)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606$fn__1607.invoke(analyzer.cljc:1093)
+	at clojure.core$map$fn__4550.invoke(core.clj:2620)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606.invoke(analyzer.cljc:1093)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1092)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_fn_method$fn__1556.invoke(analyzer.cljc:974)
+	at cljs.analyzer$analyze_fn_method.invoke(analyzer.cljc:973)
+	at cljs.analyzer$eval1561$fn__1563$fn__1566.invoke(analyzer.cljc:1010)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$map$fn__4550.invoke(core.clj:2614)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$apply.invoke(core.clj:628)
+	at cljs.analyzer$eval1561$fn__1563.invoke(analyzer.cljc:1011)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$eval1519$fn__1520$fn__1523.invoke(analyzer.cljc:869)
+	at cljs.analyzer$eval1519$fn__1520.invoke(analyzer.cljc:868)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.compiler$compile_file_STAR_$fn__2961.invoke(compiler.cljc:1027)
+	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:968)
+	at cljs.compiler$compile_file_STAR_.invoke(compiler.cljc:988)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1129)
+	... 14 more
+
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+clojure.lang.ExceptionInfo: failed compiling file:01-pressure-draw/cljs_draw/core.cljs {:file #object[java.io.File 0x3de57f71 "01-pressure-draw/cljs_draw/core.cljs"]}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1146)
+	at cljs.compiler$compile_file.invoke(compiler.cljc:1109)
+	at cljs.compiler$compile_root.invoke(compiler.cljc:1181)
+	at cljs.closure$compile_dir.invoke(closure.clj:385)
+	at cljs.closure$eval3401$fn__3402.invoke(closure.clj:425)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$eval3414$fn__3415.invoke(closure.clj:439)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$build.invoke(closure.clj:1475)
+	at cljs.closure$watch$buildf__3746.invoke(closure.clj:1563)
+	at cljs.closure$watch.invoke(closure.clj:1612)
+	at cljs.repl$repl_STAR_$fn__4248$fn__4251.invoke(repl.cljc:836)
+	at clojure.core$binding_conveyor_fn$fn__4441.invoke(core.clj:1914)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: clojure.lang.ExceptionInfo: bindings must be vector of even number of elements at line 406 01-pressure-draw/cljs_draw/core.cljs {:file "01-pressure-draw/cljs_draw/core.cljs", :line 406, :column 11, :tag :cljs/analysis-error}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.analyzer$error.invoke(analyzer.cljc:384)
+	at cljs.analyzer$error.invoke(analyzer.cljc:382)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1104)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_invoke$fn__1977.invoke(analyzer.cljc:1796)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.Cons.next(Cons.java:39)
+	at clojure.lang.PersistentVector.create(PersistentVector.java:68)
+	at clojure.lang.LazilyPersistentVector.create(LazilyPersistentVector.java:30)
+	at clojure.core$vec.invoke(core.clj:359)
+	at cljs.analyzer$parse_invoke.invoke(analyzer.cljc:1796)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1901)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_let$fn__1624.invoke(analyzer.cljc:1152)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1148)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_invoke$fn__1977.invoke(analyzer.cljc:1796)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.Cons.next(Cons.java:39)
+	at clojure.lang.PersistentVector.create(PersistentVector.java:68)
+	at clojure.lang.LazilyPersistentVector.create(LazilyPersistentVector.java:30)
+	at clojure.core$vec.invoke(core.clj:359)
+	at cljs.analyzer$parse_invoke.invoke(analyzer.cljc:1796)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1901)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_let$fn__1624.invoke(analyzer.cljc:1152)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1148)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_fn_method$fn__1556.invoke(analyzer.cljc:974)
+	at cljs.analyzer$analyze_fn_method.invoke(analyzer.cljc:973)
+	at cljs.analyzer$eval1561$fn__1563$fn__1566.invoke(analyzer.cljc:1010)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$map$fn__4550.invoke(core.clj:2614)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$apply.invoke(core.clj:628)
+	at cljs.analyzer$eval1561$fn__1563.invoke(analyzer.cljc:1011)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1666$fn__1668.invoke(analyzer.cljc:1245)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1096)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_type.invoke(analyzer.cljc:1631)
+	at cljs.analyzer$eval1870$fn__1871.invoke(analyzer.cljc:1635)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606$fn__1607.invoke(analyzer.cljc:1093)
+	at clojure.core$map$fn__4550.invoke(core.clj:2620)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606.invoke(analyzer.cljc:1093)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1092)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1447$fn__1449$fn__1455.invoke(analyzer.cljc:721)
+	at cljs.analyzer$eval1447$fn__1449.invoke(analyzer.cljc:721)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606$fn__1607.invoke(analyzer.cljc:1093)
+	at clojure.core$map$fn__4550.invoke(core.clj:2620)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606.invoke(analyzer.cljc:1093)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1092)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_fn_method$fn__1556.invoke(analyzer.cljc:974)
+	at cljs.analyzer$analyze_fn_method.invoke(analyzer.cljc:973)
+	at cljs.analyzer$eval1561$fn__1563$fn__1566.invoke(analyzer.cljc:1010)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$map$fn__4550.invoke(core.clj:2614)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$apply.invoke(core.clj:628)
+	at cljs.analyzer$eval1561$fn__1563.invoke(analyzer.cljc:1011)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$eval1519$fn__1520$fn__1523.invoke(analyzer.cljc:869)
+	at cljs.analyzer$eval1519$fn__1520.invoke(analyzer.cljc:868)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.compiler$compile_file_STAR_$fn__2961.invoke(compiler.cljc:1027)
+	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:968)
+	at cljs.compiler$compile_file_STAR_.invoke(compiler.cljc:988)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1129)
+	... 14 more
+
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+clojure.lang.ExceptionInfo: failed compiling file:01-pressure-draw/cljs_draw/core.cljs {:file #object[java.io.File 0x7ab6838c "01-pressure-draw/cljs_draw/core.cljs"]}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1146)
+	at cljs.compiler$compile_file.invoke(compiler.cljc:1109)
+	at cljs.compiler$compile_root.invoke(compiler.cljc:1181)
+	at cljs.closure$compile_dir.invoke(closure.clj:385)
+	at cljs.closure$eval3401$fn__3402.invoke(closure.clj:425)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$eval3414$fn__3415.invoke(closure.clj:439)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$build.invoke(closure.clj:1475)
+	at cljs.closure$watch$buildf__3746.invoke(closure.clj:1563)
+	at cljs.closure$watch.invoke(closure.clj:1612)
+	at cljs.repl$repl_STAR_$fn__4248$fn__4251.invoke(repl.cljc:836)
+	at clojure.core$binding_conveyor_fn$fn__4441.invoke(core.clj:1914)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: clojure.lang.ExceptionInfo: bindings must be vector of even number of elements at line 407 01-pressure-draw/cljs_draw/core.cljs {:file "01-pressure-draw/cljs_draw/core.cljs", :line 407, :column 11, :tag :cljs/analysis-error}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.analyzer$error.invoke(analyzer.cljc:384)
+	at cljs.analyzer$error.invoke(analyzer.cljc:382)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1104)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_invoke$fn__1977.invoke(analyzer.cljc:1796)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.Cons.next(Cons.java:39)
+	at clojure.lang.PersistentVector.create(PersistentVector.java:68)
+	at clojure.lang.LazilyPersistentVector.create(LazilyPersistentVector.java:30)
+	at clojure.core$vec.invoke(core.clj:359)
+	at cljs.analyzer$parse_invoke.invoke(analyzer.cljc:1796)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1901)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_let$fn__1624.invoke(analyzer.cljc:1152)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1148)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_invoke$fn__1977.invoke(analyzer.cljc:1796)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.Cons.next(Cons.java:39)
+	at clojure.lang.PersistentVector.create(PersistentVector.java:68)
+	at clojure.lang.LazilyPersistentVector.create(LazilyPersistentVector.java:30)
+	at clojure.core$vec.invoke(core.clj:359)
+	at cljs.analyzer$parse_invoke.invoke(analyzer.cljc:1796)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1901)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_let$fn__1624.invoke(analyzer.cljc:1152)
+	at cljs.analyzer$analyze_let.invoke(analyzer.cljc:1148)
+	at cljs.analyzer$eval1628$fn__1629.invoke(analyzer.cljc:1159)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_fn_method$fn__1556.invoke(analyzer.cljc:974)
+	at cljs.analyzer$analyze_fn_method.invoke(analyzer.cljc:973)
+	at cljs.analyzer$eval1561$fn__1563$fn__1566.invoke(analyzer.cljc:1010)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$map$fn__4550.invoke(core.clj:2614)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$apply.invoke(core.clj:628)
+	at cljs.analyzer$eval1561$fn__1563.invoke(analyzer.cljc:1011)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1666$fn__1668.invoke(analyzer.cljc:1245)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1096)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$parse_type.invoke(analyzer.cljc:1631)
+	at cljs.analyzer$eval1870$fn__1871.invoke(analyzer.cljc:1635)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606$fn__1607.invoke(analyzer.cljc:1093)
+	at clojure.core$map$fn__4550.invoke(core.clj:2620)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606.invoke(analyzer.cljc:1093)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1092)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1447$fn__1449$fn__1455.invoke(analyzer.cljc:721)
+	at cljs.analyzer$eval1447$fn__1449.invoke(analyzer.cljc:721)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606$fn__1607.invoke(analyzer.cljc:1093)
+	at clojure.core$map$fn__4550.invoke(core.clj:2620)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.analyzer$eval1602$fn__1604$fn__1606.invoke(analyzer.cljc:1093)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1092)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$eval1602$fn__1604.invoke(analyzer.cljc:1095)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1977)
+	at cljs.analyzer$analyze_fn_method$fn__1556.invoke(analyzer.cljc:974)
+	at cljs.analyzer$analyze_fn_method.invoke(analyzer.cljc:973)
+	at cljs.analyzer$eval1561$fn__1563$fn__1566.invoke(analyzer.cljc:1010)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$map$fn__4550.invoke(core.clj:2614)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$apply.invoke(core.clj:628)
+	at cljs.analyzer$eval1561$fn__1563.invoke(analyzer.cljc:1011)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1978)
+	at cljs.analyzer$eval1519$fn__1520$fn__1523.invoke(analyzer.cljc:869)
+	at cljs.analyzer$eval1519$fn__1520.invoke(analyzer.cljc:868)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:251)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1900)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1902)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.compiler$compile_file_STAR_$fn__2961.invoke(compiler.cljc:1027)
+	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:968)
+	at cljs.compiler$compile_file_STAR_.invoke(compiler.cljc:988)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1129)
+	... 14 more
+
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.450735903 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.480693271 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.502373296 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.469862848 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.569772509 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.628829789 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.51167724 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.470943816 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.626327 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.466495861 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/none at line 410 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.465467759 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/set-cursor at line 353 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.468423199 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.46736914 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.456593841 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.457930817 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.467502935 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.483661954 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.493393865 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.477681464 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.461733677 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.461483999 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.530146393 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var thi.ng.geom.core/length at line 110 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.430274506 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/length at line 110 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.529496163 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Wrong number of args (1) passed to thi.ng.geom.core/dist at line 110 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.450420754 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.451135702 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.487132242 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.454073603 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.470553806 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.50578411 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.455146069 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.473308751 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.571750481 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.461243318 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.443776731 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.464182315 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.467404911 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.46913981 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.447704602 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.451622103 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Wrong number of args (5) passed to cljs_draw.core/add-face at line 121 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.445481158 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.466085209 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.45152464 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.474102445 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.440976522 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.45883821 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.443753937 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.091447494 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.090974284 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.45625003 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.457333356 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.448924732 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.097228879 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.4478777 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.549820567 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.472422339 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.098220276 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.090372915 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.09579132 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.092383087 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.095099023 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Wrong number of args (4) passed to cljs_draw.core/add-face at line 118 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Wrong number of args (4) passed to cljs_draw.core/add-face at line 119 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Wrong number of args (4) passed to cljs_draw.core/add-face at line 120 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Wrong number of args (4) passed to cljs_draw.core/add-face at line 121 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.447900027 seconds

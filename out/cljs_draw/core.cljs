@@ -17,7 +17,7 @@
             [thi.ng.geom.core.matrix :as mat :refer [M44]])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
 
-;; (defonce conn (repl/connect "http://localhost:9000/repl"))
+;;(defonce conn (repl/connect "http://localhost:9000/repl"))
 (enable-console-print!)
 
 (defonce app-state
@@ -25,10 +25,11 @@
          :current-color "#bbffbb"
          :listening-for-color false}))
 
+(def dimen 1200)
+(def boundary 50)
 (def paint-meshes [])
 (def current-mesh nil)
-(def cursor [])
-
+(def stroke-history [])
 (def renderer nil)
 
 (def u-p-matrix
@@ -51,50 +52,36 @@
     :fragment-shader {(g/gl-frag-color) (g/vec4 u-color 1)}
     :precision {:float :mediump}}))
 
-(defn renderable [p mv color vertices]
+(defn renderable [p mv color vertices vertex-count]
   {u-p-matrix p
    u-mv-matrix mv
    u-color (vec color)
-   a-position {:data vertices :count (/ (.-length vertices) 2)}})
+   a-position {:data vertices :count vertex-count}})
 
 (defn get-perspective-matrix [width height]
   (mat/ortho 0 0 width height 0.1 1000))
 
-;; (defn save-image []
-;;   (let [data (.getImageData baked-ctx 0 0
-;;                             (first baked-dimen) (second baked-dimen))]
-;;     (.setItem js/localforage "image" (.toDataURL baked-cvs))))
+(defn save-state []
+  (.setItem js/localforage "meshes" (apply array (map (fn [m] (.serialize m)) paint-meshes)))
+  (.setItem js/localforage "current-mesh" (.serialize current-mesh))
+  (.setItem js/localforage "app-state" (clj->js @app-state)))
 
-;; (defn load-image []
-;;   (go
-;;     (let [value (<! (get-from-storage "image"))]
-;;       (if value
-;;         (let [img (js/Image.)]
-;;           (.addEventListener img "load"
-;;                              (fn [e]
-;;                                (.drawImage baked-ctx img 0 0)))
-;;           (set! (.-src img) value))))))
+(defn load-state []
+  (go
+    (set! paint-meshes (mapv (fn [data] (.unserialize js/Mesh2d data))
+                             (<! (get-from-storage "meshes"))))
+    (set! current-mesh (.unserialize js/Mesh2d
+                                     (<! (get-from-storage "current-mesh"))))
+    (let [state (<! (get-from-storage "app-state"))]
+      (swap! app-state (fn [x] (js->clj state
+                                        :keywordize-keys true))))))
 
-;; (defn save-state []
-;;   (save-image)
-;;   (.setItem js/localforage "lines" (clj->js lines))
-;;   (.setItem js/localforage "app-state" (clj->js @app-state)))
-
-;; (defn load-state []
-;;   (load-image)
-;;   (go
-;;     (set! lines (js->clj (<! (get-from-storage "lines"))
-;;                          :keywordize-keys true))
-;;     (let [state (<! (get-from-storage "app-state"))]
-;;       (swap! app-state (fn [x] (js->clj state
-;;                                         :keywordize-keys true))))))
-
-;; (defn clear-canvas []
-;;   (if (js/confirm "Are you sure you want to clear the canvas?")
-;;     (set! points [])))
-
-(defn set-cursor [point]
-  (set! cursor point))
+(defn clear-canvas []
+  (if (js/confirm "Are you sure you want to clear the canvas?")
+    (do
+      (set! paint-meshes [])
+      (set! stroke-history [])
+      (set! current-mesh nil))))
 
 (defn finalize-stroke []
   (set! paint-meshes (conj paint-meshes current-mesh))
@@ -102,52 +89,47 @@
 
 (defn start-stroke [point]
   (let [[x y] point]
-    (.addFace current-mesh x y x y x y)
-    (.addFace current-mesh x y x y x y)))
+    (set! stroke-history (conj stroke-history (.getPointer current-mesh)))
+    (.setCurrentPos current-mesh x y x y)))
+
+(defn add-face [mesh p1 p2 p3]
+  (.addFace mesh
+            (nth p1 0) (nth p1 1)
+            (nth p2 0) (nth p2 1)
+            (nth p3 0) (nth p3 1)))
 
 (defn add-to-stroke [point pressure]
-  (let [width (* (.pow js/Math pressure 2) 10)
-        valid (> (.getPointer current-mesh) 0)
-        last-point1 (if valid
-                      (vec/vec2 (.getOffsetValue current-mesh 12)
-                                (.getOffsetValue current-mesh 11))
-                      point)
-        last-point2 (if valid
-                      (vec/vec2 (.getOffsetValue current-mesh 10)
-                                (.getOffsetValue current-mesh 9))
-                      point)
+  (let [width (* (.pow js/Math pressure 2) 20)
+        current-pos (.getCurrentPos current-mesh)
+        last-point1 (vec/vec2 (nth current-pos 0) (nth current-pos 1))
+        last-point2 (vec/vec2 (nth current-pos 2) (nth current-pos 3))
         last-middle (geom/+ last-point1
                             (geom/div (geom/- last-point2 last-point1) 2))
         
-        vec (geom/- (vec/vec2 point) last-middle)
-        normalized (geom/* (geom/normalize vec) width)
-        r1 (geom/rotate normalized (/ PI 2))
-        r2 (geom/rotate normalized (/ PI -2))
-
-        p1 (geom/+ point r1)
-        p2 (geom/+ point r2)
-        p3 last-point1
-        
-        p4 last-point1
-        p5 (geom/+ point r2)
-        p6 last-point2]
-    (.addFace
-     current-mesh
-     (nth p1 0) (nth p1 1)
-     (nth p2 0) (nth p2 1)
-     (nth p3 0) (nth p3 1))
-    (.addFace
-     current-mesh
-     (nth p4 0) (nth p4 1)
-     (nth p5 0) (nth p5 1)
-     (nth p6 0) (nth p6 1))))
+        vec (geom/- (vec/vec2 point) last-middle)]
+    (if (> (geom/dot vec vec) 2)
+      (let [normalized (geom/* (geom/normalize vec) width)
+            r1 (geom/rotate normalized (/ PI 2))
+            r2 (geom/rotate normalized (/ PI -2))
+            c1 (geom/+ point r1)
+            c2 (geom/+ point r2)
+            c3 last-point1
+            c4 last-point2]
+        (add-face current-mesh c1 point c3)
+        (add-face current-mesh c3 point last-middle)
+        (add-face current-mesh point c2 last-middle)
+        (add-face current-mesh last-middle c2 c4)
+        (.setCurrentPos
+         current-mesh
+         (nth c1 0) (nth c1 1) (nth c2 0) (nth c2 1))))))
 
 (defn render-mesh [mesh driver program pers mv]
   (gd/draw-arrays driver
                   (gd/bind driver program
                            (renderable pers mv
                                        (.getColor mesh)
-                                       (.getVertices mesh)))
+                                       (.getVertices mesh)
+                                       (/ (.getPointer mesh) 2)))
                   {:draw-mode :triangles}))
 
 (defn render []
@@ -165,11 +147,17 @@
   (render)
   (js/requestAnimationFrame render-loop))
 
-;; (defn undo []
-;;   (set! lines (vec
-;;                (if (= (count (last lines)) 0)
-;;                  (drop-last 2 lines)
-;;                  (drop-last 1 lines)))))
+(defn undo []
+  (let [ptr (last stroke-history)
+        history (drop-last 1 stroke-history)]
+    (if current-mesh
+      (do
+        (.setPointer current-mesh ptr)
+        (set! stroke-history (vec history))
+        (if (= ptr 0)
+          (do
+            (set! current-mesh (last paint-meshes))
+            (set! paint-meshes (vec (drop-last 1 paint-meshes)))))))))
 
 ;; interface
 
@@ -333,7 +321,7 @@
         program (dp/program driver program-source)
         pers (get-perspective-matrix w h)]
     (.viewport gl 0 0 (* w 2) (* h 2))
-    (.clearColor gl 0 0 0 1)
+    (.clearColor gl 1 1 1 1)
 
     {:gl gl :driver driver :program program :pers pers}))
 
@@ -346,15 +334,15 @@
             canvas (.querySelector node "canvas")]
         
         (set! renderer (init canvas))
-        ;;(load-state)
+        (load-state)
         (render-loop)
 
-        (let [moved (listen canvas "pointermove")]
+        (let [moved (listen container "pointermove")]
           (go-loop [last-pressure 0]
             (if-let [e (<! moved)]
-              (let [point (vec/vec2 (.-layerX e) (.-layerY e))
+              (let [point (vec/vec2 (- (.-layerX e) boundary)
+                                    (- (.-layerY e) boundary))
                     pressure (.-mozPressure e)]
-                ;;(set-cursor point)
                 (cond
                   (not (:current-color @app-state))
                   nil
@@ -370,25 +358,25 @@
                     (if (not current-mesh)
                       (set! current-mesh (js/Mesh2d. (:current-color @app-state))))
                     (start-stroke point))
-                  
+
                   :else
                   (add-to-stroke point pressure))
                 (recur pressure)))))
 
-        ;; (let [keydown (listen js/window "keydown"
-        ;;                       (fn [e]
-        ;;                         (let [kc (.-keyCode e)]
-        ;;                           (if (or (= kc 83) (= kc 90))
-        ;;                             (.preventDefault e)))))]
-        ;;   (go-loop []
-        ;;     (let [e (<! keydown)]
-        ;;       (if (.-metaKey e)
-        ;;         (case (.-keyCode e)
-        ;;           ;;83 (save-state)
-        ;;           ;;90 (undo)
-        ;;           67 (clear-canvas)
-        ;;           :else)))
-        ;;     (recur)))
+        (let [keydown (listen js/window "keydown"
+                              (fn [e]
+                                (let [kc (.-keyCode e)]
+                                  (if (or (= kc 83) (= kc 90))
+                                    (.preventDefault e)))))]
+          (go-loop []
+            (let [e (<! keydown)]
+              (if (.-metaKey e)
+                (case (.-keyCode e)
+                  83 (save-state)
+                  90 (undo)
+                  67 (clear-canvas)
+                  :else)))
+            (recur)))
         ))
 
     om/IRender
@@ -399,23 +387,25 @@
                         :backgroundColor "#222222"}}
        (dom/div
         #js {:className "canvas-container"
-             :style
-             #js {:overflow "hidden"}}
-        (let [dimen 1200
-              style #js {:position "absolute"
-                         :top 0
-                         :left 0
-                         :right 0
-                         :bottom 0
-                         :margin "auto"
-                         :border "1px solid #333333"
-                         :width (/ dimen 2)
-                         :height (/ dimen 2)
-                         ;;:cursor "none"
-                         }]
-          #js [(dom/canvas #js {:width dimen
-                                :height dimen
-                                :style style})]))
+             :style #js
+             {:overflow "hidden"
+              :position "absolute"
+              :top 0
+              :left 0
+              :right 0
+              :bottom 0
+              :margin "auto"
+              :border "1px solid #2f2f2f"
+              :width (+ (/ dimen 2) (* boundary 2))
+              :height (+ (/ dimen 2) (* boundary 2))
+              :padding 50
+              :cursor "crosshair"}}
+        (dom/canvas
+         #js {:width dimen
+              :height dimen
+              :style #js
+              {:width (/ dimen 2)
+               :height (/ dimen 2)}}))
        (color-chooser data)))))
 
 (om/root app app-state
