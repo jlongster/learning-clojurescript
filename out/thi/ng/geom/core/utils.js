@@ -26,8 +26,8 @@ return thi.ng.geom.core.mix.call(null,a,b,t);
 }
 });
 thi.ng.geom.core.utils.closest_point_on_segments = (function thi$ng$geom$core$utils$closest_point_on_segments(p,segments){
-return cljs.core.transduce.call(null,cljs.core.map.call(null,(function (p1__19554_SHARP_){
-return cljs.core.apply.call(null,thi.ng.geom.core.utils.closest_point_on_segment,p,p1__19554_SHARP_);
+return cljs.core.transduce.call(null,cljs.core.map.call(null,(function (p1__19650_SHARP_){
+return cljs.core.apply.call(null,thi.ng.geom.core.utils.closest_point_on_segment,p,p1__19650_SHARP_);
 })),cljs.core.completing.call(null,(function (a,q){
 var d_SINGLEQUOTE_ = thi.ng.geom.core.dist_squared.call(null,p,q);
 if((d_SINGLEQUOTE_ < a.call(null,(1)))){
@@ -66,16 +66,16 @@ return null;
 });
 thi.ng.geom.core.utils.dist_STAR_ = (function thi$ng$geom$core$utils$dist_STAR_(rf){
 return (function (c,points){
-return Math.sqrt(cljs.core.transduce.call(null,cljs.core.map.call(null,(function (p1__19555_SHARP_){
-return thi.ng.geom.core.dist_squared.call(null,c,p1__19555_SHARP_);
+return Math.sqrt(cljs.core.transduce.call(null,cljs.core.map.call(null,(function (p1__19651_SHARP_){
+return thi.ng.geom.core.dist_squared.call(null,c,p1__19651_SHARP_);
 })),rf,points));
 });
 });
 thi.ng.geom.core.utils.min_dist = thi.ng.geom.core.utils.dist_STAR_.call(null,cljs.core.min);
 thi.ng.geom.core.utils.max_dist = thi.ng.geom.core.utils.dist_STAR_.call(null,cljs.core.max);
 thi.ng.geom.core.utils.arc_length_index = (function thi$ng$geom$core$utils$arc_length_index(points){
-return cljs.core.transduce.call(null,cljs.core.map.call(null,(function (p1__19556_SHARP_){
-return thi.ng.geom.core.dist.call(null,p1__19556_SHARP_.call(null,(0)),p1__19556_SHARP_.call(null,(1)));
+return cljs.core.transduce.call(null,cljs.core.map.call(null,(function (p1__19652_SHARP_){
+return thi.ng.geom.core.dist.call(null,p1__19652_SHARP_.call(null,(0)),p1__19652_SHARP_.call(null,(1)));
 })),cljs.core.completing.call(null,(function (a,d){
 return cljs.core.conj.call(null,a,(cljs.core.peek.call(null,a) + d));
 })),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(0)], null),thi.ng.common.data.core.successive_nth.call(null,(2),points));
@@ -83,13 +83,13 @@ return cljs.core.conj.call(null,a,(cljs.core.peek.call(null,a) + d));
 thi.ng.geom.core.utils.arc_length = (function thi$ng$geom$core$utils$arc_length(points){
 return thi.ng.common.data.core.reduce_pairs.call(null,cljs.core._PLUS_,thi.ng.geom.core.dist,points);
 });
-thi.ng.geom.core.utils.centroid = (function thi$ng$geom$core$utils$centroid(p__19557){
-var vec__19560 = p__19557;
-var x = cljs.core.nth.call(null,vec__19560,(0),null);
-var xs = cljs.core.nthnext.call(null,vec__19560,(1));
-var coll = vec__19560;
-var G__19561 = cljs.core.count.call(null,coll);
-switch (G__19561) {
+thi.ng.geom.core.utils.centroid = (function thi$ng$geom$core$utils$centroid(p__19653){
+var vec__19656 = p__19653;
+var x = cljs.core.nth.call(null,vec__19656,(0),null);
+var xs = cljs.core.nthnext.call(null,vec__19656,(1));
+var coll = vec__19656;
+var G__19657 = cljs.core.count.call(null,coll);
+switch (G__19657) {
 case (0):
 return null;
 
@@ -104,18 +104,18 @@ return thi.ng.geom.core.mix.call(null,x,cljs.core.first.call(null,xs));
 break;
 default:
 var s = (1.0 / cljs.core.count.call(null,coll));
-var f = ((function (s,G__19561,vec__19560,x,xs,coll){
+var f = ((function (s,G__19657,vec__19656,x,xs,coll){
 return (function (x__$1,_){
 return (x__$1 * s);
-});})(s,G__19561,vec__19560,x,xs,coll))
+});})(s,G__19657,vec__19656,x,xs,coll))
 ;
 return thi.ng.geom.core.reduce_vector.call(null,x,cljs.core._PLUS_,f,xs);
 
 }
 });
 thi.ng.geom.core.utils.center = (function thi$ng$geom$core$utils$center(){
-var G__19565 = arguments.length;
-switch (G__19565) {
+var G__19661 = arguments.length;
+switch (G__19661) {
 case 2:
 return thi.ng.geom.core.utils.center.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -137,16 +137,16 @@ return thi.ng.geom.core.utils.center.call(null,thi.ng.geom.core.utils.centroid.c
 thi.ng.geom.core.utils.center.cljs$core$IFn$_invoke$arity$3 = (function (c,c_SINGLEQUOTE_,coll){
 var d = thi.ng.geom.core._.call(null,c_SINGLEQUOTE_,c);
 return cljs.core.mapv.call(null,((function (d){
-return (function (p1__19563_SHARP_){
-return thi.ng.geom.core._PLUS_.call(null,p1__19563_SHARP_,d);
+return (function (p1__19659_SHARP_){
+return thi.ng.geom.core._PLUS_.call(null,p1__19659_SHARP_,d);
 });})(d))
 ,coll);
 });
 
 thi.ng.geom.core.utils.center.cljs$lang$maxFixedArity = 3;
 thi.ng.geom.core.utils.scale_size = (function thi$ng$geom$core$utils$scale_size(){
-var G__19569 = arguments.length;
-switch (G__19569) {
+var G__19665 = arguments.length;
+switch (G__19665) {
 case 2:
 return thi.ng.geom.core.utils.scale_size.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -166,17 +166,17 @@ return thi.ng.geom.core.utils.scale_size.call(null,thi.ng.geom.core.utils.centro
 });
 
 thi.ng.geom.core.utils.scale_size.cljs$core$IFn$_invoke$arity$3 = (function (c,s,coll){
-return cljs.core.mapv.call(null,(function (p1__19567_SHARP_){
-return thi.ng.geom.core.madd.call(null,thi.ng.geom.core._.call(null,p1__19567_SHARP_,c),s,c);
+return cljs.core.mapv.call(null,(function (p1__19663_SHARP_){
+return thi.ng.geom.core.madd.call(null,thi.ng.geom.core._.call(null,p1__19663_SHARP_,c),s,c);
 }),coll);
 });
 
 thi.ng.geom.core.utils.scale_size.cljs$lang$maxFixedArity = 3;
-thi.ng.geom.core.utils.bounds_STAR_ = (function thi$ng$geom$core$utils$bounds_STAR_(zero,p__19571){
-var vec__19573 = p__19571;
-var x = cljs.core.nth.call(null,vec__19573,(0),null);
-var xs = cljs.core.nthnext.call(null,vec__19573,(1));
-var coll = vec__19573;
+thi.ng.geom.core.utils.bounds_STAR_ = (function thi$ng$geom$core$utils$bounds_STAR_(zero,p__19667){
+var vec__19669 = p__19667;
+var x = cljs.core.nth.call(null,vec__19669,(0),null);
+var xs = cljs.core.nthnext.call(null,vec__19669,(1));
+var coll = vec__19669;
 var c = cljs.core.count.call(null,coll);
 if((c > (1))){
 var p = thi.ng.geom.core.reduce_vector.call(null,x,cljs.core.min,xs);
@@ -201,8 +201,8 @@ thi.ng.geom.core.utils.radial_bounds = (function thi$ng$geom$core$utils$radial_b
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [ctor.call(null,c),((cljs.core.coll_QMARK_.call(null,r_or_points))?thi.ng.geom.core.utils.max_dist.call(null,c,r_or_points):r_or_points)], null);
 });
 thi.ng.geom.core.utils.axis_bounds = (function thi$ng$geom$core$utils$axis_bounds(axis,coll){
-var xs = cljs.core.mapv.call(null,(function (p1__19574_SHARP_){
-return cljs.core.nth.call(null,p1__19574_SHARP_,axis);
+var xs = cljs.core.mapv.call(null,(function (p1__19670_SHARP_){
+return cljs.core.nth.call(null,p1__19670_SHARP_,axis);
 }),coll);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.reduce.call(null,cljs.core.min,xs),cljs.core.reduce.call(null,cljs.core.max,xs)], null);
 });
@@ -210,8 +210,8 @@ thi.ng.geom.core.utils.axis_range = (function thi$ng$geom$core$utils$axis_range(
 return (- cljs.core.apply.call(null,cljs.core._,thi.ng.geom.core.utils.axis_bounds.call(null,axis,coll)));
 });
 thi.ng.geom.core.utils.delta_contains = (function thi$ng$geom$core$utils$delta_contains(points,p,eps){
-return cljs.core.some.call(null,(function (p1__19575_SHARP_){
-return thi.ng.common.math.core.delta_EQ_.call(null,p,p1__19575_SHARP_,eps);
+return cljs.core.some.call(null,(function (p1__19671_SHARP_){
+return thi.ng.common.math.core.delta_EQ_.call(null,p,p1__19671_SHARP_,eps);
 }),points);
 });
 thi.ng.geom.core.utils.from_barycentric = (function thi$ng$geom$core$utils$from_barycentric(points,weights){
@@ -222,8 +222,8 @@ var ct = (t * total);
 var i__$1 = ((function (){var i__$1 = i;
 while(true){
 if((ct >= idx.call(null,i__$1))){
-var G__19576 = (i__$1 + (1));
-i__$1 = G__19576;
+var G__19672 = (i__$1 + (1));
+i__$1 = G__19672;
 continue;
 } else {
 return i__$1;
@@ -236,8 +236,8 @@ var pi = idx.call(null,i1);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [thi.ng.geom.core.mix.call(null,cljs.core.nth.call(null,points,i1),cljs.core.nth.call(null,points,i__$1),((ct - pi) / (idx.call(null,i__$1) - pi))),i__$1], null);
 });
 thi.ng.geom.core.utils.point_at = (function thi$ng$geom$core$utils$point_at(){
-var G__19578 = arguments.length;
-switch (G__19578) {
+var G__19674 = arguments.length;
+switch (G__19674) {
 case 2:
 return thi.ng.geom.core.utils.point_at.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -296,15 +296,15 @@ var i = (1);
 var acc = cljs.core.PersistentVector.EMPTY;
 while(true){
 if((t < 1.0)){
-var vec__19581 = thi.ng.geom.core.utils.point_at_STAR_.call(null,points,idx,total,t,i);
-var p = cljs.core.nth.call(null,vec__19581,(0),null);
-var i__$1 = cljs.core.nth.call(null,vec__19581,(1),null);
-var G__19582 = (t + delta);
-var G__19583 = (i__$1 | (0));
-var G__19584 = cljs.core.conj.call(null,acc,p);
-t = G__19582;
-i = G__19583;
-acc = G__19584;
+var vec__19677 = thi.ng.geom.core.utils.point_at_STAR_.call(null,points,idx,total,t,i);
+var p = cljs.core.nth.call(null,vec__19677,(0),null);
+var i__$1 = cljs.core.nth.call(null,vec__19677,(1),null);
+var G__19678 = (t + delta);
+var G__19679 = (i__$1 | (0));
+var G__19680 = cljs.core.conj.call(null,acc,p);
+t = G__19678;
+i = G__19679;
+acc = G__19680;
 continue;
 } else {
 return acc;
@@ -332,25 +332,25 @@ return thi.ng.geom.core.utils.sample_uniform_STAR_.call(null,udist,include_last_
 }
 });
 thi.ng.geom.core.utils.sample_segment_with_res = (function thi$ng$geom$core$utils$sample_segment_with_res(a,b,res,include_b_QMARK_){
-var ls = (function (){var iter__5704__auto__ = (function thi$ng$geom$core$utils$sample_segment_with_res_$_iter__19589(s__19590){
+var ls = (function (){var iter__5704__auto__ = (function thi$ng$geom$core$utils$sample_segment_with_res_$_iter__19685(s__19686){
 return (new cljs.core.LazySeq(null,(function (){
-var s__19590__$1 = s__19590;
+var s__19686__$1 = s__19686;
 while(true){
-var temp__4422__auto__ = cljs.core.seq.call(null,s__19590__$1);
+var temp__4422__auto__ = cljs.core.seq.call(null,s__19686__$1);
 if(temp__4422__auto__){
-var s__19590__$2 = temp__4422__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__19590__$2)){
-var c__5702__auto__ = cljs.core.chunk_first.call(null,s__19590__$2);
+var s__19686__$2 = temp__4422__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__19686__$2)){
+var c__5702__auto__ = cljs.core.chunk_first.call(null,s__19686__$2);
 var size__5703__auto__ = cljs.core.count.call(null,c__5702__auto__);
-var b__19592 = cljs.core.chunk_buffer.call(null,size__5703__auto__);
-if((function (){var i__19591 = (0);
+var b__19688 = cljs.core.chunk_buffer.call(null,size__5703__auto__);
+if((function (){var i__19687 = (0);
 while(true){
-if((i__19591 < size__5703__auto__)){
-var t = cljs.core._nth.call(null,c__5702__auto__,i__19591);
-cljs.core.chunk_append.call(null,b__19592,thi.ng.geom.core.mix.call(null,a,b,t));
+if((i__19687 < size__5703__auto__)){
+var t = cljs.core._nth.call(null,c__5702__auto__,i__19687);
+cljs.core.chunk_append.call(null,b__19688,thi.ng.geom.core.mix.call(null,a,b,t));
 
-var G__19593 = (i__19591 + (1));
-i__19591 = G__19593;
+var G__19689 = (i__19687 + (1));
+i__19687 = G__19689;
 continue;
 } else {
 return true;
@@ -358,13 +358,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__19592),thi$ng$geom$core$utils$sample_segment_with_res_$_iter__19589.call(null,cljs.core.chunk_rest.call(null,s__19590__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__19688),thi$ng$geom$core$utils$sample_segment_with_res_$_iter__19685.call(null,cljs.core.chunk_rest.call(null,s__19686__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__19592),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__19688),null);
 }
 } else {
-var t = cljs.core.first.call(null,s__19590__$2);
-return cljs.core.cons.call(null,thi.ng.geom.core.mix.call(null,a,b,t),thi$ng$geom$core$utils$sample_segment_with_res_$_iter__19589.call(null,cljs.core.rest.call(null,s__19590__$2)));
+var t = cljs.core.first.call(null,s__19686__$2);
+return cljs.core.cons.call(null,thi.ng.geom.core.mix.call(null,a,b,t),thi$ng$geom$core$utils$sample_segment_with_res_$_iter__19685.call(null,cljs.core.rest.call(null,s__19686__$2)));
 }
 } else {
 return null;
@@ -386,15 +386,15 @@ return cljs.core.butlast.call(null,ls);
  * coordinates. Applies bilinear interpolation to compute point within
  * the rect: U is coord along AB/DC edge, V along BC/AD
  */
-thi.ng.geom.core.utils.map_bilinear = (function thi$ng$geom$core$utils$map_bilinear(p__19594,p__19595){
-var vec__19598 = p__19594;
-var a = cljs.core.nth.call(null,vec__19598,(0),null);
-var b = cljs.core.nth.call(null,vec__19598,(1),null);
-var c = cljs.core.nth.call(null,vec__19598,(2),null);
-var d = cljs.core.nth.call(null,vec__19598,(3),null);
-var vec__19599 = p__19595;
-var u = cljs.core.nth.call(null,vec__19599,(0),null);
-var v = cljs.core.nth.call(null,vec__19599,(1),null);
+thi.ng.geom.core.utils.map_bilinear = (function thi$ng$geom$core$utils$map_bilinear(p__19690,p__19691){
+var vec__19694 = p__19690;
+var a = cljs.core.nth.call(null,vec__19694,(0),null);
+var b = cljs.core.nth.call(null,vec__19694,(1),null);
+var c = cljs.core.nth.call(null,vec__19694,(2),null);
+var d = cljs.core.nth.call(null,vec__19694,(3),null);
+var vec__19695 = p__19691;
+var u = cljs.core.nth.call(null,vec__19695,(0),null);
+var v = cljs.core.nth.call(null,vec__19695,(1),null);
 return thi.ng.geom.core.mix.call(null,a,b,d,c,u,v);
 });
 /**
@@ -403,25 +403,25 @@ return thi.ng.geom.core.mix.call(null,a,b,d,c,u,v);
  * within the cuboid: U is coord along AD/BC edge, V along AE/BF, W
  * along AB/DC (see above diagram)
  */
-thi.ng.geom.core.utils.map_trilinear = (function thi$ng$geom$core$utils$map_trilinear(p__19600,p__19601){
-var vec__19604 = p__19600;
-var a = cljs.core.nth.call(null,vec__19604,(0),null);
-var b = cljs.core.nth.call(null,vec__19604,(1),null);
-var c = cljs.core.nth.call(null,vec__19604,(2),null);
-var d = cljs.core.nth.call(null,vec__19604,(3),null);
-var e = cljs.core.nth.call(null,vec__19604,(4),null);
-var f = cljs.core.nth.call(null,vec__19604,(5),null);
-var g = cljs.core.nth.call(null,vec__19604,(6),null);
-var h = cljs.core.nth.call(null,vec__19604,(7),null);
-var vec__19605 = p__19601;
-var u = cljs.core.nth.call(null,vec__19605,(0),null);
-var v = cljs.core.nth.call(null,vec__19605,(1),null);
-var w = cljs.core.nth.call(null,vec__19605,(2),null);
+thi.ng.geom.core.utils.map_trilinear = (function thi$ng$geom$core$utils$map_trilinear(p__19696,p__19697){
+var vec__19700 = p__19696;
+var a = cljs.core.nth.call(null,vec__19700,(0),null);
+var b = cljs.core.nth.call(null,vec__19700,(1),null);
+var c = cljs.core.nth.call(null,vec__19700,(2),null);
+var d = cljs.core.nth.call(null,vec__19700,(3),null);
+var e = cljs.core.nth.call(null,vec__19700,(4),null);
+var f = cljs.core.nth.call(null,vec__19700,(5),null);
+var g = cljs.core.nth.call(null,vec__19700,(6),null);
+var h = cljs.core.nth.call(null,vec__19700,(7),null);
+var vec__19701 = p__19697;
+var u = cljs.core.nth.call(null,vec__19701,(0),null);
+var v = cljs.core.nth.call(null,vec__19701,(1),null);
+var w = cljs.core.nth.call(null,vec__19701,(2),null);
 return thi.ng.geom.core.mix.call(null,thi.ng.geom.core.mix.call(null,a,d,e,h,u,v),thi.ng.geom.core.mix.call(null,b,c,f,g,u,v),w);
 });
 thi.ng.geom.core.utils.tessellate_with_point = (function thi$ng$geom$core$utils$tessellate_with_point(){
-var G__19608 = arguments.length;
-switch (G__19608) {
+var G__19704 = arguments.length;
+switch (G__19704) {
 case 1:
 return thi.ng.geom.core.utils.tessellate_with_point.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -441,51 +441,51 @@ return thi.ng.geom.core.utils.tessellate_with_point.call(null,thi.ng.geom.core.u
 });
 
 thi.ng.geom.core.utils.tessellate_with_point.cljs$core$IFn$_invoke$arity$2 = (function (c,points){
-return cljs.core.mapv.call(null,(function (p1__19606_SHARP_){
-return (new cljs.core.PersistentVector(null,3,(5),cljs.core.PersistentVector.EMPTY_NODE,[c,p1__19606_SHARP_.call(null,(0)),p1__19606_SHARP_.call(null,(1))],null));
+return cljs.core.mapv.call(null,(function (p1__19702_SHARP_){
+return (new cljs.core.PersistentVector(null,3,(5),cljs.core.PersistentVector.EMPTY_NODE,[c,p1__19702_SHARP_.call(null,(0)),p1__19702_SHARP_.call(null,(1))],null));
 }),thi.ng.common.data.core.successive_nth.call(null,(2),cljs.core.concat.call(null,points,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.first.call(null,points)], null))));
 });
 
 thi.ng.geom.core.utils.tessellate_with_point.cljs$lang$maxFixedArity = 2;
 thi.ng.geom.core.utils.tessellate_with_first = (function thi$ng$geom$core$utils$tessellate_with_first(points){
 if((cljs.core.count.call(null,points) > (3))){
-var vec__19613 = points;
-var v0 = cljs.core.nth.call(null,vec__19613,(0),null);
-var more = cljs.core.nthnext.call(null,vec__19613,(1));
-return cljs.core.mapv.call(null,((function (vec__19613,v0,more){
-return (function (p__19614){
-var vec__19615 = p__19614;
-var a = cljs.core.nth.call(null,vec__19615,(0),null);
-var b = cljs.core.nth.call(null,vec__19615,(1),null);
+var vec__19709 = points;
+var v0 = cljs.core.nth.call(null,vec__19709,(0),null);
+var more = cljs.core.nthnext.call(null,vec__19709,(1));
+return cljs.core.mapv.call(null,((function (vec__19709,v0,more){
+return (function (p__19710){
+var vec__19711 = p__19710;
+var a = cljs.core.nth.call(null,vec__19711,(0),null);
+var b = cljs.core.nth.call(null,vec__19711,(1),null);
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [v0,a,b], null);
-});})(vec__19613,v0,more))
+});})(vec__19709,v0,more))
 ,thi.ng.common.data.core.successive_nth.call(null,(2),more));
 } else {
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [points], null);
 }
 });
-thi.ng.geom.core.utils.tessellate_tri_with_midpoints = (function thi$ng$geom$core$utils$tessellate_tri_with_midpoints(p__19616){
-var vec__19618 = p__19616;
-var a = cljs.core.nth.call(null,vec__19618,(0),null);
-var b = cljs.core.nth.call(null,vec__19618,(1),null);
-var c = cljs.core.nth.call(null,vec__19618,(2),null);
+thi.ng.geom.core.utils.tessellate_tri_with_midpoints = (function thi$ng$geom$core$utils$tessellate_tri_with_midpoints(p__19712){
+var vec__19714 = p__19712;
+var a = cljs.core.nth.call(null,vec__19714,(0),null);
+var b = cljs.core.nth.call(null,vec__19714,(1),null);
+var c = cljs.core.nth.call(null,vec__19714,(2),null);
 var ab = thi.ng.geom.core.mix.call(null,a,b);
 var bc = thi.ng.geom.core.mix.call(null,b,c);
 var ca = thi.ng.geom.core.mix.call(null,c,a);
 return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [a,ab,ca], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [ab,b,bc], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [bc,c,ca], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [ab,bc,ca], null)], null);
 });
 thi.ng.geom.core.utils.tessellate_3 = (function thi$ng$geom$core$utils$tessellate_3(points){
-var pred__19623 = cljs.core._EQ_;
-var expr__19624 = cljs.core.count.call(null,points);
-if(cljs.core.truth_(pred__19623.call(null,(3),expr__19624))){
+var pred__19719 = cljs.core._EQ_;
+var expr__19720 = cljs.core.count.call(null,points);
+if(cljs.core.truth_(pred__19719.call(null,(3),expr__19720))){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [points], null);
 } else {
-if(cljs.core.truth_(pred__19623.call(null,(4),expr__19624))){
-var vec__19626 = points;
-var a = cljs.core.nth.call(null,vec__19626,(0),null);
-var b = cljs.core.nth.call(null,vec__19626,(1),null);
-var c = cljs.core.nth.call(null,vec__19626,(2),null);
-var d = cljs.core.nth.call(null,vec__19626,(3),null);
+if(cljs.core.truth_(pred__19719.call(null,(4),expr__19720))){
+var vec__19722 = points;
+var a = cljs.core.nth.call(null,vec__19722,(0),null);
+var b = cljs.core.nth.call(null,vec__19722,(1),null);
+var c = cljs.core.nth.call(null,vec__19722,(2),null);
+var d = cljs.core.nth.call(null,vec__19722,(3),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [a,b,c], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [a,c,d], null)], null);
 } else {
 return thi.ng.geom.core.utils.tessellate_with_point.call(null,points);
@@ -500,8 +500,8 @@ return thi.ng.geom.core.utils.tessellate_with_point.call(null,points);
 }
 });
 thi.ng.geom.core.utils.ortho_normal = (function thi$ng$geom$core$utils$ortho_normal(){
-var G__19628 = arguments.length;
-switch (G__19628) {
+var G__19724 = arguments.length;
+switch (G__19724) {
 case 1:
 return thi.ng.geom.core.utils.ortho_normal.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -520,11 +520,11 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 }
 });
 
-thi.ng.geom.core.utils.ortho_normal.cljs$core$IFn$_invoke$arity$1 = (function (p__19629){
-var vec__19630 = p__19629;
-var a = cljs.core.nth.call(null,vec__19630,(0),null);
-var b = cljs.core.nth.call(null,vec__19630,(1),null);
-var c = cljs.core.nth.call(null,vec__19630,(2),null);
+thi.ng.geom.core.utils.ortho_normal.cljs$core$IFn$_invoke$arity$1 = (function (p__19725){
+var vec__19726 = p__19725;
+var a = cljs.core.nth.call(null,vec__19726,(0),null);
+var b = cljs.core.nth.call(null,vec__19726,(1),null);
+var c = cljs.core.nth.call(null,vec__19726,(2),null);
 return thi.ng.geom.core.normalize.call(null,thi.ng.geom.core.cross.call(null,thi.ng.geom.core._.call(null,b,a),thi.ng.geom.core._.call(null,c,a)));
 });
 
@@ -537,16 +537,16 @@ return thi.ng.geom.core.normalize.call(null,thi.ng.geom.core.cross.call(null,thi
 });
 
 thi.ng.geom.core.utils.ortho_normal.cljs$lang$maxFixedArity = 3;
-thi.ng.geom.core.utils.norm_sign2 = (function thi$ng$geom$core$utils$norm_sign2(p__19632,p__19633,p__19634){
-var vec__19638 = p__19632;
-var ax = cljs.core.nth.call(null,vec__19638,(0),null);
-var ay = cljs.core.nth.call(null,vec__19638,(1),null);
-var vec__19639 = p__19633;
-var bx = cljs.core.nth.call(null,vec__19639,(0),null);
-var by = cljs.core.nth.call(null,vec__19639,(1),null);
-var vec__19640 = p__19634;
-var cx = cljs.core.nth.call(null,vec__19640,(0),null);
-var cy = cljs.core.nth.call(null,vec__19640,(1),null);
+thi.ng.geom.core.utils.norm_sign2 = (function thi$ng$geom$core$utils$norm_sign2(p__19728,p__19729,p__19730){
+var vec__19734 = p__19728;
+var ax = cljs.core.nth.call(null,vec__19734,(0),null);
+var ay = cljs.core.nth.call(null,vec__19734,(1),null);
+var vec__19735 = p__19729;
+var bx = cljs.core.nth.call(null,vec__19735,(0),null);
+var by = cljs.core.nth.call(null,vec__19735,(1),null);
+var vec__19736 = p__19730;
+var cx = cljs.core.nth.call(null,vec__19736,(0),null);
+var cy = cljs.core.nth.call(null,vec__19736,(1),null);
 return (((bx - ax) * (cy - ay)) - ((cx - ax) * (by - ay)));
 });
 thi.ng.geom.core.utils.norm_sign3 = (function thi$ng$geom$core$utils$norm_sign3(a,b,c){
@@ -565,8 +565,8 @@ thi.ng.geom.core.utils.clockwise3_QMARK_ = (function thi$ng$geom$core$utils$cloc
 return (thi.ng.geom.core.dot.call(null,thi.ng.geom.core.cross.call(null,thi.ng.geom.core._.call(null,b,a),thi.ng.geom.core._.call(null,c,a)),n) > (0));
 });
 thi.ng.geom.core.utils.triangle_barycentric_coords = (function thi$ng$geom$core$utils$triangle_barycentric_coords(){
-var G__19642 = arguments.length;
-switch (G__19642) {
+var G__19738 = arguments.length;
+switch (G__19738) {
 case 2:
 return thi.ng.geom.core.utils.triangle_barycentric_coords.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -585,11 +585,11 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 }
 });
 
-thi.ng.geom.core.utils.triangle_barycentric_coords.cljs$core$IFn$_invoke$arity$2 = (function (p__19643,p){
-var vec__19644 = p__19643;
-var a = cljs.core.nth.call(null,vec__19644,(0),null);
-var b = cljs.core.nth.call(null,vec__19644,(1),null);
-var c = cljs.core.nth.call(null,vec__19644,(2),null);
+thi.ng.geom.core.utils.triangle_barycentric_coords.cljs$core$IFn$_invoke$arity$2 = (function (p__19739,p){
+var vec__19740 = p__19739;
+var a = cljs.core.nth.call(null,vec__19740,(0),null);
+var b = cljs.core.nth.call(null,vec__19740,(1),null);
+var c = cljs.core.nth.call(null,vec__19740,(2),null);
 return thi.ng.geom.core.utils.triangle_barycentric_coords.call(null,a,b,c,p,thi.ng.geom.core._.call(null,b,a),thi.ng.geom.core._.call(null,c,a));
 });
 
@@ -624,10 +624,10 @@ var v = thi.ng.geom.core._.call(null,c,a);
 var n = thi.ng.geom.core.utils.ortho_normal.call(null,u,v);
 var cl = (thi.ng.geom.core.dot.call(null,n,p) - thi.ng.geom.core.dot.call(null,n,a));
 if(cljs.core.truth_(thi.ng.common.math.core.delta_EQ_.call(null,0.0,cl))){
-var vec__19647 = thi.ng.geom.core.utils.triangle_barycentric_coords.call(null,a,b,c,p,u,v);
-var u__$1 = cljs.core.nth.call(null,vec__19647,(0),null);
-var v__$1 = cljs.core.nth.call(null,vec__19647,(1),null);
-var w = cljs.core.nth.call(null,vec__19647,(2),null);
+var vec__19743 = thi.ng.geom.core.utils.triangle_barycentric_coords.call(null,a,b,c,p,u,v);
+var u__$1 = cljs.core.nth.call(null,vec__19743,(0),null);
+var v__$1 = cljs.core.nth.call(null,vec__19743,(1),null);
+var w = cljs.core.nth.call(null,vec__19743,(2),null);
 var and__4938__auto__ = (u__$1 >= 0.0);
 if(and__4938__auto__){
 var and__4938__auto____$1 = (w >= 0.0);
@@ -646,11 +646,11 @@ return null;
 thi.ng.geom.core.utils.tessellating_transducer = (function thi$ng$geom$core$utils$tessellating_transducer(f){
 return cljs.core.comp.call(null,cljs.core.mapcat.call(null,thi.ng.geom.core.utils.tessellate_with_first),cljs.core.map.call(null,f));
 });
-thi.ng.geom.core.utils.area_xf = thi.ng.geom.core.utils.tessellating_transducer.call(null,(function (p1__19648_SHARP_){
-return thi.ng.common.math.core.abs.call(null,cljs.core.apply.call(null,thi.ng.geom.core.utils.tri_area3,p1__19648_SHARP_));
+thi.ng.geom.core.utils.area_xf = thi.ng.geom.core.utils.tessellating_transducer.call(null,(function (p1__19744_SHARP_){
+return thi.ng.common.math.core.abs.call(null,cljs.core.apply.call(null,thi.ng.geom.core.utils.tri_area3,p1__19744_SHARP_));
 }));
-thi.ng.geom.core.utils.volume_xf = thi.ng.geom.core.utils.tessellating_transducer.call(null,(function (p1__19649_SHARP_){
-return thi.ng.geom.core.dot.call(null,p1__19649_SHARP_.call(null,(0)),thi.ng.geom.core.cross.call(null,p1__19649_SHARP_.call(null,(1)),p1__19649_SHARP_.call(null,(2))));
+thi.ng.geom.core.utils.volume_xf = thi.ng.geom.core.utils.tessellating_transducer.call(null,(function (p1__19745_SHARP_){
+return thi.ng.geom.core.dot.call(null,p1__19745_SHARP_.call(null,(0)),thi.ng.geom.core.cross.call(null,p1__19745_SHARP_.call(null,(1)),p1__19745_SHARP_.call(null,(2))));
 }));
 thi.ng.geom.core.utils.total_area_3d = (function thi$ng$geom$core$utils$total_area_3d(faces){
 return cljs.core.transduce.call(null,thi.ng.geom.core.utils.area_xf,cljs.core._PLUS_,faces);

@@ -2,8 +2,8 @@
 goog.provide('gamma_driver.protocols');
 goog.require('cljs.core');
 
-gamma_driver.protocols.IContext = (function (){var obj19321 = {};
-return obj19321;
+gamma_driver.protocols.IContext = (function (){var obj19548 = {};
+return obj19548;
 })();
 
 gamma_driver.protocols.configure = (function gamma_driver$protocols$configure(this$,spec){
@@ -59,8 +59,8 @@ throw cljs.core.missing_protocol.call(null,"IContext.gl",this$);
 });
 
 
-gamma_driver.protocols.IResource = (function (){var obj19323 = {};
-return obj19323;
+gamma_driver.protocols.IResource = (function (){var obj19550 = {};
+return obj19550;
 })();
 
 gamma_driver.protocols.program = (function gamma_driver$protocols$program(this$,spec){
@@ -246,8 +246,8 @@ throw cljs.core.missing_protocol.call(null,"IResource.release",this$);
 });
 
 
-gamma_driver.protocols.IBindVariable = (function (){var obj19325 = {};
-return obj19325;
+gamma_driver.protocols.IBindVariable = (function (){var obj19552 = {};
+return obj19552;
 })();
 
 gamma_driver.protocols.bind_attribute = (function gamma_driver$protocols$bind_attribute(this$,program,attribute,input){
@@ -329,8 +329,8 @@ throw cljs.core.missing_protocol.call(null,"IBindVariable.bind-uniform",this$);
 });
 
 
-gamma_driver.protocols.IBind = (function (){var obj19327 = {};
-return obj19327;
+gamma_driver.protocols.IBind = (function (){var obj19554 = {};
+return obj19554;
 })();
 
 gamma_driver.protocols.bind = (function gamma_driver$protocols$bind(this$,program,spec){
@@ -360,13 +360,13 @@ throw cljs.core.missing_protocol.call(null,"IBind.bind",this$);
 });
 
 
-gamma_driver.protocols.IDraw = (function (){var obj19329 = {};
-return obj19329;
+gamma_driver.protocols.IDraw = (function (){var obj19556 = {};
+return obj19556;
 })();
 
 gamma_driver.protocols.draw_arrays = (function gamma_driver$protocols$draw_arrays(){
-var G__19331 = arguments.length;
-switch (G__19331) {
+var G__19558 = arguments.length;
+switch (G__19558) {
 case 3:
 return gamma_driver.protocols.draw_arrays.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -436,8 +436,8 @@ throw cljs.core.missing_protocol.call(null,"IDraw.draw-arrays",this$);
 gamma_driver.protocols.draw_arrays.cljs$lang$maxFixedArity = 4;
 
 gamma_driver.protocols.draw_elements = (function gamma_driver$protocols$draw_elements(){
-var G__19333 = arguments.length;
-switch (G__19333) {
+var G__19560 = arguments.length;
+switch (G__19560) {
 case 3:
 return gamma_driver.protocols.draw_elements.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 

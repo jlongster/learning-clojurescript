@@ -8,26 +8,26 @@ goog.require('gamma_driver.impl.variable');
 goog.require('gamma_driver.protocols');
 goog.require('gamma_driver.impl.resource');
 gamma_driver.api.configure = (function gamma_driver$api$configure(this$,spec){
-if((function (){var G__19364 = this$;
-if(G__19364){
+if((function (){var G__19925 = this$;
+if(G__19925){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19364.gamma_driver$protocols$IContext$;
+return G__19925.gamma_driver$protocols$IContext$;
 }
 })())){
 return true;
 } else {
-if((!G__19364.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IContext,G__19364);
+if((!G__19925.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IContext,G__19925);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IContext,G__19364);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IContext,G__19925);
 }
 })()){
 return gamma_driver.protocols.configure.call(null,this$,spec);
@@ -39,26 +39,26 @@ return gamma_driver.impl.context.configure.call(null,this$,spec);
  * Returns WebGL context object.
  */
 gamma_driver.api.gl = (function gamma_driver$api$gl(this$){
-if((function (){var G__19366 = this$;
-if(G__19366){
+if((function (){var G__19927 = this$;
+if(G__19927){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19366.gamma_driver$protocols$IContext$;
+return G__19927.gamma_driver$protocols$IContext$;
 }
 })())){
 return true;
 } else {
-if((!G__19366.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IContext,G__19366);
+if((!G__19927.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IContext,G__19927);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IContext,G__19366);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IContext,G__19927);
 }
 })()){
 return gamma_driver.protocols.gl.call(null,this$);
@@ -70,26 +70,26 @@ return gamma_driver$api$gl;
  * Sets the gl context's current program to spec, compiling spec if it does not contain a webgl program object at :program. Returns spec with webgl program object at :program.
  */
 gamma_driver.api.program = (function gamma_driver$api$program(this$,spec){
-if((function (){var G__19368 = this$;
-if(G__19368){
+if((function (){var G__19929 = this$;
+if(G__19929){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19368.gamma_driver$protocols$IResource$;
+return G__19929.gamma_driver$protocols$IResource$;
 }
 })())){
 return true;
 } else {
-if((!G__19368.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19368);
+if((!G__19929.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19929);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19368);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19929);
 }
 })()){
 return gamma_driver.protocols.program.call(null,this$,spec);
@@ -101,26 +101,26 @@ return gamma_driver.impl.resource.program.call(null,this$,spec);
  * Populates and returns an array-buffer model suitable as input to attribute-input. Resuses webgl array buffer object supplied at :array-buffer, otherwise creates new object.
  */
 gamma_driver.api.array_buffer = (function gamma_driver$api$array_buffer(this$,spec){
-if((function (){var G__19370 = this$;
-if(G__19370){
+if((function (){var G__19931 = this$;
+if(G__19931){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19370.gamma_driver$protocols$IResource$;
+return G__19931.gamma_driver$protocols$IResource$;
 }
 })())){
 return true;
 } else {
-if((!G__19370.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19370);
+if((!G__19931.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19931);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19370);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19931);
 }
 })()){
 return gamma_driver.protocols.array_buffer.call(null,this$,spec);
@@ -132,26 +132,26 @@ return gamma_driver.impl.resource.array_buffer.call(null,this$,spec);
  * Populates and returns an element-array-buffer model. Resuses webgl element array buffer object supplied at :element-array-buffer, otherwise creates new object.
  */
 gamma_driver.api.element_array_buffer = (function gamma_driver$api$element_array_buffer(this$,spec){
-if((function (){var G__19372 = this$;
-if(G__19372){
+if((function (){var G__19933 = this$;
+if(G__19933){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19372.gamma_driver$protocols$IResource$;
+return G__19933.gamma_driver$protocols$IResource$;
 }
 })())){
 return true;
 } else {
-if((!G__19372.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19372);
+if((!G__19933.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19933);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19372);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19933);
 }
 })()){
 return gamma_driver.protocols.element_array_buffer.call(null,this$,spec);
@@ -163,26 +163,26 @@ return gamma_driver.impl.resource.element_array_buffer.call(null,this$,spec);
  * Populates and returns a texture model suitable as input to texture-uniform-input.
  */
 gamma_driver.api.texture = (function gamma_driver$api$texture(this$,spec){
-if((function (){var G__19374 = this$;
-if(G__19374){
+if((function (){var G__19935 = this$;
+if(G__19935){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19374.gamma_driver$protocols$IResource$;
+return G__19935.gamma_driver$protocols$IResource$;
 }
 })())){
 return true;
 } else {
-if((!G__19374.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19374);
+if((!G__19935.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19935);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19374);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19935);
 }
 })()){
 return gamma_driver.protocols.texture.call(null,this$,spec);
@@ -194,26 +194,26 @@ return gamma_driver.impl.resource.texture.call(null,this$,spec);
  * Populates and returns a frame-buffer model
  */
 gamma_driver.api.frame_buffer = (function gamma_driver$api$frame_buffer(this$,spec){
-if((function (){var G__19376 = this$;
-if(G__19376){
+if((function (){var G__19937 = this$;
+if(G__19937){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19376.gamma_driver$protocols$IResource$;
+return G__19937.gamma_driver$protocols$IResource$;
 }
 })())){
 return true;
 } else {
-if((!G__19376.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19376);
+if((!G__19937.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19937);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19376);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19937);
 }
 })()){
 return gamma_driver.protocols.frame_buffer.call(null,this$,spec);
@@ -225,26 +225,26 @@ return gamma_driver.impl.resource.frame_buffer.call(null,this$,spec);
  * Populates and returns a render-buffer model.
  */
 gamma_driver.api.render_buffer = (function gamma_driver$api$render_buffer(this$,spec){
-if((function (){var G__19378 = this$;
-if(G__19378){
+if((function (){var G__19939 = this$;
+if(G__19939){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19378.gamma_driver$protocols$IResource$;
+return G__19939.gamma_driver$protocols$IResource$;
 }
 })())){
 return true;
 } else {
-if((!G__19378.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19378);
+if((!G__19939.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19939);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19378);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19939);
 }
 })()){
 return gamma_driver.protocols.render_buffer.call(null,this$,spec);
@@ -256,26 +256,26 @@ return gamma_driver.impl.resource.render_buffer.call(null,this$,spec);
  * Releases webgl objects associated with model.
  */
 gamma_driver.api.release = (function gamma_driver$api$release(this$,resource){
-if((function (){var G__19380 = this$;
-if(G__19380){
+if((function (){var G__19941 = this$;
+if(G__19941){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19380.gamma_driver$protocols$IResource$;
+return G__19941.gamma_driver$protocols$IResource$;
 }
 })())){
 return true;
 } else {
-if((!G__19380.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19380);
+if((!G__19941.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19941);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19380);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IResource,G__19941);
 }
 })()){
 return gamma_driver.protocols.release.call(null,this$,resource);
@@ -287,26 +287,26 @@ return gamma_driver.impl.resource.release.call(null,this$,resource);
  * Binds attribute variable to data in array-buffer-model.
  */
 gamma_driver.api.bind_attribute = (function gamma_driver$api$bind_attribute(this$,program,attribute,array_buffer_model){
-if((function (){var G__19382 = this$;
-if(G__19382){
+if((function (){var G__19943 = this$;
+if(G__19943){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19382.gamma_driver$protocols$IBindVariable$;
+return G__19943.gamma_driver$protocols$IBindVariable$;
 }
 })())){
 return true;
 } else {
-if((!G__19382.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19382);
+if((!G__19943.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19943);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19382);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19943);
 }
 })()){
 return gamma_driver.protocols.bind_attribute.call(null,this$,program,attribute,array_buffer_model);
@@ -318,26 +318,26 @@ return gamma_driver.impl.variable.bind_attribute.call(null,this$,program,attribu
  * Binds texture uniform variable (sampler2D) to data in texture-model.
  */
 gamma_driver.api.bind_texture_uniform = (function gamma_driver$api$bind_texture_uniform(this$,program,uniform,texture_model){
-if((function (){var G__19384 = this$;
-if(G__19384){
+if((function (){var G__19945 = this$;
+if(G__19945){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19384.gamma_driver$protocols$IBindVariable$;
+return G__19945.gamma_driver$protocols$IBindVariable$;
 }
 })())){
 return true;
 } else {
-if((!G__19384.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19384);
+if((!G__19945.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19945);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19384);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19945);
 }
 })()){
 return gamma_driver.protocols.bind_texture_uniform.call(null,this$,program,uniform,texture_model);
@@ -349,26 +349,26 @@ return gamma_driver.impl.variable.bind_texture_uniform.call(null,this$,program,u
  * Binds uniform variable to data.
  */
 gamma_driver.api.bind_uniform = (function gamma_driver$api$bind_uniform(this$,program,uniform,data){
-if((function (){var G__19386 = this$;
-if(G__19386){
+if((function (){var G__19947 = this$;
+if(G__19947){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19386.gamma_driver$protocols$IBindVariable$;
+return G__19947.gamma_driver$protocols$IBindVariable$;
 }
 })())){
 return true;
 } else {
-if((!G__19386.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19386);
+if((!G__19947.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19947);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19386);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBindVariable,G__19947);
 }
 })()){
 return gamma_driver.protocols.bind_uniform.call(null,this$,program,uniform,data);
@@ -380,26 +380,26 @@ return gamma_driver.impl.variable.bind_uniform.call(null,this$,program,uniform,d
  * Binds the program's variables as specified in spec.
  */
 gamma_driver.api.bind = (function gamma_driver$api$bind(this$,prog,spec){
-if((function (){var G__19388 = this$;
-if(G__19388){
+if((function (){var G__19949 = this$;
+if(G__19949){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19388.gamma_driver$protocols$IBind$;
+return G__19949.gamma_driver$protocols$IBind$;
 }
 })())){
 return true;
 } else {
-if((!G__19388.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBind,G__19388);
+if((!G__19949.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBind,G__19949);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBind,G__19388);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IBind,G__19949);
 }
 })()){
 return gamma_driver.protocols.bind.call(null,this$,gamma_driver.api.program,spec);
@@ -408,8 +408,8 @@ return gamma_driver.impl.bind.bind.call(null,new cljs.core.PersistentArrayMap(nu
 }
 });
 gamma_driver.api.draw_arrays = (function gamma_driver$api$draw_arrays(){
-var G__19390 = arguments.length;
-switch (G__19390) {
+var G__19951 = arguments.length;
+switch (G__19951) {
 case 3:
 return gamma_driver.api.draw_arrays.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -425,26 +425,26 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 });
 
 gamma_driver.api.draw_arrays.cljs$core$IFn$_invoke$arity$3 = (function (this$,program,spec){
-if((function (){var G__19391 = this$;
-if(G__19391){
+if((function (){var G__19952 = this$;
+if(G__19952){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19391.gamma_driver$protocols$IDraw$;
+return G__19952.gamma_driver$protocols$IDraw$;
 }
 })())){
 return true;
 } else {
-if((!G__19391.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19391);
+if((!G__19952.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19952);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19391);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19952);
 }
 })()){
 return gamma_driver.protocols.draw_arrays.call(null,this$,program,spec);
@@ -454,26 +454,26 @@ return gamma_driver.impl.draw.draw_arrays.call(null,this$,program,spec);
 });
 
 gamma_driver.api.draw_arrays.cljs$core$IFn$_invoke$arity$4 = (function (this$,program,spec,target){
-if((function (){var G__19392 = this$;
-if(G__19392){
+if((function (){var G__19953 = this$;
+if(G__19953){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19392.gamma_driver$protocols$IDraw$;
+return G__19953.gamma_driver$protocols$IDraw$;
 }
 })())){
 return true;
 } else {
-if((!G__19392.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19392);
+if((!G__19953.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19953);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19392);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19953);
 }
 })()){
 return gamma_driver.protocols.draw_arrays.call(null,this$,program,spec,target);
@@ -484,8 +484,8 @@ return gamma_driver.impl.draw.draw_arrays.call(null,this$,program,spec,target);
 
 gamma_driver.api.draw_arrays.cljs$lang$maxFixedArity = 4;
 gamma_driver.api.draw_elements = (function gamma_driver$api$draw_elements(){
-var G__19395 = arguments.length;
-switch (G__19395) {
+var G__19956 = arguments.length;
+switch (G__19956) {
 case 3:
 return gamma_driver.api.draw_elements.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -501,26 +501,26 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 });
 
 gamma_driver.api.draw_elements.cljs$core$IFn$_invoke$arity$3 = (function (this$,program,spec){
-if((function (){var G__19396 = this$;
-if(G__19396){
+if((function (){var G__19957 = this$;
+if(G__19957){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19396.gamma_driver$protocols$IDraw$;
+return G__19957.gamma_driver$protocols$IDraw$;
 }
 })())){
 return true;
 } else {
-if((!G__19396.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19396);
+if((!G__19957.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19957);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19396);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19957);
 }
 })()){
 return gamma_driver.protocols.draw_elements.call(null,this$,program,spec);
@@ -530,26 +530,26 @@ return gamma_driver.impl.draw.draw_elements.call(null,this$,program,spec);
 });
 
 gamma_driver.api.draw_elements.cljs$core$IFn$_invoke$arity$4 = (function (this$,program,spec,target){
-if((function (){var G__19397 = this$;
-if(G__19397){
+if((function (){var G__19958 = this$;
+if(G__19958){
 var bit__5624__auto__ = null;
 if(cljs.core.truth_((function (){var or__4950__auto__ = bit__5624__auto__;
 if(cljs.core.truth_(or__4950__auto__)){
 return or__4950__auto__;
 } else {
-return G__19397.gamma_driver$protocols$IDraw$;
+return G__19958.gamma_driver$protocols$IDraw$;
 }
 })())){
 return true;
 } else {
-if((!G__19397.cljs$lang$protocol_mask$partition$)){
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19397);
+if((!G__19958.cljs$lang$protocol_mask$partition$)){
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19958);
 } else {
 return false;
 }
 }
 } else {
-return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19397);
+return cljs.core.native_satisfies_QMARK_.call(null,gamma_driver.protocols.IDraw,G__19958);
 }
 })()){
 return gamma_driver.protocols.draw_elements.call(null,this$,program,spec);

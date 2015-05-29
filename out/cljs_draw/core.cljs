@@ -11,7 +11,7 @@
             [gamma-driver.drivers.basic :as driver]
             [gamma-driver.protocols :as dp]
             [gamma-driver.api :as gd]
-            [thi.ng.math.core :refer [PI]]
+            [thi.ng.math.core :as math :refer [PI]]
             [thi.ng.geom.core :as geom]
             [thi.ng.geom.core.vector :as vec]
             [thi.ng.geom.core.matrix :as mat :refer [M44]])
@@ -21,8 +21,8 @@
 (enable-console-print!)
 
 (defonce app-state
-  (atom {:colors ["#bbffbb"]
-         :current-color "#bbffbb"
+  (atom {:colors ["#000000"]
+         :current-color "#000000"
          :listening-for-color false}))
 
 (def dimen 1200)
@@ -41,21 +41,32 @@
 (def u-color
   (g/uniform "uColor" :vec3))
 
+(def a-value
+  (g/attribute "aValue" :float))
+
 (def a-position
   (g/attribute "aVertexPosition" :vec2))
+
+(def v-value
+  (g/varying "vValue" :float :mediump))
 
 (def program-source
   (p/program
    {:vertex-shader   {(g/gl-position)   (-> u-p-matrix
                                             (g/* u-mv-matrix)
-                                            (g/* (g/vec4 a-position 0 1)))}
-    :fragment-shader {(g/gl-frag-color) (g/vec4 u-color 1)}
+                                            (g/* (g/vec4 a-position 0 1)))
+                      v-value a-value}
+    :fragment-shader {;;(g/gl-frag-color) (g/vec4 u-color (g/pow .9 (g/div 1 v-value)))
+                      ;;(g/gl-frag-color) (g/vec4 u-color (g/sin (g/* v-value 100)))
+                      (g/gl-frag-color) (g/vec4 u-color v-value)
+                      }
     :precision {:float :mediump}}))
 
-(defn renderable [p mv color vertices vertex-count]
+(defn renderable [p mv color vertices values vertex-count]
   {u-p-matrix p
    u-mv-matrix mv
    u-color (vec color)
+   a-value values
    a-position {:data vertices :count vertex-count}})
 
 (defn get-perspective-matrix [width height]
@@ -89,22 +100,42 @@
 
 (defn start-stroke [point]
   (let [[x y] point]
-    (set! stroke-history (conj stroke-history (.getPointer current-mesh)))
+    (set! stroke-history (conj stroke-history (.getNumVertices current-mesh)))
     (.setCurrentPos current-mesh x y x y)))
 
-(defn add-face [mesh p1 p2 p3]
-  (.addFace mesh
-            (nth p1 0) (nth p1 1)
-            (nth p2 0) (nth p2 1)
-            (nth p3 0) (nth p3 1)))
+(defn add-face [mesh p1 p2 p3 v1 v2 v3]
+  (.addVertex mesh (nth p1 0) (nth p1 1) v1)
+  (.addVertex mesh (nth p2 0) (nth p2 1) v2)
+  (.addVertex mesh (nth p3 0) (nth p3 1) v3))
+
+(defn ->poly-points [points]
+  (apply array (map (fn [p] (js/poly2tri.Point. (nth p 0) (nth p 1)))
+                    points)))
+
+(defn ->vec2 [poly-point]
+  (vec/vec2 (.-x poly-point) (.-y poly-point)))
+
+(defn vec-equals [v1 v2]
+  (and (math/delta= (nth v1 0) (nth v2 0))
+       (math/delta= (nth v1 1) (nth v2 1))))
+
+(defn get-alpha [p c1 c2 c3 c4 middle m1 m2]
+  (cond
+    (vec-equals p c1) 0
+    (vec-equals p c2) 1
+    (vec-equals p c3) 0
+    (vec-equals p c4) 1
+    (vec-equals p middle) .5
+    (vec-equals p m1) .5
+    (vec-equals p m2) .5))
 
 (defn add-to-stroke [point pressure]
   (let [width (* (.pow js/Math pressure 2) 20)
         current-pos (.getCurrentPos current-mesh)
         last-point1 (vec/vec2 (nth current-pos 0) (nth current-pos 1))
         last-point2 (vec/vec2 (nth current-pos 2) (nth current-pos 3))
-        last-middle (geom/+ last-point1
-                            (geom/div (geom/- last-point2 last-point1) 2))
+        last-edge (geom/div (geom/- last-point2 last-point1) 2)
+        last-middle (geom/+ last-point1 last-edge)
         
         vec (geom/- (vec/vec2 point) last-middle)]
     (if (> (geom/dot vec vec) 2)
@@ -114,11 +145,33 @@
             c1 (geom/+ point r1)
             c2 (geom/+ point r2)
             c3 last-point1
-            c4 last-point2]
-        (add-face current-mesh c1 point c3)
-        (add-face current-mesh c3 point last-middle)
-        (add-face current-mesh point c2 last-middle)
-        (add-face current-mesh last-middle c2 c4)
+            c4 last-point2
+            middle (geom/+ last-middle (geom/div vec 2))
+            swctx (js/poly2tri.SweepContext. (->poly-points [c1 point c2 c4 last-middle c3]))]
+        ;; (.addPoint swctx (js/poly2tri.Point. (nth middle 0) (nth middle 1)))
+        ;; (.triangulate swctx)
+        ;; (doseq [tri (.getTriangles swctx)]
+        ;;   (let [p1 (->vec2 (.getPoint tri 0))
+        ;;         p2 (->vec2 (.getPoint tri 1))
+        ;;         p3 (->vec2 (.getPoint tri 2))]
+        ;;     (add-face current-mesh
+        ;;               p1 p2 p3
+        ;;               (get-alpha p1 c1 c2 c3 c4 middle point last-middle)
+        ;;               (get-alpha p2 c1 c2 c3 c4 middle point last-middle)
+        ;;               (get-alpha p3 c1 c2 c3 c4 middle point last-middle))))
+
+        ;; (add-face current-mesh c1 c2 c3 0 0 1)
+        ;; (add-face current-mesh c3 c2 c4 1 0 1)
+
+        (if (vec-equals last-point1 last-point2)
+          (do
+            (add-face current-mesh last-point1 c1 point)
+            (add-face current-mesh last-point1 point c2))
+          (do
+            (add-face current-mesh c1 point c3 0 1 0)
+            (add-face current-mesh c3 point last-middle 0 1 1)
+            (add-face current-mesh point c2 last-middle 1 0 1)
+            (add-face current-mesh last-middle c2 c4 1 0 0)))
         (.setCurrentPos
          current-mesh
          (nth c1 0) (nth c1 1) (nth c2 0) (nth c2 1))))))
@@ -129,14 +182,15 @@
                            (renderable pers mv
                                        (.getColor mesh)
                                        (.getVertices mesh)
-                                       (/ (.getPointer mesh) 2)))
+                                       (.getValues mesh)
+                                       (.getNumVertices mesh)))
                   {:draw-mode :triangles}))
 
 (defn render []
   (let [{:keys [gl driver program pers]} renderer
         mv (-> (mat/matrix44)
                (geom/translate [0 0 -1]))]
-    (.clear gl (bit-or (.-COLOR_BUFFER_BIT gl) (.-DEPTH_BUFFER_BIT gl)))
+    (.clear gl (.-COLOR_BUFFER_BIT gl))
 
     (doseq [mesh paint-meshes]
       (render-mesh mesh driver program pers mv))
@@ -148,13 +202,13 @@
   (js/requestAnimationFrame render-loop))
 
 (defn undo []
-  (let [ptr (last stroke-history)
-        history (drop-last 1 stroke-history)]
+  (let [num-verts (last stroke-history)
+        history (vec (drop-last 1 stroke-history))]
     (if current-mesh
       (do
-        (.setPointer current-mesh ptr)
-        (set! stroke-history (vec history))
-        (if (= ptr 0)
+        (.setNumVertices current-mesh num-verts)
+        (set! stroke-history history)
+        (if (= num-verts 0)
           (do
             (set! current-mesh (last paint-meshes))
             (set! paint-meshes (vec (drop-last 1 paint-meshes)))))))))
@@ -322,6 +376,10 @@
         pers (get-perspective-matrix w h)]
     (.viewport gl 0 0 (* w 2) (* h 2))
     (.clearColor gl 1 1 1 1)
+    (.clear gl (bit-or (.-COLOR_BUFFER_BIT gl) (.-DEPTH_BUFFER_BIT gl)))
+    (.blendFunc gl (.-SRC_ALPHA gl) (.-ONE_MINUS_SRC_ALPHA gl))
+    (.enable gl (.-BLEND gl))
+    (.disable gl (.-DEPTH_TEST gl))
 
     {:gl gl :driver driver :program program :pers pers}))
 
@@ -334,8 +392,16 @@
             canvas (.querySelector node "canvas")]
         
         (set! renderer (init canvas))
-        (load-state)
+        ;;(load-state)
         (render-loop)
+
+        (set! current-mesh (js/Mesh2d. "#000000"))
+        (start-stroke (vec/vec2 100 100))
+        (add-to-stroke (vec/vec2 200 200) 2)
+        (add-to-stroke (vec/vec2 300 300) 2)
+        ;;(add-to-stroke (vec/vec2 400 250) 2)
+        (add-to-stroke (vec/vec2 310 395) 3)
+        (add-to-stroke (vec/vec2 390 500) 3)
 
         (let [moved (listen container "pointermove")]
           (go-loop [last-pressure 0]

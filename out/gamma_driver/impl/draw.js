@@ -10,8 +10,8 @@ return null;
 });
 gamma_driver.impl.draw.draw_modes = new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"lines","lines",-700165781),goog.webgl.LINES,new cljs.core.Keyword(null,"line-strip","line-strip",55648008),goog.webgl.LINE_STRIP,new cljs.core.Keyword(null,"line-loop","line-loop",1904870934),goog.webgl.LINE_LOOP,new cljs.core.Keyword(null,"points","points",-1486596883),goog.webgl.POINTS,new cljs.core.Keyword(null,"triangle-strip","triangle-strip",221845500),goog.webgl.TRIANGLE_STRIP,new cljs.core.Keyword(null,"triangle-fan","triangle-fan",1743150739),goog.webgl.TRIANGLE_FAN,new cljs.core.Keyword(null,"triangles","triangles",-1525417058),goog.webgl.TRIANGLES], null);
 gamma_driver.impl.draw.draw_arrays = (function gamma_driver$impl$draw$draw_arrays(){
-var G__19487 = arguments.length;
-switch (G__19487) {
+var G__20048 = arguments.length;
+switch (G__20048) {
 case 3:
 return gamma_driver.impl.draw.draw_arrays.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -49,8 +49,8 @@ return gamma_driver.impl.draw.draw_arrays.call(null,gl,program,opts);
 gamma_driver.impl.draw.draw_arrays.cljs$lang$maxFixedArity = 4;
 gamma_driver.impl.draw.element_types = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"unsigned-byte","unsigned-byte",541188667),goog.webgl.UNSIGNED_BYTE,new cljs.core.Keyword(null,"unsigned-short","unsigned-short",-1572039401),goog.webgl.UNSIGNED_SHORT], null);
 gamma_driver.impl.draw.draw_elements = (function gamma_driver$impl$draw$draw_elements(){
-var G__19490 = arguments.length;
-switch (G__19490) {
+var G__20051 = arguments.length;
+switch (G__20051) {
 case 3:
 return gamma_driver.impl.draw.draw_elements.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 

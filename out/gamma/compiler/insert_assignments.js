@@ -30,29 +30,29 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 }
 });
 });
-gamma.compiler.insert_assignments.in_path = (function gamma$compiler$insert_assignments$in_path(p__19871,f){
-var vec__19873 = p__19871;
-var a = cljs.core.nth.call(null,vec__19873,(0),null);
-var b = cljs.core.nth.call(null,vec__19873,(1),null);
-return ((function (vec__19873,a,b){
+gamma.compiler.insert_assignments.in_path = (function gamma$compiler$insert_assignments$in_path(p__20098,f){
+var vec__20100 = p__20098;
+var a = cljs.core.nth.call(null,vec__20100,(0),null);
+var b = cljs.core.nth.call(null,vec__20100,(1),null);
+return ((function (vec__20100,a,b){
 return (function (db,loc){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [db,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [a,((function (vec__19873,a,b){
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [db,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [a,((function (vec__20100,a,b){
 return (function (db__$1,loc__$1){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [db__$1,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [b,f], null)], null)], null);
-});})(vec__19873,a,b))
+});})(vec__20100,a,b))
 ], null)], null)], null);
 });
-;})(vec__19873,a,b))
+;})(vec__20100,a,b))
 });
 gamma.compiler.insert_assignments.insert_assignments_sub = (function gamma$compiler$insert_assignments$insert_assignments_sub(target_id){
 return (function (db,location){
 var e = gamma.compiler.common.get_element.call(null,db,location);
-var pred__19877 = cljs.core._EQ_;
-var expr__19878 = new cljs.core.Keyword(null,"head","head",-771383919).cljs$core$IFn$_invoke$arity$1(e);
-if(cljs.core.truth_(pred__19877.call(null,new cljs.core.Keyword(null,"if","if",-458814265),expr__19878))){
+var pred__20104 = cljs.core._EQ_;
+var expr__20105 = new cljs.core.Keyword(null,"head","head",-771383919).cljs$core$IFn$_invoke$arity$1(e);
+if(cljs.core.truth_(pred__20104.call(null,new cljs.core.Keyword(null,"if","if",-458814265),expr__20105))){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [db,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [gamma.compiler.insert_assignments.in_path.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"body","body",-2049205669),(1)], null),gamma$compiler$insert_assignments$insert_assignments_sub.call(null,target_id)),gamma.compiler.insert_assignments.in_path.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"body","body",-2049205669),(2)], null),gamma$compiler$insert_assignments$insert_assignments_sub.call(null,target_id))], null)], null);
 } else {
-if(cljs.core.truth_(pred__19877.call(null,new cljs.core.Keyword(null,"block","block",664686210),expr__19878))){
+if(cljs.core.truth_(pred__20104.call(null,new cljs.core.Keyword(null,"block","block",664686210),expr__20105))){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [db,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [gamma.compiler.insert_assignments.in_path.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"body","body",-2049205669),(cljs.core.count.call(null,new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(e)) - (1))], null),gamma$compiler$insert_assignments$insert_assignments_sub.call(null,target_id))], null)], null);
 } else {
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [gamma.compiler.insert_assignments.insert_assignment.call(null,db,location,target_id),null], null);

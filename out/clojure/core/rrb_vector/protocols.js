@@ -2,8 +2,8 @@
 goog.provide('clojure.core.rrb_vector.protocols');
 goog.require('cljs.core');
 
-clojure.core.rrb_vector.protocols.PSpliceableVector = (function (){var obj20377 = {};
-return obj20377;
+clojure.core.rrb_vector.protocols.PSpliceableVector = (function (){var obj20604 = {};
+return obj20604;
 })();
 
 clojure.core.rrb_vector.protocols._splicev = (function clojure$core$rrb_vector$protocols$_splicev(v1,v2){
@@ -33,8 +33,8 @@ throw cljs.core.missing_protocol.call(null,"PSpliceableVector.-splicev",v1);
 });
 
 
-clojure.core.rrb_vector.protocols.PSliceableVector = (function (){var obj20379 = {};
-return obj20379;
+clojure.core.rrb_vector.protocols.PSliceableVector = (function (){var obj20606 = {};
+return obj20606;
 })();
 
 clojure.core.rrb_vector.protocols._slicev = (function clojure$core$rrb_vector$protocols$_slicev(v,start,end){

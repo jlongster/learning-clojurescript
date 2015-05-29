@@ -26,13 +26,13 @@ thi.ng.math.core.abs_diff = (function thi$ng$math$core$abs_diff(x,y){
 return thi.ng.math.core.abs.call(null,(x - y));
 });
 
-thi.ng.math.core.PDeltaEquals = (function (){var obj19765 = {};
-return obj19765;
+thi.ng.math.core.PDeltaEquals = (function (){var obj19861 = {};
+return obj19861;
 })();
 
 thi.ng.math.core.delta_EQ_ = (function thi$ng$math$core$delta_EQ_(){
-var G__19767 = arguments.length;
-switch (G__19767) {
+var G__19863 = arguments.length;
+switch (G__19863) {
 case 2:
 return thi.ng.math.core.delta_EQ_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -104,25 +104,25 @@ thi.ng.math.core.delta_EQ_.cljs$lang$maxFixedArity = 3;
 (thi.ng.math.core.PDeltaEquals["number"] = true);
 
 (thi.ng.math.core.delta_EQ_["number"] = (function() {
-var G__19769 = null;
-var G__19769__2 = (function (a,b){
+var G__19865 = null;
+var G__19865__2 = (function (a,b){
 return (typeof b === 'number') && ((thi.ng.math.core.abs.call(null,(a - b)) <= thi.ng.math.core._STAR_eps_STAR_));
 });
-var G__19769__3 = (function (a,b,eps){
+var G__19865__3 = (function (a,b,eps){
 return (typeof b === 'number') && ((thi.ng.math.core.abs.call(null,(a - b)) <= eps));
 });
-G__19769 = function(a,b,eps){
+G__19865 = function(a,b,eps){
 switch(arguments.length){
 case 2:
-return G__19769__2.call(this,a,b);
+return G__19865__2.call(this,a,b);
 case 3:
-return G__19769__3.call(this,a,b,eps);
+return G__19865__3.call(this,a,b,eps);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__19769.cljs$core$IFn$_invoke$arity$2 = G__19769__2;
-G__19769.cljs$core$IFn$_invoke$arity$3 = G__19769__3;
-return G__19769;
+G__19865.cljs$core$IFn$_invoke$arity$2 = G__19865__2;
+G__19865.cljs$core$IFn$_invoke$arity$3 = G__19865__3;
+return G__19865;
 })()
 );
 
@@ -139,10 +139,10 @@ var b__$1 = b;
 while(true){
 if(cljs.core.truth_(a__$2)){
 if(cljs.core.truth_(thi.ng.math.core.delta_EQ_.call(null,cljs.core.first.call(null,a__$2),cljs.core.first.call(null,b__$1)))){
-var G__19770 = cljs.core.next.call(null,a__$2);
-var G__19771 = cljs.core.next.call(null,b__$1);
-a__$2 = G__19770;
-b__$1 = G__19771;
+var G__19866 = cljs.core.next.call(null,a__$2);
+var G__19867 = cljs.core.next.call(null,b__$1);
+a__$2 = G__19866;
+b__$1 = G__19867;
 continue;
 } else {
 return false;
@@ -171,10 +171,10 @@ var b__$1 = b;
 while(true){
 if(cljs.core.truth_(a__$2)){
 if(cljs.core.truth_(thi.ng.math.core.delta_EQ_.call(null,cljs.core.first.call(null,a__$2),cljs.core.first.call(null,b__$1),eps))){
-var G__19772 = cljs.core.next.call(null,a__$2);
-var G__19773 = cljs.core.next.call(null,b__$1);
-a__$2 = G__19772;
-b__$1 = G__19773;
+var G__19868 = cljs.core.next.call(null,a__$2);
+var G__19869 = cljs.core.next.call(null,b__$1);
+a__$2 = G__19868;
+b__$1 = G__19869;
 continue;
 } else {
 return false;
@@ -205,10 +205,10 @@ var b__$1 = b;
 while(true){
 if(cljs.core.truth_(a__$2)){
 if(cljs.core.truth_(thi.ng.math.core.delta_EQ_.call(null,cljs.core.first.call(null,a__$2),cljs.core.first.call(null,b__$1)))){
-var G__19774 = cljs.core.next.call(null,a__$2);
-var G__19775 = cljs.core.next.call(null,b__$1);
-a__$2 = G__19774;
-b__$1 = G__19775;
+var G__19870 = cljs.core.next.call(null,a__$2);
+var G__19871 = cljs.core.next.call(null,b__$1);
+a__$2 = G__19870;
+b__$1 = G__19871;
 continue;
 } else {
 return false;
@@ -237,10 +237,10 @@ var b__$1 = b;
 while(true){
 if(cljs.core.truth_(a__$2)){
 if(cljs.core.truth_(thi.ng.math.core.delta_EQ_.call(null,cljs.core.first.call(null,a__$2),cljs.core.first.call(null,b__$1),eps))){
-var G__19776 = cljs.core.next.call(null,a__$2);
-var G__19777 = cljs.core.next.call(null,b__$1);
-a__$2 = G__19776;
-b__$1 = G__19777;
+var G__19872 = cljs.core.next.call(null,a__$2);
+var G__19873 = cljs.core.next.call(null,b__$1);
+a__$2 = G__19872;
+b__$1 = G__19873;
 continue;
 } else {
 return false;
@@ -271,10 +271,10 @@ var b__$1 = b;
 while(true){
 if(cljs.core.truth_(a__$2)){
 if(cljs.core.truth_(thi.ng.math.core.delta_EQ_.call(null,cljs.core.first.call(null,a__$2),cljs.core.first.call(null,b__$1)))){
-var G__19778 = cljs.core.next.call(null,a__$2);
-var G__19779 = cljs.core.next.call(null,b__$1);
-a__$2 = G__19778;
-b__$1 = G__19779;
+var G__19874 = cljs.core.next.call(null,a__$2);
+var G__19875 = cljs.core.next.call(null,b__$1);
+a__$2 = G__19874;
+b__$1 = G__19875;
 continue;
 } else {
 return false;
@@ -303,10 +303,10 @@ var b__$1 = b;
 while(true){
 if(cljs.core.truth_(a__$2)){
 if(cljs.core.truth_(thi.ng.math.core.delta_EQ_.call(null,cljs.core.first.call(null,a__$2),cljs.core.first.call(null,b__$1),eps))){
-var G__19780 = cljs.core.next.call(null,a__$2);
-var G__19781 = cljs.core.next.call(null,b__$1);
-a__$2 = G__19780;
-b__$1 = G__19781;
+var G__19876 = cljs.core.next.call(null,a__$2);
+var G__19877 = cljs.core.next.call(null,b__$1);
+a__$2 = G__19876;
+b__$1 = G__19877;
 continue;
 } else {
 return false;
@@ -337,10 +337,10 @@ var b__$1 = b;
 while(true){
 if(cljs.core.truth_(a__$2)){
 if(cljs.core.truth_(thi.ng.math.core.delta_EQ_.call(null,cljs.core.first.call(null,a__$2),cljs.core.first.call(null,b__$1)))){
-var G__19782 = cljs.core.next.call(null,a__$2);
-var G__19783 = cljs.core.next.call(null,b__$1);
-a__$2 = G__19782;
-b__$1 = G__19783;
+var G__19878 = cljs.core.next.call(null,a__$2);
+var G__19879 = cljs.core.next.call(null,b__$1);
+a__$2 = G__19878;
+b__$1 = G__19879;
 continue;
 } else {
 return false;
@@ -369,10 +369,10 @@ var b__$1 = b;
 while(true){
 if(cljs.core.truth_(a__$2)){
 if(cljs.core.truth_(thi.ng.math.core.delta_EQ_.call(null,cljs.core.first.call(null,a__$2),cljs.core.first.call(null,b__$1),eps))){
-var G__19784 = cljs.core.next.call(null,a__$2);
-var G__19785 = cljs.core.next.call(null,b__$1);
-a__$2 = G__19784;
-b__$1 = G__19785;
+var G__19880 = cljs.core.next.call(null,a__$2);
+var G__19881 = cljs.core.next.call(null,b__$1);
+a__$2 = G__19880;
+b__$1 = G__19881;
 continue;
 } else {
 return false;
@@ -393,25 +393,25 @@ return and__4938__auto__;
 (thi.ng.math.core.PDeltaEquals["null"] = true);
 
 (thi.ng.math.core.delta_EQ_["null"] = (function() {
-var G__19786 = null;
-var G__19786__2 = (function (_,b){
+var G__19882 = null;
+var G__19882__2 = (function (_,b){
 return (b == null);
 });
-var G__19786__3 = (function (_,b,___$1){
+var G__19882__3 = (function (_,b,___$1){
 return (b == null);
 });
-G__19786 = function(_,b,___$1){
+G__19882 = function(_,b,___$1){
 switch(arguments.length){
 case 2:
-return G__19786__2.call(this,_,b);
+return G__19882__2.call(this,_,b);
 case 3:
-return G__19786__3.call(this,_,b,___$1);
+return G__19882__3.call(this,_,b,___$1);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__19786.cljs$core$IFn$_invoke$arity$2 = G__19786__2;
-G__19786.cljs$core$IFn$_invoke$arity$3 = G__19786__3;
-return G__19786;
+G__19882.cljs$core$IFn$_invoke$arity$2 = G__19882__2;
+G__19882.cljs$core$IFn$_invoke$arity$3 = G__19882__3;
+return G__19882;
 })()
 );
 /**
@@ -435,8 +435,8 @@ return x;
 }
 });
 thi.ng.math.core.signum = (function thi$ng$math$core$signum(){
-var G__19788 = arguments.length;
-switch (G__19788) {
+var G__19884 = arguments.length;
+switch (G__19884) {
 case 1:
 return thi.ng.math.core.signum.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -502,8 +502,8 @@ return x;
  * Maps x from one interval into another. Intervals can be defined as vectors.
  */
 thi.ng.math.core.map_interval = (function thi$ng$math$core$map_interval(){
-var G__19791 = arguments.length;
-switch (G__19791) {
+var G__19887 = arguments.length;
+switch (G__19887) {
 case 3:
 return thi.ng.math.core.map_interval.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -518,13 +518,13 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 }
 });
 
-thi.ng.math.core.map_interval.cljs$core$IFn$_invoke$arity$3 = (function (x,p__19792,p__19793){
-var vec__19794 = p__19792;
-var in1 = cljs.core.nth.call(null,vec__19794,(0),null);
-var in2 = cljs.core.nth.call(null,vec__19794,(1),null);
-var vec__19795 = p__19793;
-var out1 = cljs.core.nth.call(null,vec__19795,(0),null);
-var out2 = cljs.core.nth.call(null,vec__19795,(1),null);
+thi.ng.math.core.map_interval.cljs$core$IFn$_invoke$arity$3 = (function (x,p__19888,p__19889){
+var vec__19890 = p__19888;
+var in1 = cljs.core.nth.call(null,vec__19890,(0),null);
+var in2 = cljs.core.nth.call(null,vec__19890,(1),null);
+var vec__19891 = p__19889;
+var out1 = cljs.core.nth.call(null,vec__19891,(0),null);
+var out2 = cljs.core.nth.call(null,vec__19891,(1),null);
 return (((out2 - out1) * ((x - in1) / (in2 - in1))) + out1);
 });
 
@@ -534,8 +534,8 @@ return (((out2 - out1) * ((x - in1) / (in2 - in1))) + out1);
 
 thi.ng.math.core.map_interval.cljs$lang$maxFixedArity = 5;
 thi.ng.math.core.map_interval_clamped = (function thi$ng$math$core$map_interval_clamped(){
-var G__19798 = arguments.length;
-switch (G__19798) {
+var G__19894 = arguments.length;
+switch (G__19894) {
 case 3:
 return thi.ng.math.core.map_interval_clamped.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -558,13 +558,13 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 }
 });
 
-thi.ng.math.core.map_interval_clamped.cljs$core$IFn$_invoke$arity$3 = (function (x,p__19799,p__19800){
-var vec__19801 = p__19799;
-var in1 = cljs.core.nth.call(null,vec__19801,(0),null);
-var in2 = cljs.core.nth.call(null,vec__19801,(1),null);
-var vec__19802 = p__19800;
-var out1 = cljs.core.nth.call(null,vec__19802,(0),null);
-var out2 = cljs.core.nth.call(null,vec__19802,(1),null);
+thi.ng.math.core.map_interval_clamped.cljs$core$IFn$_invoke$arity$3 = (function (x,p__19895,p__19896){
+var vec__19897 = p__19895;
+var in1 = cljs.core.nth.call(null,vec__19897,(0),null);
+var in2 = cljs.core.nth.call(null,vec__19897,(1),null);
+var vec__19898 = p__19896;
+var out1 = cljs.core.nth.call(null,vec__19898,(0),null);
+var out2 = cljs.core.nth.call(null,vec__19898,(1),null);
 return thi.ng.math.core.map_interval_clamped.call(null,x,in1,in2,out1,out2);
 });
 
@@ -580,16 +580,16 @@ return thi.ng.math.core.map_interval.call(null,x,in1,in2,out1,out2);
 }
 });
 
-thi.ng.math.core.map_interval_clamped.cljs$core$IFn$_invoke$arity$4 = (function (x,p__19803,p__19804,p__19805){
-var vec__19806 = p__19803;
-var in1 = cljs.core.nth.call(null,vec__19806,(0),null);
-var in2 = cljs.core.nth.call(null,vec__19806,(1),null);
-var vec__19807 = p__19804;
-var out1 = cljs.core.nth.call(null,vec__19807,(0),null);
-var out2 = cljs.core.nth.call(null,vec__19807,(1),null);
-var vec__19808 = p__19805;
-var c1 = cljs.core.nth.call(null,vec__19808,(0),null);
-var c2 = cljs.core.nth.call(null,vec__19808,(1),null);
+thi.ng.math.core.map_interval_clamped.cljs$core$IFn$_invoke$arity$4 = (function (x,p__19899,p__19900,p__19901){
+var vec__19902 = p__19899;
+var in1 = cljs.core.nth.call(null,vec__19902,(0),null);
+var in2 = cljs.core.nth.call(null,vec__19902,(1),null);
+var vec__19903 = p__19900;
+var out1 = cljs.core.nth.call(null,vec__19903,(0),null);
+var out2 = cljs.core.nth.call(null,vec__19903,(1),null);
+var vec__19904 = p__19901;
+var c1 = cljs.core.nth.call(null,vec__19904,(0),null);
+var c2 = cljs.core.nth.call(null,vec__19904,(1),null);
 return thi.ng.math.core.clamp.call(null,thi.ng.math.core.map_interval.call(null,x,in1,in2,out1,out2),c1,c2);
 });
 
@@ -602,8 +602,8 @@ thi.ng.math.core.map_interval_clamped.cljs$lang$maxFixedArity = 7;
  * Returns true if x >= min and x <= max.
  */
 thi.ng.math.core.in_range_QMARK_ = (function thi$ng$math$core$in_range_QMARK_(){
-var G__19811 = arguments.length;
-switch (G__19811) {
+var G__19907 = arguments.length;
+switch (G__19907) {
 case 2:
 return thi.ng.math.core.in_range_QMARK_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -618,10 +618,10 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 }
 });
 
-thi.ng.math.core.in_range_QMARK_.cljs$core$IFn$_invoke$arity$2 = (function (p__19812,x){
-var vec__19813 = p__19812;
-var min = cljs.core.nth.call(null,vec__19813,(0),null);
-var max = cljs.core.nth.call(null,vec__19813,(1),null);
+thi.ng.math.core.in_range_QMARK_.cljs$core$IFn$_invoke$arity$2 = (function (p__19908,x){
+var vec__19909 = p__19908;
+var min = cljs.core.nth.call(null,vec__19909,(0),null);
+var max = cljs.core.nth.call(null,vec__19909,(1),null);
 return ((x >= min)) && ((x <= max));
 });
 
@@ -643,8 +643,8 @@ return x__$1;
  * resolution 1/x.
  */
 thi.ng.math.core.norm_range = (function thi$ng$math$core$norm_range(x){
-return cljs.core.map.call(null,(function (p1__19815_SHARP_){
-return (p1__19815_SHARP_ / x);
+return cljs.core.map.call(null,(function (p1__19911_SHARP_){
+return (p1__19911_SHARP_ / x);
 }),cljs.core.range.call(null,(x + (1))));
 });
 thi.ng.math.core.mix = (function thi$ng$math$core$mix(a,b,t){
@@ -676,8 +676,8 @@ while(true){
 if((pow2 >= x)){
 return pow2;
 } else {
-var G__19816 = (pow2 * (2));
-pow2 = G__19816;
+var G__19912 = (pow2 * (2));
+pow2 = G__19912;
 continue;
 }
 break;
@@ -769,8 +769,8 @@ var h = (k * t);
 return (h * Math.exp((1.0 - h)));
 });
 thi.ng.math.core.random = (function thi$ng$math$core$random(){
-var G__19818 = arguments.length;
-switch (G__19818) {
+var G__19914 = arguments.length;
+switch (G__19914) {
 case 0:
 return thi.ng.math.core.random.cljs$core$IFn$_invoke$arity$0();
 
@@ -823,14 +823,14 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
  * Takes a quartile index (1..4) and sorted seq of samples, returns set of items in quartile.
  */
 thi.ng.math.core.quartile = (function thi$ng$math$core$quartile(n,sorted){
-var vec__19821 = thi.ng.math.core.quartile_range.call(null,n,cljs.core.count.call(null,sorted));
-var a = cljs.core.nth.call(null,vec__19821,(0),null);
-var b = cljs.core.nth.call(null,vec__19821,(1),null);
+var vec__19917 = thi.ng.math.core.quartile_range.call(null,n,cljs.core.count.call(null,sorted));
+var a = cljs.core.nth.call(null,vec__19917,(0),null);
+var b = cljs.core.nth.call(null,vec__19917,(1),null);
 return cljs.core.take.call(null,(b - a),cljs.core.drop.call(null,a,sorted));
 });
 thi.ng.math.core.normdist_weights = (function thi$ng$math$core$normdist_weights(){
-var G__19824 = arguments.length;
-switch (G__19824) {
+var G__19920 = arguments.length;
+switch (G__19920) {
 case 1:
 return thi.ng.math.core.normdist_weights.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -853,8 +853,8 @@ thi.ng.math.core.normdist_weights.cljs$core$IFn$_invoke$arity$2 = (function (n,s
 var ws = cljs.core.repeatedly.call(null,n,thi.ng.math.core.random);
 var s = (scale / cljs.core.reduce.call(null,cljs.core._PLUS_,ws));
 return cljs.core.map.call(null,((function (ws,s){
-return (function (p1__19822_SHARP_){
-return (s * p1__19822_SHARP_);
+return (function (p1__19918_SHARP_){
+return (s * p1__19918_SHARP_);
 });})(ws,s))
 ,ws);
 });

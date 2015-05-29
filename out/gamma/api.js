@@ -18,8 +18,8 @@ gamma.api.varying = (function gamma$api$varying(name,type,precision){
 return new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"tag","tag",-1290361223),new cljs.core.Keyword(null,"variable","variable",-281346492),new cljs.core.Keyword(null,"name","name",1843675177),name,new cljs.core.Keyword(null,"type","type",1174270348),type,new cljs.core.Keyword(null,"storage","storage",1867247511),new cljs.core.Keyword(null,"varying","varying",685535123),new cljs.core.Keyword(null,"precision","precision",-1175707478),precision], null);
 });
 gamma.api.variable = (function gamma$api$variable(){
-var G__14901 = arguments.length;
-switch (G__14901) {
+var G__15128 = arguments.length;
+switch (G__15128) {
 case 1:
 return gamma.api.variable.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -196,24 +196,24 @@ var p = prule.call(null,e);
 if(cljs.core.truth_(p)){
 if(cljs.core.truth_(parameter)){
 if(cljs.core._EQ_.call(null,parameter,i)){
-var G__14903 = cljs.core.next.call(null,input);
-var G__14904 = cljs.core.next.call(null,expected);
-var G__14905 = parameter;
-input = G__14903;
-expected = G__14904;
-parameter = G__14905;
+var G__15130 = cljs.core.next.call(null,input);
+var G__15131 = cljs.core.next.call(null,expected);
+var G__15132 = parameter;
+input = G__15130;
+expected = G__15131;
+parameter = G__15132;
 continue;
 } else {
 return new cljs.core.Keyword(null,"fail","fail",1706214930);
 }
 } else {
 if(cljs.core.truth_(p.call(null,i))){
-var G__14906 = cljs.core.next.call(null,input);
-var G__14907 = cljs.core.next.call(null,expected);
-var G__14908 = p.call(null,i);
-input = G__14906;
-expected = G__14907;
-parameter = G__14908;
+var G__15133 = cljs.core.next.call(null,input);
+var G__15134 = cljs.core.next.call(null,expected);
+var G__15135 = p.call(null,i);
+input = G__15133;
+expected = G__15134;
+parameter = G__15135;
 continue;
 } else {
 return new cljs.core.Keyword(null,"fail","fail",1706214930);
@@ -221,12 +221,12 @@ return new cljs.core.Keyword(null,"fail","fail",1706214930);
 }
 } else {
 if(cljs.core._EQ_.call(null,i,e)){
-var G__14909 = cljs.core.next.call(null,input);
-var G__14910 = cljs.core.next.call(null,expected);
-var G__14911 = parameter;
-input = G__14909;
-expected = G__14910;
-parameter = G__14911;
+var G__15136 = cljs.core.next.call(null,input);
+var G__15137 = cljs.core.next.call(null,expected);
+var G__15138 = parameter;
+input = G__15136;
+expected = G__15137;
+parameter = G__15138;
 continue;
 } else {
 return new cljs.core.Keyword(null,"fail","fail",1706214930);
@@ -240,12 +240,12 @@ break;
 gamma.api.build_standard_function_term = (function gamma$api$build_standard_function_term(name,specs,args){
 var t = cljs.core.apply.call(null,gamma.ast.term,name,args);
 var temp__4420__auto__ = cljs.core.first.call(null,cljs.core.filter.call(null,((function (t){
-return (function (p1__14912_SHARP_){
-return cljs.core.not_EQ_.call(null,new cljs.core.Keyword(null,"fail","fail",1706214930),p1__14912_SHARP_);
+return (function (p1__15139_SHARP_){
+return cljs.core.not_EQ_.call(null,new cljs.core.Keyword(null,"fail","fail",1706214930),p1__15139_SHARP_);
 });})(t))
 ,cljs.core.map.call(null,((function (t){
-return (function (p1__14913_SHARP_){
-return gamma.api.infer_parameterized_type.call(null,p1__14913_SHARP_,cljs.core.map.call(null,new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(t)));
+return (function (p1__15140_SHARP_){
+return gamma.api.infer_parameterized_type.call(null,p1__15140_SHARP_,cljs.core.map.call(null,new cljs.core.Keyword(null,"type","type",1174270348),new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(t)));
 });})(t))
 ,specs)));
 if(cljs.core.truth_(temp__4420__auto__)){
@@ -266,8 +266,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.ceil.cljs$lang$maxFixedArity = (0);
 
-gamma.api.ceil.cljs$lang$applyTo = (function (seq14914){
-return gamma.api.ceil.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14914));
+gamma.api.ceil.cljs$lang$applyTo = (function (seq15141){
+return gamma.api.ceil.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15141));
 });
 
 gamma.api.atan = (function gamma$api$atan(){
@@ -281,8 +281,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.atan.cljs$lang$maxFixedArity = (0);
 
-gamma.api.atan.cljs$lang$applyTo = (function (seq14915){
-return gamma.api.atan.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14915));
+gamma.api.atan.cljs$lang$applyTo = (function (seq15142){
+return gamma.api.atan.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15142));
 });
 
 gamma.api.sign = (function gamma$api$sign(){
@@ -296,8 +296,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.sign.cljs$lang$maxFixedArity = (0);
 
-gamma.api.sign.cljs$lang$applyTo = (function (seq14916){
-return gamma.api.sign.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14916));
+gamma.api.sign.cljs$lang$applyTo = (function (seq15143){
+return gamma.api.sign.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15143));
 });
 
 gamma.api.cos = (function gamma$api$cos(){
@@ -311,8 +311,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.cos.cljs$lang$maxFixedArity = (0);
 
-gamma.api.cos.cljs$lang$applyTo = (function (seq14917){
-return gamma.api.cos.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14917));
+gamma.api.cos.cljs$lang$applyTo = (function (seq15144){
+return gamma.api.cos.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15144));
 });
 
 gamma.api.textureCubeLod = (function gamma$api$textureCubeLod(){
@@ -326,8 +326,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.textureCubeLod.cljs$lang$maxFixedArity = (0);
 
-gamma.api.textureCubeLod.cljs$lang$applyTo = (function (seq14918){
-return gamma.api.textureCubeLod.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14918));
+gamma.api.textureCubeLod.cljs$lang$applyTo = (function (seq15145){
+return gamma.api.textureCubeLod.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15145));
 });
 
 gamma.api.tan = (function gamma$api$tan(){
@@ -341,8 +341,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.tan.cljs$lang$maxFixedArity = (0);
 
-gamma.api.tan.cljs$lang$applyTo = (function (seq14919){
-return gamma.api.tan.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14919));
+gamma.api.tan.cljs$lang$applyTo = (function (seq15146){
+return gamma.api.tan.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15146));
 });
 
 gamma.api.sqrt = (function gamma$api$sqrt(){
@@ -356,8 +356,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.sqrt.cljs$lang$maxFixedArity = (0);
 
-gamma.api.sqrt.cljs$lang$applyTo = (function (seq14920){
-return gamma.api.sqrt.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14920));
+gamma.api.sqrt.cljs$lang$applyTo = (function (seq15147){
+return gamma.api.sqrt.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15147));
 });
 
 gamma.api.mod = (function gamma$api$mod(){
@@ -371,8 +371,23 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.mod.cljs$lang$maxFixedArity = (0);
 
-gamma.api.mod.cljs$lang$applyTo = (function (seq14921){
-return gamma.api.mod.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14921));
+gamma.api.mod.cljs$lang$applyTo = (function (seq15148){
+return gamma.api.mod.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15148));
+});
+
+gamma.api.pow = (function gamma$api$pow(){
+var argseq__5990__auto__ = ((((0) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(0)),(0))):null);
+return gamma.api.pow.cljs$core$IFn$_invoke$arity$variadic(argseq__5990__auto__);
+});
+
+gamma.api.pow.cljs$core$IFn$_invoke$arity$variadic = (function (body__12383__auto__){
+return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(null,"pow","pow",-1444004567),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"pow","pow",-1444004567),new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"T","T",175240877),new cljs.core.Keyword(null,"T","T",175240877)], null),new cljs.core.Keyword(null,"output","output",-1105869043),new cljs.core.Keyword(null,"T","T",175240877),new cljs.core.Keyword(null,"parameter","parameter",1978789597),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"T","T",175240877),new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"vec3","vec3",1116680488),null,new cljs.core.Keyword(null,"float","float",-1732389368),null,new cljs.core.Keyword(null,"vec4","vec4",631182126),null,new cljs.core.Keyword(null,"vec2","vec2",-762258640),null], null), null)], null)], null)], null),body__12383__auto__);
+});
+
+gamma.api.pow.cljs$lang$maxFixedArity = (0);
+
+gamma.api.pow.cljs$lang$applyTo = (function (seq15149){
+return gamma.api.pow.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15149));
 });
 
 gamma.api.exp = (function gamma$api$exp(){
@@ -386,8 +401,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.exp.cljs$lang$maxFixedArity = (0);
 
-gamma.api.exp.cljs$lang$applyTo = (function (seq14922){
-return gamma.api.exp.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14922));
+gamma.api.exp.cljs$lang$applyTo = (function (seq15150){
+return gamma.api.exp.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15150));
 });
 
 gamma.api.texture2DProjLod = (function gamma$api$texture2DProjLod(){
@@ -401,8 +416,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.texture2DProjLod.cljs$lang$maxFixedArity = (0);
 
-gamma.api.texture2DProjLod.cljs$lang$applyTo = (function (seq14923){
-return gamma.api.texture2DProjLod.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14923));
+gamma.api.texture2DProjLod.cljs$lang$applyTo = (function (seq15151){
+return gamma.api.texture2DProjLod.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15151));
 });
 
 gamma.api.log2 = (function gamma$api$log2(){
@@ -416,8 +431,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.log2.cljs$lang$maxFixedArity = (0);
 
-gamma.api.log2.cljs$lang$applyTo = (function (seq14924){
-return gamma.api.log2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14924));
+gamma.api.log2.cljs$lang$applyTo = (function (seq15152){
+return gamma.api.log2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15152));
 });
 
 gamma.api.texture2D = (function gamma$api$texture2D(){
@@ -431,8 +446,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.texture2D.cljs$lang$maxFixedArity = (0);
 
-gamma.api.texture2D.cljs$lang$applyTo = (function (seq14925){
-return gamma.api.texture2D.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14925));
+gamma.api.texture2D.cljs$lang$applyTo = (function (seq15153){
+return gamma.api.texture2D.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15153));
 });
 
 gamma.api.asin = (function gamma$api$asin(){
@@ -446,8 +461,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.asin.cljs$lang$maxFixedArity = (0);
 
-gamma.api.asin.cljs$lang$applyTo = (function (seq14926){
-return gamma.api.asin.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14926));
+gamma.api.asin.cljs$lang$applyTo = (function (seq15154){
+return gamma.api.asin.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15154));
 });
 
 gamma.api.textureCube = (function gamma$api$textureCube(){
@@ -461,23 +476,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.textureCube.cljs$lang$maxFixedArity = (0);
 
-gamma.api.textureCube.cljs$lang$applyTo = (function (seq14927){
-return gamma.api.textureCube.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14927));
-});
-
-gamma.api.power = (function gamma$api$power(){
-var argseq__5990__auto__ = ((((0) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(0)),(0))):null);
-return gamma.api.power.cljs$core$IFn$_invoke$arity$variadic(argseq__5990__auto__);
-});
-
-gamma.api.power.cljs$core$IFn$_invoke$arity$variadic = (function (body__12383__auto__){
-return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(null,"power","power",-937852079),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"name","name",1843675177),new cljs.core.Keyword(null,"power","power",-937852079),new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"T","T",175240877),new cljs.core.Keyword(null,"T","T",175240877)], null),new cljs.core.Keyword(null,"output","output",-1105869043),new cljs.core.Keyword(null,"T","T",175240877),new cljs.core.Keyword(null,"parameter","parameter",1978789597),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"T","T",175240877),new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"vec3","vec3",1116680488),null,new cljs.core.Keyword(null,"float","float",-1732389368),null,new cljs.core.Keyword(null,"vec4","vec4",631182126),null,new cljs.core.Keyword(null,"vec2","vec2",-762258640),null], null), null)], null)], null)], null),body__12383__auto__);
-});
-
-gamma.api.power.cljs$lang$maxFixedArity = (0);
-
-gamma.api.power.cljs$lang$applyTo = (function (seq14928){
-return gamma.api.power.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14928));
+gamma.api.textureCube.cljs$lang$applyTo = (function (seq15155){
+return gamma.api.textureCube.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15155));
 });
 
 gamma.api.refract = (function gamma$api$refract(){
@@ -491,8 +491,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.refract.cljs$lang$maxFixedArity = (0);
 
-gamma.api.refract.cljs$lang$applyTo = (function (seq14929){
-return gamma.api.refract.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14929));
+gamma.api.refract.cljs$lang$applyTo = (function (seq15156){
+return gamma.api.refract.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15156));
 });
 
 gamma.api.texture2DLod = (function gamma$api$texture2DLod(){
@@ -506,8 +506,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.texture2DLod.cljs$lang$maxFixedArity = (0);
 
-gamma.api.texture2DLod.cljs$lang$applyTo = (function (seq14930){
-return gamma.api.texture2DLod.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14930));
+gamma.api.texture2DLod.cljs$lang$applyTo = (function (seq15157){
+return gamma.api.texture2DLod.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15157));
 });
 
 gamma.api.exp2 = (function gamma$api$exp2(){
@@ -521,8 +521,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.exp2.cljs$lang$maxFixedArity = (0);
 
-gamma.api.exp2.cljs$lang$applyTo = (function (seq14931){
-return gamma.api.exp2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14931));
+gamma.api.exp2.cljs$lang$applyTo = (function (seq15158){
+return gamma.api.exp2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15158));
 });
 
 gamma.api.smoothstep = (function gamma$api$smoothstep(){
@@ -536,8 +536,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.smoothstep.cljs$lang$maxFixedArity = (0);
 
-gamma.api.smoothstep.cljs$lang$applyTo = (function (seq14932){
-return gamma.api.smoothstep.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14932));
+gamma.api.smoothstep.cljs$lang$applyTo = (function (seq15159){
+return gamma.api.smoothstep.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15159));
 });
 
 gamma.api.abs = (function gamma$api$abs(){
@@ -551,8 +551,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.abs.cljs$lang$maxFixedArity = (0);
 
-gamma.api.abs.cljs$lang$applyTo = (function (seq14933){
-return gamma.api.abs.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14933));
+gamma.api.abs.cljs$lang$applyTo = (function (seq15160){
+return gamma.api.abs.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15160));
 });
 
 gamma.api.max = (function gamma$api$max(){
@@ -566,8 +566,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.max.cljs$lang$maxFixedArity = (0);
 
-gamma.api.max.cljs$lang$applyTo = (function (seq14934){
-return gamma.api.max.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14934));
+gamma.api.max.cljs$lang$applyTo = (function (seq15161){
+return gamma.api.max.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15161));
 });
 
 gamma.api.inversesqrt = (function gamma$api$inversesqrt(){
@@ -581,8 +581,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.inversesqrt.cljs$lang$maxFixedArity = (0);
 
-gamma.api.inversesqrt.cljs$lang$applyTo = (function (seq14935){
-return gamma.api.inversesqrt.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14935));
+gamma.api.inversesqrt.cljs$lang$applyTo = (function (seq15162){
+return gamma.api.inversesqrt.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15162));
 });
 
 gamma.api.length = (function gamma$api$length(){
@@ -596,8 +596,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.length.cljs$lang$maxFixedArity = (0);
 
-gamma.api.length.cljs$lang$applyTo = (function (seq14936){
-return gamma.api.length.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14936));
+gamma.api.length.cljs$lang$applyTo = (function (seq15163){
+return gamma.api.length.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15163));
 });
 
 gamma.api.sin = (function gamma$api$sin(){
@@ -611,8 +611,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.sin.cljs$lang$maxFixedArity = (0);
 
-gamma.api.sin.cljs$lang$applyTo = (function (seq14937){
-return gamma.api.sin.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14937));
+gamma.api.sin.cljs$lang$applyTo = (function (seq15164){
+return gamma.api.sin.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15164));
 });
 
 gamma.api.texture2DProj = (function gamma$api$texture2DProj(){
@@ -626,8 +626,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.texture2DProj.cljs$lang$maxFixedArity = (0);
 
-gamma.api.texture2DProj.cljs$lang$applyTo = (function (seq14938){
-return gamma.api.texture2DProj.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14938));
+gamma.api.texture2DProj.cljs$lang$applyTo = (function (seq15165){
+return gamma.api.texture2DProj.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15165));
 });
 
 gamma.api.faceforward = (function gamma$api$faceforward(){
@@ -641,8 +641,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.faceforward.cljs$lang$maxFixedArity = (0);
 
-gamma.api.faceforward.cljs$lang$applyTo = (function (seq14939){
-return gamma.api.faceforward.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14939));
+gamma.api.faceforward.cljs$lang$applyTo = (function (seq15166){
+return gamma.api.faceforward.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15166));
 });
 
 gamma.api.dot = (function gamma$api$dot(){
@@ -656,8 +656,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.dot.cljs$lang$maxFixedArity = (0);
 
-gamma.api.dot.cljs$lang$applyTo = (function (seq14940){
-return gamma.api.dot.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14940));
+gamma.api.dot.cljs$lang$applyTo = (function (seq15167){
+return gamma.api.dot.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15167));
 });
 
 gamma.api.distance = (function gamma$api$distance(){
@@ -671,8 +671,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.distance.cljs$lang$maxFixedArity = (0);
 
-gamma.api.distance.cljs$lang$applyTo = (function (seq14941){
-return gamma.api.distance.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14941));
+gamma.api.distance.cljs$lang$applyTo = (function (seq15168){
+return gamma.api.distance.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15168));
 });
 
 gamma.api.fract = (function gamma$api$fract(){
@@ -686,8 +686,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.fract.cljs$lang$maxFixedArity = (0);
 
-gamma.api.fract.cljs$lang$applyTo = (function (seq14942){
-return gamma.api.fract.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14942));
+gamma.api.fract.cljs$lang$applyTo = (function (seq15169){
+return gamma.api.fract.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15169));
 });
 
 gamma.api.clamp = (function gamma$api$clamp(){
@@ -701,8 +701,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.clamp.cljs$lang$maxFixedArity = (0);
 
-gamma.api.clamp.cljs$lang$applyTo = (function (seq14943){
-return gamma.api.clamp.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14943));
+gamma.api.clamp.cljs$lang$applyTo = (function (seq15170){
+return gamma.api.clamp.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15170));
 });
 
 gamma.api.radians = (function gamma$api$radians(){
@@ -716,8 +716,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.radians.cljs$lang$maxFixedArity = (0);
 
-gamma.api.radians.cljs$lang$applyTo = (function (seq14944){
-return gamma.api.radians.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14944));
+gamma.api.radians.cljs$lang$applyTo = (function (seq15171){
+return gamma.api.radians.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15171));
 });
 
 gamma.api.degrees = (function gamma$api$degrees(){
@@ -731,8 +731,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.degrees.cljs$lang$maxFixedArity = (0);
 
-gamma.api.degrees.cljs$lang$applyTo = (function (seq14945){
-return gamma.api.degrees.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14945));
+gamma.api.degrees.cljs$lang$applyTo = (function (seq15172){
+return gamma.api.degrees.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15172));
 });
 
 gamma.api.acos = (function gamma$api$acos(){
@@ -746,8 +746,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.acos.cljs$lang$maxFixedArity = (0);
 
-gamma.api.acos.cljs$lang$applyTo = (function (seq14947){
-return gamma.api.acos.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14947));
+gamma.api.acos.cljs$lang$applyTo = (function (seq15174){
+return gamma.api.acos.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15174));
 });
 
 gamma.api.step = (function gamma$api$step(){
@@ -761,8 +761,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.step.cljs$lang$maxFixedArity = (0);
 
-gamma.api.step.cljs$lang$applyTo = (function (seq14948){
-return gamma.api.step.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14948));
+gamma.api.step.cljs$lang$applyTo = (function (seq15175){
+return gamma.api.step.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15175));
 });
 
 gamma.api.log = (function gamma$api$log(){
@@ -776,8 +776,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.log.cljs$lang$maxFixedArity = (0);
 
-gamma.api.log.cljs$lang$applyTo = (function (seq14949){
-return gamma.api.log.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14949));
+gamma.api.log.cljs$lang$applyTo = (function (seq15176){
+return gamma.api.log.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15176));
 });
 
 gamma.api.normalize = (function gamma$api$normalize(){
@@ -791,8 +791,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.normalize.cljs$lang$maxFixedArity = (0);
 
-gamma.api.normalize.cljs$lang$applyTo = (function (seq14950){
-return gamma.api.normalize.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14950));
+gamma.api.normalize.cljs$lang$applyTo = (function (seq15177){
+return gamma.api.normalize.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15177));
 });
 
 gamma.api.floor = (function gamma$api$floor(){
@@ -806,8 +806,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.floor.cljs$lang$maxFixedArity = (0);
 
-gamma.api.floor.cljs$lang$applyTo = (function (seq14951){
-return gamma.api.floor.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14951));
+gamma.api.floor.cljs$lang$applyTo = (function (seq15178){
+return gamma.api.floor.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15178));
 });
 
 gamma.api.cross = (function gamma$api$cross(){
@@ -821,8 +821,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.cross.cljs$lang$maxFixedArity = (0);
 
-gamma.api.cross.cljs$lang$applyTo = (function (seq14952){
-return gamma.api.cross.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14952));
+gamma.api.cross.cljs$lang$applyTo = (function (seq15179){
+return gamma.api.cross.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15179));
 });
 
 gamma.api.reflect = (function gamma$api$reflect(){
@@ -836,8 +836,8 @@ return gamma.api.build_standard_function_term.call(null,new cljs.core.Keyword(nu
 
 gamma.api.reflect.cljs$lang$maxFixedArity = (0);
 
-gamma.api.reflect.cljs$lang$applyTo = (function (seq14953){
-return gamma.api.reflect.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14953));
+gamma.api.reflect.cljs$lang$applyTo = (function (seq15180){
+return gamma.api.reflect.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15180));
 });
 
 gamma.api.selector = (function gamma$api$selector(){
@@ -851,8 +851,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"sele
 
 gamma.api.selector.cljs$lang$maxFixedArity = (0);
 
-gamma.api.selector.cljs$lang$applyTo = (function (seq14954){
-return gamma.api.selector.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14954));
+gamma.api.selector.cljs$lang$applyTo = (function (seq15181){
+return gamma.api.selector.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15181));
 });
 
 gamma.api.increment = (function gamma$api$increment(){
@@ -866,8 +866,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"incr
 
 gamma.api.increment.cljs$lang$maxFixedArity = (0);
 
-gamma.api.increment.cljs$lang$applyTo = (function (seq14955){
-return gamma.api.increment.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14955));
+gamma.api.increment.cljs$lang$applyTo = (function (seq15182){
+return gamma.api.increment.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15182));
 });
 
 gamma.api.pre_decrement = (function gamma$api$pre_decrement(){
@@ -881,8 +881,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"pre-
 
 gamma.api.pre_decrement.cljs$lang$maxFixedArity = (0);
 
-gamma.api.pre_decrement.cljs$lang$applyTo = (function (seq14956){
-return gamma.api.pre_decrement.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14956));
+gamma.api.pre_decrement.cljs$lang$applyTo = (function (seq15183){
+return gamma.api.pre_decrement.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15183));
 });
 
 gamma.api.set_div = (function gamma$api$set_div(){
@@ -896,8 +896,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"set-
 
 gamma.api.set_div.cljs$lang$maxFixedArity = (0);
 
-gamma.api.set_div.cljs$lang$applyTo = (function (seq14957){
-return gamma.api.set_div.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14957));
+gamma.api.set_div.cljs$lang$applyTo = (function (seq15184){
+return gamma.api.set_div.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15184));
 });
 
 gamma.api.pre_increment = (function gamma$api$pre_increment(){
@@ -911,8 +911,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"pre-
 
 gamma.api.pre_increment.cljs$lang$maxFixedArity = (0);
 
-gamma.api.pre_increment.cljs$lang$applyTo = (function (seq14958){
-return gamma.api.pre_increment.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14958));
+gamma.api.pre_increment.cljs$lang$applyTo = (function (seq15185){
+return gamma.api.pre_increment.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15185));
 });
 
 gamma.api.conditional_choice = (function gamma$api$conditional_choice(){
@@ -926,8 +926,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"cond
 
 gamma.api.conditional_choice.cljs$lang$maxFixedArity = (0);
 
-gamma.api.conditional_choice.cljs$lang$applyTo = (function (seq14959){
-return gamma.api.conditional_choice.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14959));
+gamma.api.conditional_choice.cljs$lang$applyTo = (function (seq15186){
+return gamma.api.conditional_choice.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15186));
 });
 
 gamma.api.set_PLUS_ = (function gamma$api$set_PLUS_(){
@@ -941,8 +941,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"set+
 
 gamma.api.set_PLUS_.cljs$lang$maxFixedArity = (0);
 
-gamma.api.set_PLUS_.cljs$lang$applyTo = (function (seq14960){
-return gamma.api.set_PLUS_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14960));
+gamma.api.set_PLUS_.cljs$lang$applyTo = (function (seq15187){
+return gamma.api.set_PLUS_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15187));
 });
 
 gamma.api.set_ = (function gamma$api$set_(){
@@ -956,8 +956,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"set-
 
 gamma.api.set_.cljs$lang$maxFixedArity = (0);
 
-gamma.api.set_.cljs$lang$applyTo = (function (seq14961){
-return gamma.api.set_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14961));
+gamma.api.set_.cljs$lang$applyTo = (function (seq15188){
+return gamma.api.set_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15188));
 });
 
 gamma.api.constructor = (function gamma$api$constructor(){
@@ -971,8 +971,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"cons
 
 gamma.api.constructor.cljs$lang$maxFixedArity = (0);
 
-gamma.api.constructor.cljs$lang$applyTo = (function (seq14962){
-return gamma.api.constructor.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14962));
+gamma.api.constructor.cljs$lang$applyTo = (function (seq15189){
+return gamma.api.constructor.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15189));
 });
 
 gamma.api.decrement = (function gamma$api$decrement(){
@@ -986,8 +986,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"decr
 
 gamma.api.decrement.cljs$lang$maxFixedArity = (0);
 
-gamma.api.decrement.cljs$lang$applyTo = (function (seq14963){
-return gamma.api.decrement.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14963));
+gamma.api.decrement.cljs$lang$applyTo = (function (seq15190){
+return gamma.api.decrement.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15190));
 });
 
 gamma.api.set = (function gamma$api$set(){
@@ -1001,8 +1001,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"set"
 
 gamma.api.set.cljs$lang$maxFixedArity = (0);
 
-gamma.api.set.cljs$lang$applyTo = (function (seq14964){
-return gamma.api.set.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14964));
+gamma.api.set.cljs$lang$applyTo = (function (seq15191){
+return gamma.api.set.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15191));
 });
 
 gamma.api.set_STAR_ = (function gamma$api$set_STAR_(){
@@ -1016,8 +1016,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"set*
 
 gamma.api.set_STAR_.cljs$lang$maxFixedArity = (0);
 
-gamma.api.set_STAR_.cljs$lang$applyTo = (function (seq14965){
-return gamma.api.set_STAR_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14965));
+gamma.api.set_STAR_.cljs$lang$applyTo = (function (seq15192){
+return gamma.api.set_STAR_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15192));
 });
 
 gamma.api.aget = (function gamma$api$aget(){
@@ -1031,8 +1031,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"aget
 
 gamma.api.aget.cljs$lang$maxFixedArity = (0);
 
-gamma.api.aget.cljs$lang$applyTo = (function (seq14966){
-return gamma.api.aget.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14966));
+gamma.api.aget.cljs$lang$applyTo = (function (seq15193){
+return gamma.api.aget.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15193));
 });
 
 gamma.api._PLUS__ = (function gamma$api$_PLUS__(){
@@ -1046,8 +1046,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"+-",
 
 gamma.api._PLUS__.cljs$lang$maxFixedArity = (0);
 
-gamma.api._PLUS__.cljs$lang$applyTo = (function (seq14967){
-return gamma.api._PLUS__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14967));
+gamma.api._PLUS__.cljs$lang$applyTo = (function (seq15194){
+return gamma.api._PLUS__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15194));
 });
 
 gamma.api.for$ = (function gamma$api$for(){
@@ -1061,8 +1061,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"for"
 
 gamma.api.for$.cljs$lang$maxFixedArity = (0);
 
-gamma.api.for$.cljs$lang$applyTo = (function (seq14968){
-return gamma.api.for$.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14968));
+gamma.api.for$.cljs$lang$applyTo = (function (seq15195){
+return gamma.api.for$.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15195));
 });
 
 gamma.api.block = (function gamma$api$block(){
@@ -1076,8 +1076,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"bloc
 
 gamma.api.block.cljs$lang$maxFixedArity = (0);
 
-gamma.api.block.cljs$lang$applyTo = (function (seq14969){
-return gamma.api.block.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14969));
+gamma.api.block.cljs$lang$applyTo = (function (seq15196){
+return gamma.api.block.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15196));
 });
 
 gamma.api.continue$ = (function gamma$api$continue(){
@@ -1091,8 +1091,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"cont
 
 gamma.api.continue$.cljs$lang$maxFixedArity = (0);
 
-gamma.api.continue$.cljs$lang$applyTo = (function (seq14970){
-return gamma.api.continue$.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14970));
+gamma.api.continue$.cljs$lang$applyTo = (function (seq15197){
+return gamma.api.continue$.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15197));
 });
 
 gamma.api.break$ = (function gamma$api$break(){
@@ -1106,8 +1106,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"brea
 
 gamma.api.break$.cljs$lang$maxFixedArity = (0);
 
-gamma.api.break$.cljs$lang$applyTo = (function (seq14971){
-return gamma.api.break$.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14971));
+gamma.api.break$.cljs$lang$applyTo = (function (seq15198){
+return gamma.api.break$.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15198));
 });
 
 gamma.api.discard = (function gamma$api$discard(){
@@ -1121,8 +1121,8 @@ return cljs.core.apply.call(null,gamma.ast.term,new cljs.core.Keyword(null,"disc
 
 gamma.api.discard.cljs$lang$maxFixedArity = (0);
 
-gamma.api.discard.cljs$lang$applyTo = (function (seq14972){
-return gamma.api.discard.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14972));
+gamma.api.discard.cljs$lang$applyTo = (function (seq15199){
+return gamma.api.discard.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15199));
 });
 
 gamma.api.vec2 = (function gamma$api$vec2(){
@@ -1136,8 +1136,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.vec2.cljs$lang$maxFixedArity = (0);
 
-gamma.api.vec2.cljs$lang$applyTo = (function (seq14973){
-return gamma.api.vec2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14973));
+gamma.api.vec2.cljs$lang$applyTo = (function (seq15200){
+return gamma.api.vec2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15200));
 });
 
 gamma.api.vec3 = (function gamma$api$vec3(){
@@ -1151,8 +1151,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.vec3.cljs$lang$maxFixedArity = (0);
 
-gamma.api.vec3.cljs$lang$applyTo = (function (seq14974){
-return gamma.api.vec3.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14974));
+gamma.api.vec3.cljs$lang$applyTo = (function (seq15201){
+return gamma.api.vec3.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15201));
 });
 
 gamma.api.vec4 = (function gamma$api$vec4(){
@@ -1166,8 +1166,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.vec4.cljs$lang$maxFixedArity = (0);
 
-gamma.api.vec4.cljs$lang$applyTo = (function (seq14975){
-return gamma.api.vec4.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14975));
+gamma.api.vec4.cljs$lang$applyTo = (function (seq15202){
+return gamma.api.vec4.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15202));
 });
 
 gamma.api.bvec2 = (function gamma$api$bvec2(){
@@ -1181,8 +1181,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.bvec2.cljs$lang$maxFixedArity = (0);
 
-gamma.api.bvec2.cljs$lang$applyTo = (function (seq14976){
-return gamma.api.bvec2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14976));
+gamma.api.bvec2.cljs$lang$applyTo = (function (seq15203){
+return gamma.api.bvec2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15203));
 });
 
 gamma.api.bvec3 = (function gamma$api$bvec3(){
@@ -1196,8 +1196,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.bvec3.cljs$lang$maxFixedArity = (0);
 
-gamma.api.bvec3.cljs$lang$applyTo = (function (seq14977){
-return gamma.api.bvec3.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14977));
+gamma.api.bvec3.cljs$lang$applyTo = (function (seq15204){
+return gamma.api.bvec3.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15204));
 });
 
 gamma.api.bvec4 = (function gamma$api$bvec4(){
@@ -1211,8 +1211,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.bvec4.cljs$lang$maxFixedArity = (0);
 
-gamma.api.bvec4.cljs$lang$applyTo = (function (seq14978){
-return gamma.api.bvec4.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14978));
+gamma.api.bvec4.cljs$lang$applyTo = (function (seq15205){
+return gamma.api.bvec4.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15205));
 });
 
 gamma.api.ivec2 = (function gamma$api$ivec2(){
@@ -1226,8 +1226,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.ivec2.cljs$lang$maxFixedArity = (0);
 
-gamma.api.ivec2.cljs$lang$applyTo = (function (seq14979){
-return gamma.api.ivec2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14979));
+gamma.api.ivec2.cljs$lang$applyTo = (function (seq15206){
+return gamma.api.ivec2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15206));
 });
 
 gamma.api.ivec3 = (function gamma$api$ivec3(){
@@ -1241,8 +1241,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.ivec3.cljs$lang$maxFixedArity = (0);
 
-gamma.api.ivec3.cljs$lang$applyTo = (function (seq14980){
-return gamma.api.ivec3.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14980));
+gamma.api.ivec3.cljs$lang$applyTo = (function (seq15207){
+return gamma.api.ivec3.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15207));
 });
 
 gamma.api.ivec4 = (function gamma$api$ivec4(){
@@ -1256,8 +1256,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.ivec4.cljs$lang$maxFixedArity = (0);
 
-gamma.api.ivec4.cljs$lang$applyTo = (function (seq14981){
-return gamma.api.ivec4.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14981));
+gamma.api.ivec4.cljs$lang$applyTo = (function (seq15208){
+return gamma.api.ivec4.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15208));
 });
 
 gamma.api.mat2 = (function gamma$api$mat2(){
@@ -1271,8 +1271,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.mat2.cljs$lang$maxFixedArity = (0);
 
-gamma.api.mat2.cljs$lang$applyTo = (function (seq14982){
-return gamma.api.mat2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14982));
+gamma.api.mat2.cljs$lang$applyTo = (function (seq15209){
+return gamma.api.mat2.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15209));
 });
 
 gamma.api.mat3 = (function gamma$api$mat3(){
@@ -1286,8 +1286,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.mat3.cljs$lang$maxFixedArity = (0);
 
-gamma.api.mat3.cljs$lang$applyTo = (function (seq14983){
-return gamma.api.mat3.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14983));
+gamma.api.mat3.cljs$lang$applyTo = (function (seq15210){
+return gamma.api.mat3.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15210));
 });
 
 gamma.api.mat4 = (function gamma$api$mat4(){
@@ -1301,8 +1301,8 @@ return cljs.core.assoc.call(null,cljs.core.apply.call(null,gamma.ast.term,new cl
 
 gamma.api.mat4.cljs$lang$maxFixedArity = (0);
 
-gamma.api.mat4.cljs$lang$applyTo = (function (seq14946){
-return gamma.api.mat4.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14946));
+gamma.api.mat4.cljs$lang$applyTo = (function (seq15173){
+return gamma.api.mat4.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15173));
 });
 gamma.api.swizzle_type = (function gamma$api$swizzle_type(x,c){
 var l = cljs.core.count.call(null,cljs.core.name.call(null,c));

@@ -4,8 +4,8 @@ goog.require('cljs.core');
 goog.require('clojure.walk');
 goog.require('gamma.ast');
 gamma.compiler.flatten_ast.flatten_ast = (function gamma$compiler$flatten_ast$flatten_ast(){
-var G__19981 = arguments.length;
-switch (G__19981) {
+var G__20208 = arguments.length;
+switch (G__20208) {
 case 1:
 return gamma.compiler.flatten_ast.flatten_ast.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -34,8 +34,8 @@ if(cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"literal","literal",16647
 return cljs.core.assoc.call(null,db,id,cljs.core.assoc.call(null,node,new cljs.core.Keyword(null,"parents","parents",-2027538891),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [parent_id], null)));
 } else {
 return cljs.core.reduce.call(null,((function (id,seen){
-return (function (p1__19978_SHARP_,p2__19979_SHARP_){
-return gamma.compiler.flatten_ast.flatten_ast.call(null,p1__19978_SHARP_,p2__19979_SHARP_,id);
+return (function (p1__20205_SHARP_,p2__20206_SHARP_){
+return gamma.compiler.flatten_ast.flatten_ast.call(null,p1__20205_SHARP_,p2__20206_SHARP_,id);
 });})(id,seen))
 ,cljs.core.assoc.call(null,db,new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(node),cljs.core.assoc.call(null,node,new cljs.core.Keyword(null,"body","body",-2049205669),cljs.core.mapv.call(null,new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(node)),new cljs.core.Keyword(null,"parents","parents",-2027538891),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [parent_id], null))),new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(node));
 }

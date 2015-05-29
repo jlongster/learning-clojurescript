@@ -10,20 +10,20 @@ goog.require('goog.net.XhrIo');
 goog.require('clojure.browser.event');
 goog.require('goog.net.xpc.CrossPageChannel');
 clojure.browser.net._STAR_timeout_STAR_ = (10000);
-clojure.browser.net.event_types = cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,(function (p__20488){
-var vec__20489 = p__20488;
-var k = cljs.core.nth.call(null,vec__20489,(0),null);
-var v = cljs.core.nth.call(null,vec__20489,(1),null);
+clojure.browser.net.event_types = cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,(function (p__20715){
+var vec__20716 = p__20715;
+var k = cljs.core.nth.call(null,vec__20716,(0),null);
+var v = cljs.core.nth.call(null,vec__20716,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.call(null,k.toLowerCase()),v], null);
 }),cljs.core.merge.call(null,cljs.core.js__GT_clj.call(null,goog.net.EventType))));
 
-clojure.browser.net.IConnection = (function (){var obj20491 = {};
-return obj20491;
+clojure.browser.net.IConnection = (function (){var obj20718 = {};
+return obj20718;
 })();
 
 clojure.browser.net.connect = (function clojure$browser$net$connect(){
-var G__20493 = arguments.length;
-switch (G__20493) {
+var G__20720 = arguments.length;
+switch (G__20720) {
 case 1:
 return clojure.browser.net.connect.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -153,8 +153,8 @@ throw cljs.core.missing_protocol.call(null,"IConnection.connect",this$);
 clojure.browser.net.connect.cljs$lang$maxFixedArity = 4;
 
 clojure.browser.net.transmit = (function clojure$browser$net$transmit(){
-var G__20495 = arguments.length;
-switch (G__20495) {
+var G__20722 = arguments.length;
+switch (G__20722) {
 case 2:
 return clojure.browser.net.transmit.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -373,18 +373,18 @@ goog.net.XhrIo.prototype.clojure$browser$event$IEventType$ = true;
 goog.net.XhrIo.prototype.clojure$browser$event$IEventType$event_types$arity$1 = (function (this$){
 var this$__$1 = this;
 return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,((function (this$__$1){
-return (function (p__20498){
-var vec__20499 = p__20498;
-var k = cljs.core.nth.call(null,vec__20499,(0),null);
-var v = cljs.core.nth.call(null,vec__20499,(1),null);
+return (function (p__20725){
+var vec__20726 = p__20725;
+var k = cljs.core.nth.call(null,vec__20726,(0),null);
+var v = cljs.core.nth.call(null,vec__20726,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.call(null,k.toLowerCase()),v], null);
 });})(this$__$1))
 ,cljs.core.merge.call(null,cljs.core.js__GT_clj.call(null,goog.net.EventType))));
 });
-clojure.browser.net.xpc_config_fields = cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,(function (p__20500){
-var vec__20501 = p__20500;
-var k = cljs.core.nth.call(null,vec__20501,(0),null);
-var v = cljs.core.nth.call(null,vec__20501,(1),null);
+clojure.browser.net.xpc_config_fields = cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,(function (p__20727){
+var vec__20728 = p__20727;
+var k = cljs.core.nth.call(null,vec__20728,(0),null);
+var v = cljs.core.nth.call(null,vec__20728,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.call(null,k.toLowerCase()),v], null);
 }),cljs.core.js__GT_clj.call(null,goog.net.xpc.CfgFields)));
 /**
@@ -394,13 +394,13 @@ clojure.browser.net.xhr_connection = (function clojure$browser$net$xhr_connectio
 return (new goog.net.XhrIo());
 });
 
-clojure.browser.net.ICrossPageChannel = (function (){var obj20503 = {};
-return obj20503;
+clojure.browser.net.ICrossPageChannel = (function (){var obj20730 = {};
+return obj20730;
 })();
 
 clojure.browser.net.register_service = (function clojure$browser$net$register_service(){
-var G__20505 = arguments.length;
-switch (G__20505) {
+var G__20732 = arguments.length;
+switch (G__20732) {
 case 3:
 return clojure.browser.net.register_service.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -526,8 +526,8 @@ return this$__$1.close();
  * per the CrossPageChannel API.
  */
 clojure.browser.net.xpc_connection = (function clojure$browser$net$xpc_connection(){
-var G__20508 = arguments.length;
-switch (G__20508) {
+var G__20735 = arguments.length;
+switch (G__20735) {
 case 0:
 return clojure.browser.net.xpc_connection.cljs$core$IFn$_invoke$arity$0();
 
@@ -553,29 +553,29 @@ return null;
 });
 
 clojure.browser.net.xpc_connection.cljs$core$IFn$_invoke$arity$1 = (function (config){
-return (new goog.net.xpc.CrossPageChannel(cljs.core.reduce.call(null,(function (sum,p__20509){
-var vec__20510 = p__20509;
-var k = cljs.core.nth.call(null,vec__20510,(0),null);
-var v = cljs.core.nth.call(null,vec__20510,(1),null);
+return (new goog.net.xpc.CrossPageChannel(cljs.core.reduce.call(null,(function (sum,p__20736){
+var vec__20737 = p__20736;
+var k = cljs.core.nth.call(null,vec__20737,(0),null);
+var v = cljs.core.nth.call(null,vec__20737,(1),null);
 var temp__4420__auto__ = cljs.core.get.call(null,clojure.browser.net.xpc_config_fields,k);
 if(cljs.core.truth_(temp__4420__auto__)){
 var field = temp__4420__auto__;
-var G__20511 = sum;
-(G__20511[field] = v);
+var G__20738 = sum;
+(G__20738[field] = v);
 
-return G__20511;
+return G__20738;
 } else {
 return sum;
 }
-}),(function (){var obj20513 = {};
-return obj20513;
+}),(function (){var obj20740 = {};
+return obj20740;
 })(),config)));
 });
 
 clojure.browser.net.xpc_connection.cljs$lang$maxFixedArity = 1;
 
-clojure.browser.net.IWebSocket = (function (){var obj20516 = {};
-return obj20516;
+clojure.browser.net.IWebSocket = (function (){var obj20743 = {};
+return obj20743;
 })();
 
 clojure.browser.net.open_QMARK_ = (function clojure$browser$net$open_QMARK_(this$){
@@ -638,17 +638,17 @@ goog.net.WebSocket.prototype.clojure$browser$event$IEventType$ = true;
 goog.net.WebSocket.prototype.clojure$browser$event$IEventType$event_types$arity$1 = (function (this$){
 var this$__$1 = this;
 return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,((function (this$__$1){
-return (function (p__20517){
-var vec__20518 = p__20517;
-var k = cljs.core.nth.call(null,vec__20518,(0),null);
-var v = cljs.core.nth.call(null,vec__20518,(1),null);
+return (function (p__20744){
+var vec__20745 = p__20744;
+var k = cljs.core.nth.call(null,vec__20745,(0),null);
+var v = cljs.core.nth.call(null,vec__20745,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.call(null,k.toLowerCase()),v], null);
 });})(this$__$1))
 ,cljs.core.merge.call(null,cljs.core.js__GT_clj.call(null,goog.net.WebSocket.EventType))));
 });
 clojure.browser.net.websocket_connection = (function clojure$browser$net$websocket_connection(){
-var G__20520 = arguments.length;
-switch (G__20520) {
+var G__20747 = arguments.length;
+switch (G__20747) {
 case 0:
 return clojure.browser.net.websocket_connection.cljs$core$IFn$_invoke$arity$0();
 

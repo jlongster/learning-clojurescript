@@ -14,8 +14,8 @@ thi.ng.common.error.arity_error_BANG_ = (function thi$ng$common$error$arity_erro
 return thi.ng.common.error.throw_BANG_.call(null,[cljs.core.str("Wrong number of args: "),cljs.core.str(n)].join(''));
 });
 thi.ng.common.error.illegal_arg_BANG_ = (function thi$ng$common$error$illegal_arg_BANG_(){
-var G__16617 = arguments.length;
-switch (G__16617) {
+var G__16844 = arguments.length;
+switch (G__16844) {
 case 1:
 return thi.ng.common.error.illegal_arg_BANG_.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -40,8 +40,8 @@ return thi.ng.common.error.throw_BANG_.call(null,[cljs.core.str(msg),cljs.core.s
 
 thi.ng.common.error.illegal_arg_BANG_.cljs$lang$maxFixedArity = 2;
 thi.ng.common.error.unsupported_BANG_ = (function thi$ng$common$error$unsupported_BANG_(){
-var G__16620 = arguments.length;
-switch (G__16620) {
+var G__16847 = arguments.length;
+switch (G__16847) {
 case 0:
 return thi.ng.common.error.unsupported_BANG_.cljs$core$IFn$_invoke$arity$0();
 
