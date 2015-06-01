@@ -1,10 +1,11 @@
 
-function Mesh2d(color) {
+function Mesh2d(color, brush) {
   this._vertices = new Float32Array(200);
   this._values = new Float32Array(200);
   this._numVertices = 0;
   this._color = color && goog.color.hexToRgb(color).map(function(x) { return x / 255; });
   this._rawColor = color;
+  this._brush = brush;
 }
 
 Mesh2d.prototype.addVertex = function(x, y, value) {
@@ -59,6 +60,10 @@ Mesh2d.prototype.getValues = function() {
 
 Mesh2d.prototype.getColor = function() {
   return this._color;
+};
+
+Mesh2d.prototype.getBrush = function() {
+  return this._brush;
 };
 
 Mesh2d.prototype.isColor = function(color) {

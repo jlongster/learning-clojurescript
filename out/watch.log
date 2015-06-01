@@ -1,64 +1,248 @@
 Building ...
-... done. Elapsed 0.219337008 seconds
+... done. Elapsed 0.255478168 seconds
 Watching paths: /Users/james/projects/cljs-draw/01-pressure-draw
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/impl/draw.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/impl/context.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/protocols.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/impl/bind.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/impl/variable.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/impl/resource.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/api.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma-driver/0.0-49-5-g4447/gamma-driver-0.0-49-5-g4447.jar!/gamma_driver/drivers/basic.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/omcljs/om/0.8.8/om-0.8.8.jar!/om/dom.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/common/0.3.1/common-0.3.1.jar!/thi/ng/common/math/core.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/common/0.3.1/common-0.3.1.jar!/thi/ng/common/error.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core/vector.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/math/0.1.0/math-0.1.0.jar!/thi/ng/math/core.cljc
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/protocols.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/buffers.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/dispatch.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/channels.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/ioc_helpers.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async/impl/timers.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.async/0.1.346.0-17112a-alpha/core.async-0.1.346.0-17112a-alpha.jar!/cljs/core/async.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/ast.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/api.cljs
-Reading analysis cache for file:/Users/james/projects/cljs-draw/01-pressure-draw/cljs_draw/util.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/omcljs/om/0.8.8/om-0.8.8.jar!/om/core.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/emit/emit.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/emit/tag.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/emit/statement.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/emit/operator.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/protocols.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/nodes.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/trees.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/transients.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/rrbt.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector/interop.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/core.rrb-vector/0.0.11/core.rrb-vector-0.0.11.jar!/clojure/core/rrb_vector.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/fipp/fipp/0.6.2/fipp-0.6.2.jar!/fipp/deque.cljc
-Reading analysis cache for jar:file:/Users/james/.m2/repository/fipp/fipp/0.6.2/fipp-0.6.2.jar!/fipp/engine.cljc
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/compiler/common.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/compiler/move_assignments.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/clojurescript/0.0-3291/clojurescript-0.0-3291.jar!/clojure/walk.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/compiler/flatten_ast.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/compiler/insert_variables.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/compiler/bubble_term.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/clojurescript/0.0-3291/clojurescript-0.0-3291.jar!/clojure/set.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/compiler/separate_usages.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/compiler/lift_assignments.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/compiler/insert_assignments.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/compiler/core.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/emit/construct.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/emit/fun.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/kovasb/gamma/0.0-135-2-g18b5**DIRTY**/gamma-0.0-135-2-g18b5**DIRTY**.jar!/gamma/program.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/clojurescript/0.0-3291/clojurescript-0.0-3291.jar!/clojure/core/reducers.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/common/0.3.1/common-0.3.1.jar!/thi/ng/common/data/core.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core/utils.cljs
-Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core/matrix.cljs
-... done. Elapsed 3.69150973 seconds
+... done. Elapsed 1.128179369 seconds
 Change detected, recompiling ...
-... done. Elapsed 0.173086156 seconds
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 1.06833203 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.757753848 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.719663116 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/brush-p at line 74 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.594723525 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/brush-p at line 75 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.548066396 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/brush-p at line 75 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.540913678 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.515939683 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.495700434 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.514553009 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.499760224 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.646506144 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.517331367 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.52572853 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.494241049 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.474469488 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/LinearStroke at line 153 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/LinearStroke at line 153 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ResizableFloatArray at line 153 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ResizableFloatArray at line 153 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ResizableFloatArray at line 153 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ResizableFloatArray at line 153 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.485261048 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/LinearStroke at line 153 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/LinearStroke at line 153 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ResizableFloatArray at line 153 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ResizableFloatArray at line 153 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ResizableFloatArray at line 153 01-pressure-draw/cljs_draw/core.cljs
+WARNING: Use of undeclared Var cljs_draw.core/ResizableFloatArray at line 153 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.491219196 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.100754967 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.094364139 seconds
+Change detected, recompiling ...
+... done. Elapsed 0.096047979 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+clojure.lang.ExceptionInfo: failed compiling file:01-pressure-draw/cljs_draw/core.cljs {:file #object[java.io.File 0x2d85a364 "01-pressure-draw/cljs_draw/core.cljs"]}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1146)
+	at cljs.compiler$compile_file.invoke(compiler.cljc:1109)
+	at cljs.compiler$compile_root.invoke(compiler.cljc:1181)
+	at cljs.closure$compile_dir.invoke(closure.clj:385)
+	at cljs.closure$eval3401$fn__3402.invoke(closure.clj:425)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$eval3414$fn__3415.invoke(closure.clj:439)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$build.invoke(closure.clj:1475)
+	at cljs.closure$watch$buildf__3746.invoke(closure.clj:1563)
+	at cljs.closure$watch.invoke(closure.clj:1612)
+	at cljs.repl$repl_STAR_$fn__4248$fn__4251.invoke(repl.cljc:836)
+	at clojure.core$binding_conveyor_fn$fn__4441.invoke(core.clj:1914)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: clojure.lang.ExceptionInfo: clojure.lang.PersistentList cannot be cast to clojure.lang.Named at line 152 01-pressure-draw/cljs_draw/core.cljs {:file "01-pressure-draw/cljs_draw/core.cljs", :line 152, :column 1, :tag :cljs/analysis-error}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.analyzer$error.invoke(analyzer.cljc:384)
+	at cljs.analyzer$macroexpand_1.invoke(analyzer.cljc:1853)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1896)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.compiler$compile_file_STAR_$fn__2961.invoke(compiler.cljc:1027)
+	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:968)
+	at cljs.compiler$compile_file_STAR_.invoke(compiler.cljc:988)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1129)
+	... 14 more
+Caused by: java.lang.ClassCastException: clojure.lang.PersistentList cannot be cast to clojure.lang.Named
+	at clojure.core$namespace.invoke(core.clj:1524)
+	at cljs.analyzer$resolve_var.invoke(analyzer.cljc:464)
+	at cljs.analyzer$resolve_var.invoke(analyzer.cljc:462)
+	at cljs.core$resolve_var.invoke(core.clj:783)
+	at clojure.core$partial$fn__4524.invoke(core.clj:2491)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$keep$fn__6829.invoke(core.clj:7034)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.core$prepare_protocol_masks.invoke(core.clj:963)
+	at cljs.core$deftype.doInvoke(core.clj:1077)
+	at clojure.lang.RestFn.applyTo(RestFn.java:151)
+	at clojure.lang.AFunction$1.doInvoke(AFunction.java:29)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invoke(core.clj:632)
+	at cljs.analyzer$macroexpand_1.invoke(analyzer.cljc:1859)
+	... 21 more
+
+Change detected, recompiling ...
+... done. Elapsed 0.109760185 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+clojure.lang.ExceptionInfo: failed compiling file:01-pressure-draw/cljs_draw/core.cljs {:file #object[java.io.File 0x16e3cbd7 "01-pressure-draw/cljs_draw/core.cljs"]}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1146)
+	at cljs.compiler$compile_file.invoke(compiler.cljc:1109)
+	at cljs.compiler$compile_root.invoke(compiler.cljc:1181)
+	at cljs.closure$compile_dir.invoke(closure.clj:385)
+	at cljs.closure$eval3401$fn__3402.invoke(closure.clj:425)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$eval3414$fn__3415.invoke(closure.clj:439)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$build.invoke(closure.clj:1475)
+	at cljs.closure$watch$buildf__3746.invoke(closure.clj:1563)
+	at cljs.closure$watch.invoke(closure.clj:1612)
+	at cljs.repl$repl_STAR_$fn__4248$fn__4251.invoke(repl.cljc:836)
+	at clojure.core$binding_conveyor_fn$fn__4441.invoke(core.clj:1914)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: clojure.lang.ExceptionInfo: clojure.lang.PersistentList cannot be cast to clojure.lang.Named at line 152 01-pressure-draw/cljs_draw/core.cljs {:file "01-pressure-draw/cljs_draw/core.cljs", :line 152, :column 1, :tag :cljs/analysis-error}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.analyzer$error.invoke(analyzer.cljc:384)
+	at cljs.analyzer$macroexpand_1.invoke(analyzer.cljc:1853)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1896)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.compiler$compile_file_STAR_$fn__2961.invoke(compiler.cljc:1027)
+	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:968)
+	at cljs.compiler$compile_file_STAR_.invoke(compiler.cljc:988)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1129)
+	... 14 more
+Caused by: java.lang.ClassCastException: clojure.lang.PersistentList cannot be cast to clojure.lang.Named
+	at clojure.core$namespace.invoke(core.clj:1524)
+	at cljs.analyzer$resolve_var.invoke(analyzer.cljc:464)
+	at cljs.analyzer$resolve_var.invoke(analyzer.cljc:462)
+	at cljs.core$resolve_var.invoke(core.clj:783)
+	at clojure.core$partial$fn__4524.invoke(core.clj:2491)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$keep$fn__6829.invoke(core.clj:7034)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.core$prepare_protocol_masks.invoke(core.clj:963)
+	at cljs.core$deftype.doInvoke(core.clj:1077)
+	at clojure.lang.RestFn.applyTo(RestFn.java:151)
+	at clojure.lang.AFunction$1.doInvoke(AFunction.java:29)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invoke(core.clj:632)
+	at cljs.analyzer$macroexpand_1.invoke(analyzer.cljc:1859)
+	... 21 more
+
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+clojure.lang.ExceptionInfo: failed compiling file:01-pressure-draw/cljs_draw/core.cljs {:file #object[java.io.File 0x24541744 "01-pressure-draw/cljs_draw/core.cljs"]}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1146)
+	at cljs.compiler$compile_file.invoke(compiler.cljc:1109)
+	at cljs.compiler$compile_root.invoke(compiler.cljc:1181)
+	at cljs.closure$compile_dir.invoke(closure.clj:385)
+	at cljs.closure$eval3401$fn__3402.invoke(closure.clj:425)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$eval3414$fn__3415.invoke(closure.clj:439)
+	at cljs.closure$eval3354$fn__3355$G__3345__3362.invoke(closure.clj:331)
+	at cljs.closure$build.invoke(closure.clj:1475)
+	at cljs.closure$watch$buildf__3746.invoke(closure.clj:1563)
+	at cljs.closure$watch.invoke(closure.clj:1612)
+	at cljs.repl$repl_STAR_$fn__4248$fn__4251.invoke(repl.cljc:836)
+	at clojure.core$binding_conveyor_fn$fn__4441.invoke(core.clj:1914)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: clojure.lang.ExceptionInfo: clojure.lang.PersistentList cannot be cast to clojure.lang.Named at line 152 01-pressure-draw/cljs_draw/core.cljs {:file "01-pressure-draw/cljs_draw/core.cljs", :line 152, :column 1, :tag :cljs/analysis-error}
+	at clojure.core$ex_info.invoke(core.clj:4591)
+	at cljs.analyzer$error.invoke(analyzer.cljc:384)
+	at cljs.analyzer$macroexpand_1.invoke(analyzer.cljc:1853)
+	at cljs.analyzer$analyze_seq.invoke(analyzer.cljc:1896)
+	at cljs.analyzer$analyze$fn__2056.invoke(analyzer.cljc:1992)
+	at cljs.analyzer$analyze.invoke(analyzer.cljc:1985)
+	at cljs.compiler$compile_file_STAR_$fn__2961.invoke(compiler.cljc:1027)
+	at cljs.compiler$with_core_cljs.invoke(compiler.cljc:968)
+	at cljs.compiler$compile_file_STAR_.invoke(compiler.cljc:988)
+	at cljs.compiler$compile_file$fn__2993.invoke(compiler.cljc:1129)
+	... 14 more
+Caused by: java.lang.ClassCastException: clojure.lang.PersistentList cannot be cast to clojure.lang.Named
+	at clojure.core$namespace.invoke(core.clj:1524)
+	at cljs.analyzer$resolve_var.invoke(analyzer.cljc:464)
+	at cljs.analyzer$resolve_var.invoke(analyzer.cljc:462)
+	at cljs.core$resolve_var.invoke(core.clj:783)
+	at clojure.core$partial$fn__4524.invoke(core.clj:2491)
+	at clojure.core$map$fn__4550.invoke(core.clj:2622)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at clojure.core$keep$fn__6829.invoke(core.clj:7034)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:507)
+	at clojure.core$seq__4125.invoke(core.clj:135)
+	at cljs.core$prepare_protocol_masks.invoke(core.clj:963)
+	at cljs.core$deftype.doInvoke(core.clj:1077)
+	at clojure.lang.RestFn.applyTo(RestFn.java:151)
+	at clojure.lang.AFunction$1.doInvoke(AFunction.java:29)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invoke(core.clj:632)
+	at cljs.analyzer$macroexpand_1.invoke(analyzer.cljc:1859)
+	... 21 more
+

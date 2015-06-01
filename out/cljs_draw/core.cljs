@@ -13,11 +13,11 @@
             [gamma-driver.api :as gd]
             [thi.ng.math.core :as math :refer [PI]]
             [thi.ng.geom.core :as geom]
-            [thi.ng.geom.core.vector :as vec]
+            [thi.ng.geom.core.vector :as v]
             [thi.ng.geom.core.matrix :as mat :refer [M44]])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
 
-;;(defonce conn (repl/connect "http://localhost:9000/repl"))
+(defonce conn (repl/connect "http://localhost:9000/repl"))
 (enable-console-print!)
 
 (defonce app-state
@@ -50,17 +50,58 @@
 (def v-value
   (g/varying "vValue" :float :mediump))
 
-(def program-source
-  (p/program
-   {:vertex-shader   {(g/gl-position)   (-> u-p-matrix
-                                            (g/* u-mv-matrix)
-                                            (g/* (g/vec4 a-position 0 1)))
-                      v-value a-value}
-    :fragment-shader {;;(g/gl-frag-color) (g/vec4 u-color (g/pow .9 (g/div 1 v-value)))
-                      ;;(g/gl-frag-color) (g/vec4 u-color (g/sin (g/* v-value 100)))
-                      (g/gl-frag-color) (g/vec4 u-color v-value)
-                      }
-    :precision {:float :mediump}}))
+(defn shader-rand [v]
+  (g/fract (g/* (g/sin (g/dot (g/vec2 v) (g/vec2 12.9898 78.233)))
+                43758.5453)))
+
+(defn shader-lerp [a b s]
+  (g/+ a (g/* s (g/- b a))))
+
+(def current-brush :transparent)
+(def default-vertex-shader
+  {(g/gl-position) (-> u-p-matrix
+                       (g/* u-mv-matrix)
+                       (g/* (g/vec4 a-position 0 1)))
+   v-value a-value})
+
+(def brushes {})
+(defn add-brush [name brush]
+  (let [program (p/program
+                 (assoc brush :precision {:float :mediump}))]
+    (set! brushes (assoc brushes name program))
+    ;; compile and install in the registry if the renderer exists
+    (if renderer
+      (set! renderer
+            (assoc renderer :programs
+                   (assoc (:programs renderer)
+                          name
+                          (dp/program (:driver renderer) program)))))
+    nil))
+
+(add-brush
+ :solid
+ {:vertex-shader default-vertex-shader
+  :fragment-shader
+  {(g/gl-frag-color) (g/vec4 u-color 1)}})
+
+(add-brush
+ :transparent
+ {:vertex-shader default-vertex-shader
+  :fragment-shader
+  {(g/gl-frag-color) (g/vec4 u-color .4)}})
+
+(add-brush
+ :spray
+ {:vertex-shader default-vertex-shader
+  :fragment-shader
+  {(g/gl-frag-color)
+   (let [seed (g/vec2 32.2 3.5)]
+     (g/vec4 u-color
+             (g/if (g/< (g/+ (g/pow v-value 3)
+                             (g/* (shader-rand (g/gl-frag-coord)) .5))
+                        .5)
+               0 1)))
+   }})
 
 (defn renderable [p mv color vertices values vertex-count]
   {u-p-matrix p
@@ -103,70 +144,77 @@
     (set! stroke-history (conj stroke-history (.getNumVertices current-mesh)))
     (.setCurrentPos current-mesh x y x y)))
 
+;; meshes
+
+(defprotocol IRenderable
+  (add-vertex [this x y tracking]))
+
+(deftype LinearStroke [color brush vertices trackings
+                       ^:volatile-mutable num-vertices]
+
+  IRenderable
+  (add-vertex [_ x y tracking]
+    (.maybeResize vertices (+ (* num-vertices 2) 6))
+    (.maybeResize trackings (+ num-vertices 3))
+
+    (let [ptr (* num-vertices 2)]
+      (.set vertices ptr x)
+      (.set vertices (+ ptr 1) y))
+
+    (let [ptr num-vertices]
+      (.set trackings ptr tracking))
+
+    (set! num-vertices (+ num-vertices 1))))
+
+(defn make-linear-stroke [color brush]
+  (LinearStroke. color brush
+                 (js/ResizableFloatArray.) (js/ResizableFloatArray.) 0))
+
+(def x (make-linear-stroke "blue" :blue))
+(add-vertex x 3 4 10)
+(add-vertex x 3 4 10)
+(add-vertex x 3 4 10)
+(.log js/console x.vertices)
+(.log js/console x.num-vertices)
+
 (defn add-face [mesh p1 p2 p3 v1 v2 v3]
   (.addVertex mesh (nth p1 0) (nth p1 1) v1)
   (.addVertex mesh (nth p2 0) (nth p2 1) v2)
   (.addVertex mesh (nth p3 0) (nth p3 1) v3))
 
-(defn ->poly-points [points]
-  (apply array (map (fn [p] (js/poly2tri.Point. (nth p 0) (nth p 1)))
-                    points)))
-
-(defn ->vec2 [poly-point]
-  (vec/vec2 (.-x poly-point) (.-y poly-point)))
-
 (defn vec-equals [v1 v2]
   (and (math/delta= (nth v1 0) (nth v2 0))
        (math/delta= (nth v1 1) (nth v2 1))))
 
-(defn get-alpha [p c1 c2 c3 c4 middle m1 m2]
-  (cond
-    (vec-equals p c1) 0
-    (vec-equals p c2) 1
-    (vec-equals p c3) 0
-    (vec-equals p c4) 1
-    (vec-equals p middle) .5
-    (vec-equals p m1) .5
-    (vec-equals p m2) .5))
+(defn angle-of-vectors [v1 v2]
+  (.acos js/Math
+         (/ (geom/dot v1 v2)
+            (* (geom/mag v1) (geom/mag v2)))))
 
 (defn add-to-stroke [point pressure]
-  (let [width (* (.pow js/Math pressure 2) 20)
+  (let [width (* (.pow js/Math pressure 2) 60)
         current-pos (.getCurrentPos current-mesh)
-        last-point1 (vec/vec2 (nth current-pos 0) (nth current-pos 1))
-        last-point2 (vec/vec2 (nth current-pos 2) (nth current-pos 3))
+        last-point1 (v/vec2 (nth current-pos 0) (nth current-pos 1))
+        last-point2 (v/vec2 (nth current-pos 2) (nth current-pos 3))
         last-edge (geom/div (geom/- last-point2 last-point1) 2)
         last-middle (geom/+ last-point1 last-edge)
         
-        vec (geom/- (vec/vec2 point) last-middle)]
-    (if (> (geom/dot vec vec) 2)
+        vec (geom/- (v/vec2 point) last-middle)]
+    (if (> (geom/mag vec) 5)
       (let [normalized (geom/* (geom/normalize vec) width)
             r1 (geom/rotate normalized (/ PI 2))
             r2 (geom/rotate normalized (/ PI -2))
+            c1-cross (geom/cross last-edge r1)
+            c2-cross (geom/cross last-edge r2)
             c1 (geom/+ point r1)
             c2 (geom/+ point r2)
             c3 last-point1
-            c4 last-point2
-            middle (geom/+ last-middle (geom/div vec 2))
-            swctx (js/poly2tri.SweepContext. (->poly-points [c1 point c2 c4 last-middle c3]))]
-        ;; (.addPoint swctx (js/poly2tri.Point. (nth middle 0) (nth middle 1)))
-        ;; (.triangulate swctx)
-        ;; (doseq [tri (.getTriangles swctx)]
-        ;;   (let [p1 (->vec2 (.getPoint tri 0))
-        ;;         p2 (->vec2 (.getPoint tri 1))
-        ;;         p3 (->vec2 (.getPoint tri 2))]
-        ;;     (add-face current-mesh
-        ;;               p1 p2 p3
-        ;;               (get-alpha p1 c1 c2 c3 c4 middle point last-middle)
-        ;;               (get-alpha p2 c1 c2 c3 c4 middle point last-middle)
-        ;;               (get-alpha p3 c1 c2 c3 c4 middle point last-middle))))
-
-        ;; (add-face current-mesh c1 c2 c3 0 0 1)
-        ;; (add-face current-mesh c3 c2 c4 1 0 1)
+            c4 last-point2]
 
         (if (vec-equals last-point1 last-point2)
           (do
-            (add-face current-mesh last-point1 c1 point)
-            (add-face current-mesh last-point1 point c2))
+            (add-face current-mesh last-point1 c1 point 1 0 1)
+            (add-face current-mesh last-point1 point c2 1 1 0))
           (do
             (add-face current-mesh c1 point c3 0 1 0)
             (add-face current-mesh c3 point last-middle 0 1 1)
@@ -187,15 +235,16 @@
                   {:draw-mode :triangles}))
 
 (defn render []
-  (let [{:keys [gl driver program pers]} renderer
-        mv (-> (mat/matrix44)
-               (geom/translate [0 0 -1]))]
+  (let [{:keys [gl driver programs pers]} renderer
+        mv (geom/translate (mat/matrix44) [0 0 -1])]
     (.clear gl (.-COLOR_BUFFER_BIT gl))
 
     (doseq [mesh paint-meshes]
-      (render-mesh mesh driver program pers mv))
+      (render-mesh mesh driver ((.getBrush mesh) programs) pers mv))
     (if current-mesh
-      (render-mesh current-mesh driver program pers mv))))
+      (render-mesh
+       current-mesh driver
+       ((.getBrush current-mesh) programs) pers mv))))
 
 (defn render-loop []
   (render)
@@ -372,7 +421,12 @@
         w (.-width rect)
         h (.-height rect)
         driver (driver/basic-driver gl)
-        program (dp/program driver program-source)
+        programs
+        (into
+         {}
+         (map (fn [[name brush]]
+                [name (dp/program driver brush)])
+              brushes))
         pers (get-perspective-matrix w h)]
     (.viewport gl 0 0 (* w 2) (* h 2))
     (.clearColor gl 1 1 1 1)
@@ -381,7 +435,7 @@
     (.enable gl (.-BLEND gl))
     (.disable gl (.-DEPTH_TEST gl))
 
-    {:gl gl :driver driver :program program :pers pers}))
+    {:gl gl :driver driver :programs programs :pers pers}))
 
 (defn app [data owner]
   (reify
@@ -395,18 +449,10 @@
         ;;(load-state)
         (render-loop)
 
-        (set! current-mesh (js/Mesh2d. "#000000"))
-        (start-stroke (vec/vec2 100 100))
-        (add-to-stroke (vec/vec2 200 200) 2)
-        (add-to-stroke (vec/vec2 300 300) 2)
-        ;;(add-to-stroke (vec/vec2 400 250) 2)
-        (add-to-stroke (vec/vec2 310 395) 3)
-        (add-to-stroke (vec/vec2 390 500) 3)
-
         (let [moved (listen container "pointermove")]
           (go-loop [last-pressure 0]
             (if-let [e (<! moved)]
-              (let [point (vec/vec2 (- (.-layerX e) boundary)
+              (let [point (v/vec2 (- (.-layerX e) boundary)
                                     (- (.-layerY e) boundary))
                     pressure (.-mozPressure e)]
                 (cond
@@ -414,15 +460,17 @@
                   nil
                   
                   (= pressure 0)
-                  (if (and current-mesh
-                           (not
-                            (.isColor current-mesh (:current-color @app-state))))
+                  (if (and
+                       current-mesh
+                       (or (not (.isColor current-mesh (:current-color @app-state)))
+                           (not (= (.getBrush current-mesh) current-brush))))
                     (finalize-stroke))
 
                   (= last-pressure 0)
                   (do
                     (if (not current-mesh)
-                      (set! current-mesh (js/Mesh2d. (:current-color @app-state))))
+                      (set! current-mesh (js/Mesh2d. (:current-color @app-state)
+                                                     current-brush)))
                     (start-stroke point))
 
                   :else
@@ -476,4 +524,5 @@
 
 (om/root app app-state
          {:target (.getElementById js/document "mount")})
- 
+
+
