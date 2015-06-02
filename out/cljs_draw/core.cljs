@@ -150,7 +150,8 @@
 
 (add-linear-brush
  :transparent
- {:vertex-shader {(g/gl-position) default-vertex-position
+ {;;:blend {:from "ONE" :to "ONE"}
+  :vertex-shader {(g/gl-position) default-vertex-position
                   v-value a-value}
   :fragment-shader
   {(g/gl-frag-color) (g/vec4 u-color .8)}})
@@ -187,7 +188,8 @@
                               (:paint-meshes @app-state))))
   (.setItem js/localforage "current-mesh"
             (.serialize (:current-mesh @app-state)))
-  (.setItem js/localforage "app-state" (clj->js @app-state)))
+  (.setItem js/localforage "app-state"
+            (clj->js (select-keys @app-state [:colors :current-color]))))
 
 (defn load-state []
   (go
@@ -204,17 +206,17 @@
               (.unserialize (get-class current) current)}))
     
     (let [state (<! (get-from-storage "app-state"))]
-      (swap! app-state (fn [x] (js->clj state
-                                        :keywordize-keys true))))))
+      (swap! app-state (fn [data]
+                         (merge data (js->clj state
+                                              :keywordize-keys true)))))))
 
 ;; clearing & undo
 
 (defn clear-canvas []
   (if (js/confirm "Are you sure you want to clear the canvas?")
-    (do
-      (swap! app-state merge {:paint-meshes []
-                              :current-mesh nil
-                              :stroke-history []}))))
+    (swap! app-state merge {:paint-meshes []
+                            :current-mesh nil
+                            :stroke-history []})))
 
 (defn undo []
   (let [stroke-history (:stroke-history @app-state)
@@ -364,7 +366,6 @@
     (.viewport gl 0 0 (* w 2) (* h 2))
     (.clearColor gl 1 1 1 1)
     (.clear gl (bit-or (.-COLOR_BUFFER_BIT gl) (.-DEPTH_BUFFER_BIT gl)))
-    (.blendFunc gl (.-SRC_ALPHA gl) (.-ONE_MINUS_SRC_ALPHA gl))
     (.enable gl (.-BLEND gl))
     (.disable gl (.-DEPTH_TEST gl))
 
@@ -382,11 +383,14 @@
          :pers pers
          :textures textures}))))
 
-(defn render-mesh [mesh driver brush program textures pers mv]
-  (let [brush-name (keyword (.getBrush mesh))
-        brush-type (:brush-type brush)]
+(defn render-mesh [gl mesh driver brush program textures pers mv]
+  (let [brush-type (:brush-type brush)
+        blend (:blend brush)]
     (validate-brush brush mesh)
-
+    (if blend
+      (.blendFunc gl (aget gl (:from blend)) (aget gl (:to blend)))
+      (.blendFunc gl (.-SRC_ALPHA gl) (.-ONE_MINUS_SRC_ALPHA gl)))
+    
     (gd/draw-arrays
      driver
      (gd/bind
@@ -419,10 +423,10 @@
         {:keys [gl driver compiled-programs pers textures]} ctx
         mv (geom/translate (mat/matrix44) [0 0 -1])]
     (.clear gl (.-COLOR_BUFFER_BIT gl))
-
+    
     (doseq [mesh (:paint-meshes @app-state)]
       (let [brush-name (keyword (.getBrush mesh))]
-        (render-mesh mesh driver
+        (render-mesh gl mesh driver
                      (get-brush app-state brush-name)
                      (get compiled-programs brush-name)
                      textures
@@ -431,7 +435,7 @@
     (if-let [current-mesh (:current-mesh @app-state)]
       (let [brush-name (keyword (.getBrush current-mesh))]
         (render-mesh
-         current-mesh driver
+         gl current-mesh driver
          (get-brush app-state brush-name)
          (get compiled-programs brush-name)
          textures
@@ -588,7 +592,7 @@
         (go
           (merge-in! app-state :render-ctx
                      (<! (init-renderer canvas (:brushes @app-state))))
-          ;;(load-state)
+          (load-state)
           (render-loop))
 
         (let [moved (listen container "pointermove")]
