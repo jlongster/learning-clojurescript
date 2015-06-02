@@ -1,11 +1,11 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('cljs_draw.util');
 goog.require('cljs.core');
 goog.require('goog.events');
 goog.require('cljs.core.async');
 cljs_draw.util.listen = (function cljs_draw$util$listen(){
-var G__9452 = arguments.length;
-switch (G__9452) {
+var G__9455 = arguments.length;
+switch (G__9455) {
 case 2:
 return cljs_draw.util.listen.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 

@@ -1,20 +1,20 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('gamma.compiler.lift_assignments');
 goog.require('cljs.core');
 goog.require('gamma.ast');
 goog.require('gamma.compiler.common');
 gamma.compiler.lift_assignments.liftable_QMARK_ = (function gamma$compiler$lift_assignments$liftable_QMARK_(db,location){
 var e = gamma.compiler.common.get_element.call(null,db,location);
-var or__4950__auto__ = cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"shared","shared",-384145993),cljs.core.peek.call(null,cljs.core.pop.call(null,new cljs.core.Keyword(null,"path","path",-188191168).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"parent","parent",-878878779).cljs$core$IFn$_invoke$arity$1(location)))));
-if(or__4950__auto__){
-return or__4950__auto__;
+var or__4953__auto__ = cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"shared","shared",-384145993),cljs.core.peek.call(null,cljs.core.pop.call(null,new cljs.core.Keyword(null,"path","path",-188191168).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"parent","parent",-878878779).cljs$core$IFn$_invoke$arity$1(location)))));
+if(or__4953__auto__){
+return or__4953__auto__;
 } else {
-var and__4938__auto__ = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"if","if",-458814265),null], null), null).call(null,new cljs.core.Keyword(null,"head","head",-771383919).cljs$core$IFn$_invoke$arity$1(e));
-if(cljs.core.truth_(and__4938__auto__)){
+var and__4941__auto__ = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"if","if",-458814265),null], null), null).call(null,new cljs.core.Keyword(null,"head","head",-771383919).cljs$core$IFn$_invoke$arity$1(e));
+if(cljs.core.truth_(and__4941__auto__)){
 var env = cljs.core.into.call(null,cljs.core.PersistentHashSet.EMPTY,new cljs.core.Keyword(null,"env","env",-1815813235).cljs$core$IFn$_invoke$arity$1(db.call(null,new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"parent","parent",-878878779).cljs$core$IFn$_invoke$arity$1(location)))));
 return cljs.core.not.call(null,(cljs.core.truth_(env)?env.call(null,new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(e)):false));
 } else {
-return and__4938__auto__;
+return and__4941__auto__;
 }
 }
 });

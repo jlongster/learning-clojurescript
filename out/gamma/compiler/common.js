@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('gamma.compiler.common');
 goog.require('cljs.core');
 goog.require('gamma.ast');
@@ -10,15 +10,15 @@ return (function (db,path){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [db,(function (){var elt = gamma.compiler.common.get_element.call(null,db,path);
 if(cljs.core.vector_QMARK_.call(null,elt)){
 return cljs.core.mapv.call(null,((function (elt){
-return (function (p1__20109_SHARP_){
-return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[p1__20109_SHARP_,f],null));
+return (function (p1__20253_SHARP_){
+return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[p1__20253_SHARP_,f],null));
 });})(elt))
 ,cljs.core.range.call(null,(0),cljs.core.count.call(null,elt)));
 } else {
 if(cljs.core.map_QMARK_.call(null,elt)){
 return cljs.core.mapv.call(null,((function (elt){
-return (function (p1__20110_SHARP_){
-return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[p1__20110_SHARP_,f],null));
+return (function (p1__20254_SHARP_){
+return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[p1__20254_SHARP_,f],null));
 });})(elt))
 ,cljs.core.keys.call(null,elt));
 } else {
@@ -47,8 +47,8 @@ return base_location;
 }
 });
 gamma.compiler.common.merge_elements = (function gamma$compiler$common$merge_elements(){
-var G__20114 = arguments.length;
-switch (G__20114) {
+var G__20258 = arguments.length;
+switch (G__20258) {
 case 2:
 return gamma.compiler.common.merge_elements.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -64,8 +64,8 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 });
 
 gamma.compiler.common.merge_elements.cljs$core$IFn$_invoke$arity$2 = (function (db,elements){
-return cljs.core.reduce.call(null,(function (p1__20111_SHARP_,p2__20112_SHARP_){
-return cljs.core.update_in.call(null,p1__20111_SHARP_,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p2__20112_SHARP_)], null),cljs.core.fnil.call(null,cljs.core.merge,cljs.core.PersistentArrayMap.EMPTY),p2__20112_SHARP_);
+return cljs.core.reduce.call(null,(function (p1__20255_SHARP_,p2__20256_SHARP_){
+return cljs.core.update_in.call(null,p1__20255_SHARP_,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p2__20256_SHARP_)], null),cljs.core.fnil.call(null,cljs.core.merge,cljs.core.PersistentArrayMap.EMPTY),p2__20256_SHARP_);
 }),db,elements);
 });
 
@@ -75,8 +75,8 @@ return gamma.compiler.common.assoc_in_location.call(null,gamma.compiler.common.m
 
 gamma.compiler.common.merge_elements.cljs$lang$maxFixedArity = 3;
 gamma.compiler.common.assoc_elements = (function gamma$compiler$common$assoc_elements(){
-var G__20119 = arguments.length;
-switch (G__20119) {
+var G__20263 = arguments.length;
+switch (G__20263) {
 case 2:
 return gamma.compiler.common.assoc_elements.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -92,8 +92,8 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 });
 
 gamma.compiler.common.assoc_elements.cljs$core$IFn$_invoke$arity$2 = (function (db,elements){
-return cljs.core.reduce.call(null,(function (p1__20116_SHARP_,p2__20117_SHARP_){
-return cljs.core.assoc.call(null,p1__20116_SHARP_,new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p2__20117_SHARP_),p2__20117_SHARP_);
+return cljs.core.reduce.call(null,(function (p1__20260_SHARP_,p2__20261_SHARP_){
+return cljs.core.assoc.call(null,p1__20260_SHARP_,new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p2__20261_SHARP_),p2__20261_SHARP_);
 }),db,elements);
 });
 

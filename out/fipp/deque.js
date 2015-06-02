@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('fipp.deque');
 goog.require('cljs.core');
 goog.require('clojure.core.rrb_vector');

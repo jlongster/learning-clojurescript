@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('gamma.compiler.separate_usages');
 goog.require('cljs.core');
 goog.require('clojure.set');
@@ -38,11 +38,11 @@ return clojure.set.difference.call(null,nodes,have_incoming);
 gamma.compiler.separate_usages.normalize = (function gamma$compiler$separate_usages$normalize(g){
 var have_incoming = cljs.core.apply.call(null,clojure.set.union,cljs.core.vals.call(null,g));
 return cljs.core.reduce.call(null,((function (have_incoming){
-return (function (p1__20125_SHARP_,p2__20126_SHARP_){
-if(cljs.core.truth_(cljs.core.get.call(null,p1__20125_SHARP_,p2__20126_SHARP_))){
-return p1__20125_SHARP_;
+return (function (p1__20269_SHARP_,p2__20270_SHARP_){
+if(cljs.core.truth_(cljs.core.get.call(null,p1__20269_SHARP_,p2__20270_SHARP_))){
+return p1__20269_SHARP_;
 } else {
-return cljs.core.assoc.call(null,p1__20125_SHARP_,p2__20126_SHARP_,cljs.core.PersistentHashSet.EMPTY);
+return cljs.core.assoc.call(null,p1__20269_SHARP_,p2__20270_SHARP_,cljs.core.PersistentHashSet.EMPTY);
 }
 });})(have_incoming))
 ,g,have_incoming);
@@ -53,8 +53,8 @@ return cljs.core.assoc.call(null,p1__20125_SHARP_,p2__20126_SHARP_,cljs.core.Per
  * cyclic, returns nil.
  */
 gamma.compiler.separate_usages.kahn_sort = (function gamma$compiler$separate_usages$kahn_sort(){
-var G__20130 = arguments.length;
-switch (G__20130) {
+var G__20274 = arguments.length;
+switch (G__20274) {
 case 1:
 return gamma.compiler.separate_usages.kahn_sort.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -82,21 +82,21 @@ return l;
 return null;
 }
 } else {
-var vec__20131 = gamma.compiler.separate_usages.take_1.call(null,s);
-var n = cljs.core.nth.call(null,vec__20131,(0),null);
-var s_SINGLEQUOTE_ = cljs.core.nth.call(null,vec__20131,(1),null);
+var vec__20275 = gamma.compiler.separate_usages.take_1.call(null,s);
+var n = cljs.core.nth.call(null,vec__20275,(0),null);
+var s_SINGLEQUOTE_ = cljs.core.nth.call(null,vec__20275,(1),null);
 var m = g.call(null,n);
-var g_SINGLEQUOTE_ = cljs.core.reduce.call(null,((function (g,l,s,vec__20131,n,s_SINGLEQUOTE_,m){
-return (function (p1__20127_SHARP_,p2__20128_SHARP_){
-return cljs.core.update_in.call(null,p1__20127_SHARP_,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [n], null),gamma.compiler.separate_usages.without,p2__20128_SHARP_);
-});})(g,l,s,vec__20131,n,s_SINGLEQUOTE_,m))
+var g_SINGLEQUOTE_ = cljs.core.reduce.call(null,((function (g,l,s,vec__20275,n,s_SINGLEQUOTE_,m){
+return (function (p1__20271_SHARP_,p2__20272_SHARP_){
+return cljs.core.update_in.call(null,p1__20271_SHARP_,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [n], null),gamma.compiler.separate_usages.without,p2__20272_SHARP_);
+});})(g,l,s,vec__20275,n,s_SINGLEQUOTE_,m))
 ,g,m);
-var G__20133 = g_SINGLEQUOTE_;
-var G__20134 = cljs.core.conj.call(null,l,n);
-var G__20135 = clojure.set.union.call(null,s_SINGLEQUOTE_,clojure.set.intersection.call(null,gamma.compiler.separate_usages.no_incoming.call(null,g_SINGLEQUOTE_),m));
-g = G__20133;
-l = G__20134;
-s = G__20135;
+var G__20277 = g_SINGLEQUOTE_;
+var G__20278 = cljs.core.conj.call(null,l,n);
+var G__20279 = clojure.set.union.call(null,s_SINGLEQUOTE_,clojure.set.intersection.call(null,gamma.compiler.separate_usages.no_incoming.call(null,g_SINGLEQUOTE_),m));
+g = G__20277;
+l = G__20278;
+s = G__20279;
 continue;
 }
 break;
@@ -105,9 +105,9 @@ break;
 
 gamma.compiler.separate_usages.kahn_sort.cljs$lang$maxFixedArity = 3;
 gamma.compiler.separate_usages.get_shared = (function gamma$compiler$separate_usages$get_shared(x){
-return cljs.core.map.call(null,cljs.core.first,cljs.core.filter.call(null,(function (p1__20136_SHARP_){
-var u = new cljs.core.Keyword(null,"unconditional","unconditional",1829191128).cljs$core$IFn$_invoke$arity$1(cljs.core.last.call(null,p1__20136_SHARP_));
-var c = new cljs.core.Keyword(null,"conditional","conditional",1441892799).cljs$core$IFn$_invoke$arity$1(cljs.core.last.call(null,p1__20136_SHARP_));
+return cljs.core.map.call(null,cljs.core.first,cljs.core.filter.call(null,(function (p1__20280_SHARP_){
+var u = new cljs.core.Keyword(null,"unconditional","unconditional",1829191128).cljs$core$IFn$_invoke$arity$1(cljs.core.last.call(null,p1__20280_SHARP_));
+var c = new cljs.core.Keyword(null,"conditional","conditional",1441892799).cljs$core$IFn$_invoke$arity$1(cljs.core.last.call(null,p1__20280_SHARP_));
 if(cljs.core.truth_(u)){
 return ((2) <= (u + (cljs.core.truth_(c)?(1):(0))));
 } else {
@@ -126,8 +126,8 @@ return cljs.core.reverse.call(null,gamma.compiler.separate_usages.kahn_sort.call
 }
 });
 gamma.compiler.separate_usages.shared_elements = (function gamma$compiler$separate_usages$shared_elements(id_mappings,source_element,source_db){
-var shared = gamma.compiler.separate_usages.topological_sort.call(null,cljs.core.filter.call(null,(function (p1__20137_SHARP_){
-return cljs.core.not.call(null,id_mappings.call(null,p1__20137_SHARP_));
+var shared = gamma.compiler.separate_usages.topological_sort.call(null,cljs.core.filter.call(null,(function (p1__20281_SHARP_){
+return cljs.core.not.call(null,id_mappings.call(null,p1__20281_SHARP_));
 }),gamma.compiler.separate_usages.get_shared.call(null,new cljs.core.Keyword(null,"shared","shared",-384145993).cljs$core$IFn$_invoke$arity$1(source_element))),source_db);
 return new cljs.core.Keyword(null,"elements","elements",657646735).cljs$core$IFn$_invoke$arity$1(cljs.core.reduce.call(null,((function (shared){
 return (function (result,source_id){
@@ -138,9 +138,9 @@ return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"el
 });
 gamma.compiler.separate_usages.body_elements = (function gamma$compiler$separate_usages$body_elements(source_element,id_mappings){
 return cljs.core.mapv.call(null,(function (y){
-var temp__4420__auto__ = id_mappings.call(null,y);
-if(cljs.core.truth_(temp__4420__auto__)){
-var id = temp__4420__auto__;
+var temp__4421__auto__ = id_mappings.call(null,y);
+if(cljs.core.truth_(temp__4421__auto__)){
+var id = temp__4421__auto__;
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"source-id","source-id",-585995304),y,new cljs.core.Keyword(null,"id","id",-1388402092),id], null);
 } else {
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"source-id","source-id",-585995304),y,new cljs.core.Keyword(null,"id","id",-1388402092),gamma.ast.gen_term_id.call(null)], null);
@@ -148,8 +148,8 @@ return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"so
 }),new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(source_element));
 });
 gamma.compiler.separate_usages.assoc_attributes = (function gamma$compiler$separate_usages$assoc_attributes(db,location,source_element,bound_ids){
-return cljs.core.update_in.call(null,db,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(location)], null),(function (p1__20138_SHARP_,p2__20139_SHARP_){
-return cljs.core.assoc.call(null,cljs.core.merge.call(null,cljs.core.dissoc.call(null,p1__20138_SHARP_,new cljs.core.Keyword(null,"source-id","source-id",-585995304)),p2__20139_SHARP_),new cljs.core.Keyword(null,"env","env",-1815813235),cljs.core.into.call(null,new cljs.core.Keyword(null,"env","env",-1815813235).cljs$core$IFn$_invoke$arity$1(p1__20138_SHARP_),bound_ids));
+return cljs.core.update_in.call(null,db,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(location)], null),(function (p1__20282_SHARP_,p2__20283_SHARP_){
+return cljs.core.assoc.call(null,cljs.core.merge.call(null,cljs.core.dissoc.call(null,p1__20282_SHARP_,new cljs.core.Keyword(null,"source-id","source-id",-585995304)),p2__20283_SHARP_),new cljs.core.Keyword(null,"env","env",-1815813235),cljs.core.into.call(null,new cljs.core.Keyword(null,"env","env",-1815813235).cljs$core$IFn$_invoke$arity$1(p1__20282_SHARP_),bound_ids));
 }),cljs.core.dissoc.call(null,source_element,new cljs.core.Keyword(null,"id","id",-1388402092),new cljs.core.Keyword(null,"body","body",-2049205669),new cljs.core.Keyword(null,"shared","shared",-384145993)));
 });
 gamma.compiler.separate_usages.separate_usages = (function gamma$compiler$separate_usages$separate_usages(source_db,id_mapping,bound_ids){
@@ -163,8 +163,8 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 var source_element = source_db.call(null,new cljs.core.Keyword(null,"source-id","source-id",-585995304).cljs$core$IFn$_invoke$arity$1(elt));
 var shared = gamma.compiler.separate_usages.shared_elements.call(null,id_mapping__$1,source_element,source_db);
 var new_id_mapping = cljs.core.into.call(null,id_mapping__$1,cljs.core.map.call(null,((function (source_element,shared,elt,bound_ids__$1,id_mapping__$1){
-return (function (p1__20140_SHARP_){
-return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"source-id","source-id",-585995304).cljs$core$IFn$_invoke$arity$1(p1__20140_SHARP_),new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__20140_SHARP_)],null));
+return (function (p1__20284_SHARP_){
+return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"source-id","source-id",-585995304).cljs$core$IFn$_invoke$arity$1(p1__20284_SHARP_),new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__20284_SHARP_)],null));
 });})(source_element,shared,elt,bound_ids__$1,id_mapping__$1))
 ,shared));
 var new_bound_ids = cljs.core.into.call(null,bound_ids__$1,cljs.core.map.call(null,new cljs.core.Keyword(null,"id","id",-1388402092),shared));

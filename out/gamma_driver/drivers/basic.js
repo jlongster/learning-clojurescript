@@ -1,18 +1,18 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('gamma_driver.drivers.basic');
 goog.require('cljs.core');
 goog.require('gamma_driver.api');
 goog.require('gamma_driver.protocols');
 gamma_driver.drivers.basic.produce = (function gamma_driver$drivers$basic$produce(driver,constructor_fn,spec){
-var map__19566 = driver;
-var map__19566__$1 = ((cljs.core.seq_QMARK_.call(null,map__19566))?cljs.core.apply.call(null,cljs.core.hash_map,map__19566):map__19566);
-var gl = cljs.core.get.call(null,map__19566__$1,new cljs.core.Keyword(null,"gl","gl",-246422634));
-var resource_state = cljs.core.get.call(null,map__19566__$1,new cljs.core.Keyword(null,"resource-state","resource-state",129710456));
-var mapping_fn = cljs.core.get.call(null,map__19566__$1,new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410));
+var map__19710 = driver;
+var map__19710__$1 = ((cljs.core.seq_QMARK_.call(null,map__19710))?cljs.core.apply.call(null,cljs.core.hash_map,map__19710):map__19710);
+var gl = cljs.core.get.call(null,map__19710__$1,new cljs.core.Keyword(null,"gl","gl",-246422634));
+var resource_state = cljs.core.get.call(null,map__19710__$1,new cljs.core.Keyword(null,"resource-state","resource-state",129710456));
+var mapping_fn = cljs.core.get.call(null,map__19710__$1,new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410));
 var k = mapping_fn.call(null,spec);
-var spec__$1 = (function (){var temp__4420__auto__ = cljs.core.deref.call(null,resource_state).call(null,k);
-if(cljs.core.truth_(temp__4420__auto__)){
-var x = temp__4420__auto__;
+var spec__$1 = (function (){var temp__4421__auto__ = cljs.core.deref.call(null,resource_state).call(null,k);
+if(cljs.core.truth_(temp__4421__auto__)){
+var x = temp__4421__auto__;
 return cljs.core.merge.call(null,x,spec);
 } else {
 return spec;
@@ -24,10 +24,10 @@ cljs.core.swap_BANG_.call(null,resource_state,cljs.core.assoc,k,val);
 return val;
 });
 gamma_driver.drivers.basic.default_input_fn = (function gamma_driver$drivers$basic$default_input_fn(driver,program,input_binder,variable,spec){
-var map__19568 = driver;
-var map__19568__$1 = ((cljs.core.seq_QMARK_.call(null,map__19568))?cljs.core.apply.call(null,cljs.core.hash_map,map__19568):map__19568);
-var input_state = cljs.core.get.call(null,map__19568__$1,new cljs.core.Keyword(null,"input-state","input-state",-2018653626));
-var gl = cljs.core.get.call(null,map__19568__$1,new cljs.core.Keyword(null,"gl","gl",-246422634));
+var map__19712 = driver;
+var map__19712__$1 = ((cljs.core.seq_QMARK_.call(null,map__19712))?cljs.core.apply.call(null,cljs.core.hash_map,map__19712):map__19712);
+var input_state = cljs.core.get.call(null,map__19712__$1,new cljs.core.Keyword(null,"input-state","input-state",-2018653626));
+var gl = cljs.core.get.call(null,map__19712__$1,new cljs.core.Keyword(null,"gl","gl",-246422634));
 var i = input_binder.call(null,gl,program,variable,spec);
 cljs.core.swap_BANG_.call(null,input_state,cljs.core.assoc_in,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [program,variable], null),spec);
 
@@ -36,8 +36,8 @@ return i;
 gamma_driver.drivers.basic.program_inputs_state = (function gamma_driver$drivers$basic$program_inputs_state(driver,program){
 var s = cljs.core.deref.call(null,new cljs.core.Keyword(null,"input-state","input-state",-2018653626).cljs$core$IFn$_invoke$arity$1(driver)).call(null,program);
 return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,((function (s){
-return (function (p1__19569_SHARP_){
-return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[p1__19569_SHARP_,s.call(null,p1__19569_SHARP_)],null));
+return (function (p1__19713_SHARP_){
+return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[p1__19713_SHARP_,s.call(null,p1__19713_SHARP_)],null));
 });})(s))
 ,new cljs.core.Keyword(null,"inputs","inputs",865803858).cljs$core$IFn$_invoke$arity$1(program)));
 });
@@ -47,10 +47,10 @@ var inputs = new cljs.core.Keyword(null,"inputs","inputs",865803858).cljs$core$I
 return cljs.core.not_any_QMARK_.call(null,cljs.core.nil_QMARK_,cljs.core.map.call(null,state,inputs));
 });
 gamma_driver.drivers.basic.draw_count = (function gamma_driver$drivers$basic$draw_count(driver,program){
-return cljs.core.first.call(null,cljs.core.keep.call(null,(function (p__19572){
-var vec__19573 = p__19572;
-var k = cljs.core.nth.call(null,vec__19573,(0),null);
-var v = cljs.core.nth.call(null,vec__19573,(1),null);
+return cljs.core.first.call(null,cljs.core.keep.call(null,(function (p__19716){
+var vec__19717 = p__19716;
+var k = cljs.core.nth.call(null,vec__19717,(0),null);
+var v = cljs.core.nth.call(null,vec__19717,(1),null);
 if(cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"attribute","attribute",-2074029119),new cljs.core.Keyword(null,"storage","storage",1867247511).cljs$core$IFn$_invoke$arity$1(k))){
 return new cljs.core.Keyword(null,"count","count",2139924085).cljs$core$IFn$_invoke$arity$1(v);
 } else {
@@ -59,8 +59,8 @@ return null;
 }),cljs.core.deref.call(null,new cljs.core.Keyword(null,"input-state","input-state",-2018653626).cljs$core$IFn$_invoke$arity$1(driver)).call(null,program)));
 });
 gamma_driver.drivers.basic.draw_arrays_STAR_ = (function gamma_driver$drivers$basic$draw_arrays_STAR_(){
-var G__19575 = arguments.length;
-switch (G__19575) {
+var G__19719 = arguments.length;
+switch (G__19719) {
 case 3:
 return gamma_driver.drivers.basic.draw_arrays_STAR_.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -89,8 +89,8 @@ return gamma_driver.api.draw_arrays.call(null,gamma_driver.protocols.gl.call(nul
 
 gamma_driver.drivers.basic.draw_arrays_STAR_.cljs$lang$maxFixedArity = 4;
 gamma_driver.drivers.basic.draw_elements_STAR_ = (function gamma_driver$drivers$basic$draw_elements_STAR_(){
-var G__19578 = arguments.length;
-switch (G__19578) {
+var G__19722 = arguments.length;
+switch (G__19722) {
 case 3:
 return gamma_driver.drivers.basic.draw_elements_STAR_.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -145,17 +145,17 @@ this.__hash = __hash;
 this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__5545__auto__,k__5546__auto__){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__5548__auto__,k__5549__auto__){
 var self__ = this;
-var this__5545__auto____$1 = this;
-return cljs.core._lookup.call(null,this__5545__auto____$1,k__5546__auto__,null);
+var this__5548__auto____$1 = this;
+return cljs.core._lookup.call(null,this__5548__auto____$1,k__5549__auto__,null);
 });
 
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__5547__auto__,k19581,else__5548__auto__){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__5550__auto__,k19725,else__5551__auto__){
 var self__ = this;
-var this__5547__auto____$1 = this;
-var G__19583 = (((k19581 instanceof cljs.core.Keyword))?k19581.fqn:null);
-switch (G__19583) {
+var this__5550__auto____$1 = this;
+var G__19727 = (((k19725 instanceof cljs.core.Keyword))?k19725.fqn:null);
+switch (G__19727) {
 case "gl":
 return self__.gl;
 
@@ -177,7 +177,7 @@ return self__.input_fn;
 
 break;
 default:
-return cljs.core.get.call(null,self__.__extmap,k19581,else__5548__auto__);
+return cljs.core.get.call(null,self__.__extmap,k19725,else__5551__auto__);
 
 }
 });
@@ -202,46 +202,46 @@ var this$__$1 = this;
 return self__.input_fn.call(null,this$__$1,program,gamma_driver.api.bind_uniform,uniform,input);
 });
 
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__5559__auto__,writer__5560__auto__,opts__5561__auto__){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__5562__auto__,writer__5563__auto__,opts__5564__auto__){
 var self__ = this;
-var this__5559__auto____$1 = this;
-var pr_pair__5562__auto__ = ((function (this__5559__auto____$1){
-return (function (keyval__5563__auto__){
-return cljs.core.pr_sequential_writer.call(null,writer__5560__auto__,cljs.core.pr_writer,""," ","",opts__5561__auto__,keyval__5563__auto__);
-});})(this__5559__auto____$1))
+var this__5562__auto____$1 = this;
+var pr_pair__5565__auto__ = ((function (this__5562__auto____$1){
+return (function (keyval__5566__auto__){
+return cljs.core.pr_sequential_writer.call(null,writer__5563__auto__,cljs.core.pr_writer,""," ","",opts__5564__auto__,keyval__5566__auto__);
+});})(this__5562__auto____$1))
 ;
-return cljs.core.pr_sequential_writer.call(null,writer__5560__auto__,pr_pair__5562__auto__,"#gamma-driver.drivers.basic.BasicDriver{",", ","}",opts__5561__auto__,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"gl","gl",-246422634),self__.gl],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"resource-state","resource-state",129710456),self__.resource_state],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410),self__.mapping_fn],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"input-state","input-state",-2018653626),self__.input_state],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510),self__.input_fn],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer.call(null,writer__5563__auto__,pr_pair__5565__auto__,"#gamma-driver.drivers.basic.BasicDriver{",", ","}",opts__5564__auto__,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"gl","gl",-246422634),self__.gl],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"resource-state","resource-state",129710456),self__.resource_state],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410),self__.mapping_fn],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"input-state","input-state",-2018653626),self__.input_state],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510),self__.input_fn],null))], null),self__.__extmap));
 });
 
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__5543__auto__){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__5546__auto__){
 var self__ = this;
-var this__5543__auto____$1 = this;
+var this__5546__auto____$1 = this;
 return self__.__meta;
 });
 
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__5539__auto__){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__5542__auto__){
 var self__ = this;
-var this__5539__auto____$1 = this;
+var this__5542__auto____$1 = this;
 return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,self__.input_state,self__.input_fn,self__.__meta,self__.__extmap,self__.__hash));
 });
 
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__5549__auto__){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__5552__auto__){
 var self__ = this;
-var this__5549__auto____$1 = this;
+var this__5552__auto____$1 = this;
 return (5 + cljs.core.count.call(null,self__.__extmap));
 });
 
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__5540__auto__){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__5543__auto__){
 var self__ = this;
-var this__5540__auto____$1 = this;
-var h__5366__auto__ = self__.__hash;
-if(!((h__5366__auto__ == null))){
-return h__5366__auto__;
+var this__5543__auto____$1 = this;
+var h__5369__auto__ = self__.__hash;
+if(!((h__5369__auto__ == null))){
+return h__5369__auto__;
 } else {
-var h__5366__auto____$1 = cljs.core.hash_imap.call(null,this__5540__auto____$1);
-self__.__hash = h__5366__auto____$1;
+var h__5369__auto____$1 = cljs.core.hash_imap.call(null,this__5543__auto____$1);
+self__.__hash = h__5369__auto____$1;
 
-return h__5366__auto____$1;
+return h__5369__auto____$1;
 }
 });
 
@@ -271,19 +271,19 @@ var this$__$1 = this;
 return gamma_driver.drivers.basic.draw_elements_STAR_.call(null,this$__$1,program,spec,target);
 });
 
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__5541__auto__,other__5542__auto__){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__5544__auto__,other__5545__auto__){
 var self__ = this;
-var this__5541__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__4938__auto__ = other__5542__auto__;
-if(cljs.core.truth_(and__4938__auto__)){
-var and__4938__auto____$1 = (this__5541__auto____$1.constructor === other__5542__auto__.constructor);
-if(and__4938__auto____$1){
-return cljs.core.equiv_map.call(null,this__5541__auto____$1,other__5542__auto__);
+var this__5544__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__4941__auto__ = other__5545__auto__;
+if(cljs.core.truth_(and__4941__auto__)){
+var and__4941__auto____$1 = (this__5544__auto____$1.constructor === other__5545__auto__.constructor);
+if(and__4941__auto____$1){
+return cljs.core.equiv_map.call(null,this__5544__auto____$1,other__5545__auto__);
 } else {
-return and__4938__auto____$1;
+return and__4941__auto____$1;
 }
 } else {
-return and__4938__auto__;
+return and__4941__auto__;
 }
 })())){
 return true;
@@ -353,63 +353,63 @@ var this$__$1 = this;
 return self__.gl;
 });
 
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__5554__auto__,k__5555__auto__){
-var self__ = this;
-var this__5554__auto____$1 = this;
-if(cljs.core.contains_QMARK_.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"input-state","input-state",-2018653626),null,new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410),null,new cljs.core.Keyword(null,"gl","gl",-246422634),null,new cljs.core.Keyword(null,"resource-state","resource-state",129710456),null,new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510),null], null), null),k__5555__auto__)){
-return cljs.core.dissoc.call(null,cljs.core.with_meta.call(null,cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,this__5554__auto____$1),self__.__meta),k__5555__auto__);
-} else {
-return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,self__.input_state,self__.input_fn,self__.__meta,cljs.core.not_empty.call(null,cljs.core.dissoc.call(null,self__.__extmap,k__5555__auto__)),null));
-}
-});
-
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__5552__auto__,k__5553__auto__,G__19580){
-var self__ = this;
-var this__5552__auto____$1 = this;
-var pred__19584 = cljs.core.keyword_identical_QMARK_;
-var expr__19585 = k__5553__auto__;
-if(cljs.core.truth_(pred__19584.call(null,new cljs.core.Keyword(null,"gl","gl",-246422634),expr__19585))){
-return (new gamma_driver.drivers.basic.BasicDriver(G__19580,self__.resource_state,self__.mapping_fn,self__.input_state,self__.input_fn,self__.__meta,self__.__extmap,null));
-} else {
-if(cljs.core.truth_(pred__19584.call(null,new cljs.core.Keyword(null,"resource-state","resource-state",129710456),expr__19585))){
-return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,G__19580,self__.mapping_fn,self__.input_state,self__.input_fn,self__.__meta,self__.__extmap,null));
-} else {
-if(cljs.core.truth_(pred__19584.call(null,new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410),expr__19585))){
-return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,G__19580,self__.input_state,self__.input_fn,self__.__meta,self__.__extmap,null));
-} else {
-if(cljs.core.truth_(pred__19584.call(null,new cljs.core.Keyword(null,"input-state","input-state",-2018653626),expr__19585))){
-return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,G__19580,self__.input_fn,self__.__meta,self__.__extmap,null));
-} else {
-if(cljs.core.truth_(pred__19584.call(null,new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510),expr__19585))){
-return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,self__.input_state,G__19580,self__.__meta,self__.__extmap,null));
-} else {
-return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,self__.input_state,self__.input_fn,self__.__meta,cljs.core.assoc.call(null,self__.__extmap,k__5553__auto__,G__19580),null));
-}
-}
-}
-}
-}
-});
-
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__5557__auto__){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__5557__auto__,k__5558__auto__){
 var self__ = this;
 var this__5557__auto____$1 = this;
+if(cljs.core.contains_QMARK_.call(null,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"input-state","input-state",-2018653626),null,new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410),null,new cljs.core.Keyword(null,"gl","gl",-246422634),null,new cljs.core.Keyword(null,"resource-state","resource-state",129710456),null,new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510),null], null), null),k__5558__auto__)){
+return cljs.core.dissoc.call(null,cljs.core.with_meta.call(null,cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,this__5557__auto____$1),self__.__meta),k__5558__auto__);
+} else {
+return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,self__.input_state,self__.input_fn,self__.__meta,cljs.core.not_empty.call(null,cljs.core.dissoc.call(null,self__.__extmap,k__5558__auto__)),null));
+}
+});
+
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__5555__auto__,k__5556__auto__,G__19724){
+var self__ = this;
+var this__5555__auto____$1 = this;
+var pred__19728 = cljs.core.keyword_identical_QMARK_;
+var expr__19729 = k__5556__auto__;
+if(cljs.core.truth_(pred__19728.call(null,new cljs.core.Keyword(null,"gl","gl",-246422634),expr__19729))){
+return (new gamma_driver.drivers.basic.BasicDriver(G__19724,self__.resource_state,self__.mapping_fn,self__.input_state,self__.input_fn,self__.__meta,self__.__extmap,null));
+} else {
+if(cljs.core.truth_(pred__19728.call(null,new cljs.core.Keyword(null,"resource-state","resource-state",129710456),expr__19729))){
+return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,G__19724,self__.mapping_fn,self__.input_state,self__.input_fn,self__.__meta,self__.__extmap,null));
+} else {
+if(cljs.core.truth_(pred__19728.call(null,new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410),expr__19729))){
+return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,G__19724,self__.input_state,self__.input_fn,self__.__meta,self__.__extmap,null));
+} else {
+if(cljs.core.truth_(pred__19728.call(null,new cljs.core.Keyword(null,"input-state","input-state",-2018653626),expr__19729))){
+return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,G__19724,self__.input_fn,self__.__meta,self__.__extmap,null));
+} else {
+if(cljs.core.truth_(pred__19728.call(null,new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510),expr__19729))){
+return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,self__.input_state,G__19724,self__.__meta,self__.__extmap,null));
+} else {
+return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,self__.input_state,self__.input_fn,self__.__meta,cljs.core.assoc.call(null,self__.__extmap,k__5556__auto__,G__19724),null));
+}
+}
+}
+}
+}
+});
+
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__5560__auto__){
+var self__ = this;
+var this__5560__auto____$1 = this;
 return cljs.core.seq.call(null,cljs.core.concat.call(null,new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"gl","gl",-246422634),self__.gl],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"resource-state","resource-state",129710456),self__.resource_state],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410),self__.mapping_fn],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"input-state","input-state",-2018653626),self__.input_state],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510),self__.input_fn],null))], null),self__.__extmap));
 });
 
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__5544__auto__,G__19580){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__5547__auto__,G__19724){
 var self__ = this;
-var this__5544__auto____$1 = this;
-return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,self__.input_state,self__.input_fn,G__19580,self__.__extmap,self__.__hash));
+var this__5547__auto____$1 = this;
+return (new gamma_driver.drivers.basic.BasicDriver(self__.gl,self__.resource_state,self__.mapping_fn,self__.input_state,self__.input_fn,G__19724,self__.__extmap,self__.__hash));
 });
 
-gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__5550__auto__,entry__5551__auto__){
+gamma_driver.drivers.basic.BasicDriver.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__5553__auto__,entry__5554__auto__){
 var self__ = this;
-var this__5550__auto____$1 = this;
-if(cljs.core.vector_QMARK_.call(null,entry__5551__auto__)){
-return cljs.core._assoc.call(null,this__5550__auto____$1,cljs.core._nth.call(null,entry__5551__auto__,(0)),cljs.core._nth.call(null,entry__5551__auto__,(1)));
+var this__5553__auto____$1 = this;
+if(cljs.core.vector_QMARK_.call(null,entry__5554__auto__)){
+return cljs.core._assoc.call(null,this__5553__auto____$1,cljs.core._nth.call(null,entry__5554__auto__,(0)),cljs.core._nth.call(null,entry__5554__auto__,(1)));
 } else {
-return cljs.core.reduce.call(null,cljs.core._conj,this__5550__auto____$1,entry__5551__auto__);
+return cljs.core.reduce.call(null,cljs.core._conj,this__5553__auto____$1,entry__5554__auto__);
 }
 });
 
@@ -419,31 +419,31 @@ return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMP
 
 gamma_driver.drivers.basic.BasicDriver.cljs$lang$type = true;
 
-gamma_driver.drivers.basic.BasicDriver.cljs$lang$ctorPrSeq = (function (this__5579__auto__){
+gamma_driver.drivers.basic.BasicDriver.cljs$lang$ctorPrSeq = (function (this__5582__auto__){
 return cljs.core._conj.call(null,cljs.core.List.EMPTY,"gamma-driver.drivers.basic/BasicDriver");
 });
 
-gamma_driver.drivers.basic.BasicDriver.cljs$lang$ctorPrWriter = (function (this__5579__auto__,writer__5580__auto__){
-return cljs.core._write.call(null,writer__5580__auto__,"gamma-driver.drivers.basic/BasicDriver");
+gamma_driver.drivers.basic.BasicDriver.cljs$lang$ctorPrWriter = (function (this__5582__auto__,writer__5583__auto__){
+return cljs.core._write.call(null,writer__5583__auto__,"gamma-driver.drivers.basic/BasicDriver");
 });
 
 gamma_driver.drivers.basic.__GT_BasicDriver = (function gamma_driver$drivers$basic$__GT_BasicDriver(gl,resource_state,mapping_fn,input_state,input_fn){
 return (new gamma_driver.drivers.basic.BasicDriver(gl,resource_state,mapping_fn,input_state,input_fn,null,null,null));
 });
 
-gamma_driver.drivers.basic.map__GT_BasicDriver = (function gamma_driver$drivers$basic$map__GT_BasicDriver(G__19582){
-return (new gamma_driver.drivers.basic.BasicDriver(new cljs.core.Keyword(null,"gl","gl",-246422634).cljs$core$IFn$_invoke$arity$1(G__19582),new cljs.core.Keyword(null,"resource-state","resource-state",129710456).cljs$core$IFn$_invoke$arity$1(G__19582),new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410).cljs$core$IFn$_invoke$arity$1(G__19582),new cljs.core.Keyword(null,"input-state","input-state",-2018653626).cljs$core$IFn$_invoke$arity$1(G__19582),new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510).cljs$core$IFn$_invoke$arity$1(G__19582),null,cljs.core.dissoc.call(null,G__19582,new cljs.core.Keyword(null,"gl","gl",-246422634),new cljs.core.Keyword(null,"resource-state","resource-state",129710456),new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410),new cljs.core.Keyword(null,"input-state","input-state",-2018653626),new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510)),null));
+gamma_driver.drivers.basic.map__GT_BasicDriver = (function gamma_driver$drivers$basic$map__GT_BasicDriver(G__19726){
+return (new gamma_driver.drivers.basic.BasicDriver(new cljs.core.Keyword(null,"gl","gl",-246422634).cljs$core$IFn$_invoke$arity$1(G__19726),new cljs.core.Keyword(null,"resource-state","resource-state",129710456).cljs$core$IFn$_invoke$arity$1(G__19726),new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410).cljs$core$IFn$_invoke$arity$1(G__19726),new cljs.core.Keyword(null,"input-state","input-state",-2018653626).cljs$core$IFn$_invoke$arity$1(G__19726),new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510).cljs$core$IFn$_invoke$arity$1(G__19726),null,cljs.core.dissoc.call(null,G__19726,new cljs.core.Keyword(null,"gl","gl",-246422634),new cljs.core.Keyword(null,"resource-state","resource-state",129710456),new cljs.core.Keyword(null,"mapping-fn","mapping-fn",1124246410),new cljs.core.Keyword(null,"input-state","input-state",-2018653626),new cljs.core.Keyword(null,"input-fn","input-fn",-1154229510)),null));
 });
 
 gamma_driver.drivers.basic.basic_driver = (function gamma_driver$drivers$basic$basic_driver(gl){
 return (new gamma_driver.drivers.basic.BasicDriver(gl,cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY),(function (x){
-var or__4950__auto__ = new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(x);
-if(cljs.core.truth_(or__4950__auto__)){
-return or__4950__auto__;
+var or__4953__auto__ = new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(x);
+if(cljs.core.truth_(or__4953__auto__)){
+return or__4953__auto__;
 } else {
-var or__4950__auto____$1 = new cljs.core.Keyword(null,"element","element",1974019749).cljs$core$IFn$_invoke$arity$1(x);
-if(cljs.core.truth_(or__4950__auto____$1)){
-return or__4950__auto____$1;
+var or__4953__auto____$1 = new cljs.core.Keyword(null,"element","element",1974019749).cljs$core$IFn$_invoke$arity$1(x);
+if(cljs.core.truth_(or__4953__auto____$1)){
+return or__4953__auto____$1;
 } else {
 return x;
 }

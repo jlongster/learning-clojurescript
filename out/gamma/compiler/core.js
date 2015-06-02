@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('gamma.compiler.core');
 goog.require('cljs.core');
 goog.require('gamma.compiler.common');
@@ -24,18 +24,18 @@ var db__$1 = db;
 var stack__$1 = stack;
 var c = (0);
 while(true){
-var temp__4420__auto__ = cljs.core.peek.call(null,stack__$1);
-if(cljs.core.truth_(temp__4420__auto__)){
-var f = temp__4420__auto__;
-var vec__20091 = f.call(null,(1)).call(null,db__$1,f.call(null,(0)));
-var db__$2 = cljs.core.nth.call(null,vec__20091,(0),null);
-var ops = cljs.core.nth.call(null,vec__20091,(1),null);
-var G__20092 = db__$2;
-var G__20093 = gamma.compiler.core.push_ops.call(null,db__$2,ops,f.call(null,(0)),cljs.core.pop.call(null,stack__$1));
-var G__20094 = (c + (1));
-db__$1 = G__20092;
-stack__$1 = G__20093;
-c = G__20094;
+var temp__4421__auto__ = cljs.core.peek.call(null,stack__$1);
+if(cljs.core.truth_(temp__4421__auto__)){
+var f = temp__4421__auto__;
+var vec__20235 = f.call(null,(1)).call(null,db__$1,f.call(null,(0)));
+var db__$2 = cljs.core.nth.call(null,vec__20235,(0),null);
+var ops = cljs.core.nth.call(null,vec__20235,(1),null);
+var G__20236 = db__$2;
+var G__20237 = gamma.compiler.core.push_ops.call(null,db__$2,ops,f.call(null,(0)),cljs.core.pop.call(null,stack__$1));
+var G__20238 = (c + (1));
+db__$1 = G__20236;
+stack__$1 = G__20237;
+c = G__20238;
 continue;
 } else {
 return db__$1;
@@ -55,12 +55,12 @@ gamma.compiler.core.variables = (function gamma$compiler$core$variables(db){
 var a = cljs.core.atom.call(null,cljs.core.PersistentHashSet.EMPTY);
 gamma.compiler.core.walk.call(null,db,((function (a){
 return (function (db__$1,location){
-var e_20095 = gamma.compiler.common.get_element.call(null,db__$1,location);
-if(cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"literal","literal",1664775605),new cljs.core.Keyword(null,"head","head",-771383919).cljs$core$IFn$_invoke$arity$1(e_20095))){
-if(cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"variable","variable",-281346492),new cljs.core.Keyword(null,"tag","tag",-1290361223).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(e_20095)))){
-cljs.core.swap_BANG_.call(null,a,cljs.core.conj,new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(e_20095));
+var e_20239 = gamma.compiler.common.get_element.call(null,db__$1,location);
+if(cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"literal","literal",1664775605),new cljs.core.Keyword(null,"head","head",-771383919).cljs$core$IFn$_invoke$arity$1(e_20239))){
+if(cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"variable","variable",-281346492),new cljs.core.Keyword(null,"tag","tag",-1290361223).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(e_20239)))){
+cljs.core.swap_BANG_.call(null,a,cljs.core.conj,new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(e_20239));
 
-if(cljs.core.truth_(new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(e_20095)))){
+if(cljs.core.truth_(new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(e_20239)))){
 } else {
 cljs.core.println.call(null,location);
 }

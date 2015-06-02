@@ -1,47 +1,47 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('thi.ng.common.data.core');
 goog.require('cljs.core');
 thi.ng.common.data.core.index = (function thi$ng$common$data$core$index(i,t){
-var temp__4420__auto__ = cljs.core.get.call(null,i,t);
-if(cljs.core.truth_(temp__4420__auto__)){
-var tt = temp__4420__auto__;
+var temp__4421__auto__ = cljs.core.get.call(null,i,t);
+if(cljs.core.truth_(temp__4421__auto__)){
+var tt = temp__4421__auto__;
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [i,tt], null);
 } else {
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.conj.call(null,i,t),t], null);
 }
 });
 thi.ng.common.data.core.index_BANG_ = (function thi$ng$common$data$core$index_BANG_(i,t){
-var temp__4420__auto__ = cljs.core.get.call(null,i,t);
-if(cljs.core.truth_(temp__4420__auto__)){
-var tt = temp__4420__auto__;
+var temp__4421__auto__ = cljs.core.get.call(null,i,t);
+if(cljs.core.truth_(temp__4421__auto__)){
+var tt = temp__4421__auto__;
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [i,tt], null);
 } else {
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.conj_BANG_.call(null,i,t),t], null);
 }
 });
 thi.ng.common.data.core.index_kv = (function thi$ng$common$data$core$index_kv(m,k,v){
-var temp__4420__auto__ = cljs.core.find.call(null,m,k);
-if(cljs.core.truth_(temp__4420__auto__)){
-var vec__19749 = temp__4420__auto__;
-var k__$1 = cljs.core.nth.call(null,vec__19749,(0),null);
-var vv = cljs.core.nth.call(null,vec__19749,(1),null);
+var temp__4421__auto__ = cljs.core.find.call(null,m,k);
+if(cljs.core.truth_(temp__4421__auto__)){
+var vec__19893 = temp__4421__auto__;
+var k__$1 = cljs.core.nth.call(null,vec__19893,(0),null);
+var vv = cljs.core.nth.call(null,vec__19893,(1),null);
 return cljs.core.assoc.call(null,m,k__$1,cljs.core.conj.call(null,vv,v));
 } else {
 return cljs.core.assoc.call(null,m,k,cljs.core.PersistentHashSet.fromArray([v], true));
 }
 });
 thi.ng.common.data.core.index_kv_BANG_ = (function thi$ng$common$data$core$index_kv_BANG_(m,k,v){
-var temp__4420__auto__ = cljs.core.get.call(null,m,k);
-if(cljs.core.truth_(temp__4420__auto__)){
-var vv = temp__4420__auto__;
+var temp__4421__auto__ = cljs.core.get.call(null,m,k);
+if(cljs.core.truth_(temp__4421__auto__)){
+var vv = temp__4421__auto__;
 return cljs.core.assoc_BANG_.call(null,m,k,cljs.core.conj.call(null,vv,v));
 } else {
 return cljs.core.assoc_BANG_.call(null,m,k,cljs.core.PersistentHashSet.fromArray([v], true));
 }
 });
 thi.ng.common.data.core.value_set = (function thi$ng$common$data$core$value_set(){
-var G__19753 = arguments.length;
-switch (G__19753) {
+var G__19897 = arguments.length;
+switch (G__19897) {
 case 2:
 return thi.ng.common.data.core.value_set.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -61,33 +61,33 @@ return cljs.core.into.call(null,cljs.core.PersistentHashSet.EMPTY,cljs.core.get.
 });
 
 thi.ng.common.data.core.value_set.cljs$core$IFn$_invoke$arity$3 = (function (f,idx,v){
-return cljs.core.persistent_BANG_.call(null,cljs.core.reduce.call(null,(function (p1__19750_SHARP_,p2__19751_SHARP_){
-return cljs.core.conj_BANG_.call(null,p1__19750_SHARP_,f.call(null,p2__19751_SHARP_));
+return cljs.core.persistent_BANG_.call(null,cljs.core.reduce.call(null,(function (p1__19894_SHARP_,p2__19895_SHARP_){
+return cljs.core.conj_BANG_.call(null,p1__19894_SHARP_,f.call(null,p2__19895_SHARP_));
 }),cljs.core.transient$.call(null,cljs.core.PersistentHashSet.EMPTY),cljs.core.get.call(null,idx,v)));
 });
 
 thi.ng.common.data.core.value_set.cljs$lang$maxFixedArity = 3;
 thi.ng.common.data.core.set_conj = cljs.core.fnil.call(null,cljs.core.conj,cljs.core.PersistentHashSet.EMPTY);
 thi.ng.common.data.core.vec_conj = cljs.core.fnil.call(null,cljs.core.conj,cljs.core.PersistentVector.EMPTY);
-thi.ng.common.data.core.set_conj2_STAR_ = (function thi$ng$common$data$core$set_conj2_STAR_(p1__19755_SHARP_,p2__19756_SHARP_){
-if((p1__19755_SHARP_ == null)){
-return p2__19756_SHARP_;
+thi.ng.common.data.core.set_conj2_STAR_ = (function thi$ng$common$data$core$set_conj2_STAR_(p1__19899_SHARP_,p2__19900_SHARP_){
+if((p1__19899_SHARP_ == null)){
+return p2__19900_SHARP_;
 } else {
-if(cljs.core.set_QMARK_.call(null,p1__19755_SHARP_)){
-return cljs.core.conj.call(null,p1__19755_SHARP_,p2__19756_SHARP_);
+if(cljs.core.set_QMARK_.call(null,p1__19899_SHARP_)){
+return cljs.core.conj.call(null,p1__19899_SHARP_,p2__19900_SHARP_);
 } else {
-return cljs.core.PersistentHashSet.fromArray([p1__19755_SHARP_,p2__19756_SHARP_], true);
+return cljs.core.PersistentHashSet.fromArray([p2__19900_SHARP_,p1__19899_SHARP_], true);
 }
 }
 });
-thi.ng.common.data.core.vec_conj2_STAR_ = (function thi$ng$common$data$core$vec_conj2_STAR_(p1__19757_SHARP_,p2__19758_SHARP_){
-if((p1__19757_SHARP_ == null)){
-return p2__19758_SHARP_;
+thi.ng.common.data.core.vec_conj2_STAR_ = (function thi$ng$common$data$core$vec_conj2_STAR_(p1__19901_SHARP_,p2__19902_SHARP_){
+if((p1__19901_SHARP_ == null)){
+return p2__19902_SHARP_;
 } else {
-if(cljs.core.vector_QMARK_.call(null,p1__19757_SHARP_)){
-return cljs.core.conj.call(null,p1__19757_SHARP_,p2__19758_SHARP_);
+if(cljs.core.vector_QMARK_.call(null,p1__19901_SHARP_)){
+return cljs.core.conj.call(null,p1__19901_SHARP_,p2__19902_SHARP_);
 } else {
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [p1__19757_SHARP_,p2__19758_SHARP_], null);
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [p1__19901_SHARP_,p2__19902_SHARP_], null);
 }
 }
 });
@@ -99,8 +99,8 @@ var keys = thi.ng.common.data.core.collect_set.call(null,f,coll);
 return cljs.core.zipmap.call(null,keys,((cljs.core._EQ_.call(null,f2,cljs.core.identity))?keys:cljs.core.map.call(null,f2,keys)));
 });
 thi.ng.common.data.core.interval_set = (function thi$ng$common$data$core$interval_set(){
-var argseq__5990__auto__ = ((((0) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(0)),(0))):null);
-return thi.ng.common.data.core.interval_set.cljs$core$IFn$_invoke$arity$variadic(argseq__5990__auto__);
+var argseq__5993__auto__ = ((((0) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(0)),(0))):null);
+return thi.ng.common.data.core.interval_set.cljs$core$IFn$_invoke$arity$variadic(argseq__5993__auto__);
 });
 
 thi.ng.common.data.core.interval_set.cljs$core$IFn$_invoke$arity$variadic = (function (ivals){
@@ -115,57 +115,57 @@ return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMP
 
 thi.ng.common.data.core.interval_set.cljs$lang$maxFixedArity = (0);
 
-thi.ng.common.data.core.interval_set.cljs$lang$applyTo = (function (seq19759){
-return thi.ng.common.data.core.interval_set.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19759));
+thi.ng.common.data.core.interval_set.cljs$lang$applyTo = (function (seq19903){
+return thi.ng.common.data.core.interval_set.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19903));
 });
 thi.ng.common.data.core.check_intervals = (function thi$ng$common$data$core$check_intervals(){
-var argseq__5990__auto__ = ((((0) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(0)),(0))):null);
-return thi.ng.common.data.core.check_intervals.cljs$core$IFn$_invoke$arity$variadic(argseq__5990__auto__);
+var argseq__5993__auto__ = ((((0) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(0)),(0))):null);
+return thi.ng.common.data.core.check_intervals.cljs$core$IFn$_invoke$arity$variadic(argseq__5993__auto__);
 });
 
 thi.ng.common.data.core.check_intervals.cljs$core$IFn$_invoke$arity$variadic = (function (ivals){
-var vec__19761 = cljs.core.reduce.call(null,(function (p__19762,v){
-var vec__19763 = p__19762;
-var i = cljs.core.nth.call(null,vec__19763,(0),null);
-var c = cljs.core.nth.call(null,vec__19763,(1),null);
+var vec__19905 = cljs.core.reduce.call(null,(function (p__19906,v){
+var vec__19907 = p__19906;
+var i = cljs.core.nth.call(null,vec__19907,(0),null);
+var c = cljs.core.nth.call(null,vec__19907,(1),null);
 if(cljs.core.sequential_QMARK_.call(null,v)){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.conj.call(null,i,v),c], null);
 } else {
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [i,cljs.core.conj.call(null,c,v)], null);
 }
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.PersistentVector.EMPTY,cljs.core.PersistentHashSet.EMPTY], null),ivals);
-var ivals__$1 = cljs.core.nth.call(null,vec__19761,(0),null);
-var const$ = cljs.core.nth.call(null,vec__19761,(1),null);
-return ((function (vec__19761,ivals__$1,const$){
+var ivals__$1 = cljs.core.nth.call(null,vec__19905,(0),null);
+var const$ = cljs.core.nth.call(null,vec__19905,(1),null);
+return ((function (vec__19905,ivals__$1,const$){
 return (function (x){
 if(cljs.core.truth_(const$.call(null,x))){
 return x;
 } else {
-return cljs.core.some.call(null,((function (vec__19761,ivals__$1,const$){
-return (function (p__19764){
-var vec__19765 = p__19764;
-var a = cljs.core.nth.call(null,vec__19765,(0),null);
-var b = cljs.core.nth.call(null,vec__19765,(1),null);
+return cljs.core.some.call(null,((function (vec__19905,ivals__$1,const$){
+return (function (p__19908){
+var vec__19909 = p__19908;
+var a = cljs.core.nth.call(null,vec__19909,(0),null);
+var b = cljs.core.nth.call(null,vec__19909,(1),null);
 return ((a <= x)) && ((x <= b));
-});})(vec__19761,ivals__$1,const$))
+});})(vec__19905,ivals__$1,const$))
 ,ivals__$1);
 }
 });
-;})(vec__19761,ivals__$1,const$))
+;})(vec__19905,ivals__$1,const$))
 });
 
 thi.ng.common.data.core.check_intervals.cljs$lang$maxFixedArity = (0);
 
-thi.ng.common.data.core.check_intervals.cljs$lang$applyTo = (function (seq19760){
-return thi.ng.common.data.core.check_intervals.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19760));
+thi.ng.common.data.core.check_intervals.cljs$lang$applyTo = (function (seq19904){
+return thi.ng.common.data.core.check_intervals.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19904));
 });
 /**
  * All the ways to take one item from each sequence
  * (taken from clojure.contrib.combinatorics)
  */
 thi.ng.common.data.core.cartesian_product = (function thi$ng$common$data$core$cartesian_product(){
-var argseq__5990__auto__ = ((((0) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(0)),(0))):null);
-return thi.ng.common.data.core.cartesian_product.cljs$core$IFn$_invoke$arity$variadic(argseq__5990__auto__);
+var argseq__5993__auto__ = ((((0) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(0)),(0))):null);
+return thi.ng.common.data.core.cartesian_product.cljs$core$IFn$_invoke$arity$variadic(argseq__5993__auto__);
 });
 
 thi.ng.common.data.core.cartesian_product.cljs$core$IFn$_invoke$arity$variadic = (function (seqs){
@@ -180,15 +180,15 @@ while(true){
 if((i < (0))){
 return null;
 } else {
-var temp__4420__auto__ = cljs.core.next.call(null,v_seqs__$2.call(null,i));
-if(temp__4420__auto__){
-var rst = temp__4420__auto__;
+var temp__4421__auto__ = cljs.core.next.call(null,v_seqs__$2.call(null,i));
+if(temp__4421__auto__){
+var rst = temp__4421__auto__;
 return cljs.core.assoc.call(null,v_seqs__$2,i,rst);
 } else {
-var G__19767 = (i - (1));
-var G__19768 = cljs.core.assoc.call(null,v_seqs__$2,i,v_original_seqs.call(null,i));
-i = G__19767;
-v_seqs__$2 = G__19768;
+var G__19911 = (i - (1));
+var G__19912 = cljs.core.assoc.call(null,v_seqs__$2,i,v_original_seqs.call(null,i));
+i = G__19911;
+v_seqs__$2 = G__19912;
 continue;
 }
 }
@@ -220,8 +220,8 @@ return null;
 
 thi.ng.common.data.core.cartesian_product.cljs$lang$maxFixedArity = (0);
 
-thi.ng.common.data.core.cartesian_product.cljs$lang$applyTo = (function (seq19766){
-return thi.ng.common.data.core.cartesian_product.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19766));
+thi.ng.common.data.core.cartesian_product.cljs$lang$applyTo = (function (seq19910){
+return thi.ng.common.data.core.cartesian_product.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19910));
 });
 /**
  * Applies `f` to root coll and every of its (nested) elements. Returns
@@ -243,8 +243,8 @@ return acc;
 return cljs.core.reduce.call(null,walk,cljs.core.PersistentVector.EMPTY,root);
 });
 thi.ng.common.data.core.bisect = (function thi$ng$common$data$core$bisect(){
-var G__19770 = arguments.length;
-switch (G__19770) {
+var G__19914 = arguments.length;
+switch (G__19914) {
 case 2:
 return thi.ng.common.data.core.bisect.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -260,25 +260,25 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(arguments.lengt
 });
 
 thi.ng.common.data.core.bisect.cljs$core$IFn$_invoke$arity$2 = (function (f,coll){
-var vec__19771 = cljs.core.reduce.call(null,(function (p__19772,v){
-var vec__19773 = p__19772;
-var m = cljs.core.nth.call(null,vec__19773,(0),null);
-var n = cljs.core.nth.call(null,vec__19773,(1),null);
+var vec__19915 = cljs.core.reduce.call(null,(function (p__19916,v){
+var vec__19917 = p__19916;
+var m = cljs.core.nth.call(null,vec__19917,(0),null);
+var n = cljs.core.nth.call(null,vec__19917,(1),null);
 if(cljs.core.truth_(f.call(null,v))){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.conj_BANG_.call(null,m,v),n], null);
 } else {
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [m,cljs.core.conj_BANG_.call(null,n,v)], null);
 }
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.transient$.call(null,cljs.core.PersistentVector.EMPTY),cljs.core.transient$.call(null,cljs.core.PersistentVector.EMPTY)], null),coll);
-var m = cljs.core.nth.call(null,vec__19771,(0),null);
-var n = cljs.core.nth.call(null,vec__19771,(1),null);
+var m = cljs.core.nth.call(null,vec__19915,(0),null);
+var n = cljs.core.nth.call(null,vec__19915,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.persistent_BANG_.call(null,m),cljs.core.persistent_BANG_.call(null,n)], null);
 });
 
 thi.ng.common.data.core.bisect.cljs$core$IFn$_invoke$arity$3 = (function (f,f2,coll){
-var vec__19774 = thi.ng.common.data.core.bisect.call(null,f,coll);
-var m = cljs.core.nth.call(null,vec__19774,(0),null);
-var n = cljs.core.nth.call(null,vec__19774,(1),null);
+var vec__19918 = thi.ng.common.data.core.bisect.call(null,f,coll);
+var m = cljs.core.nth.call(null,vec__19918,(0),null);
+var n = cljs.core.nth.call(null,vec__19918,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [f2.call(null,m),f2.call(null,n)], null);
 });
 
@@ -291,8 +291,8 @@ if((i >= (0))){
 if(cljs.core._EQ_.call(null,x,coll.call(null,i))){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [coll.call(null,(((i > (0)))?(i - (1)):n)),coll.call(null,(((i < n))?(i + (1)):(0)))], null);
 } else {
-var G__19776 = (i - (1));
-i = G__19776;
+var G__19920 = (i - (1));
+i = G__19920;
 continue;
 }
 } else {
@@ -309,8 +309,8 @@ break;
  * => ([1 2 3] [2 3 4] [3 4 5])
  */
 thi.ng.common.data.core.successive_nth = (function thi$ng$common$data$core$successive_nth(){
-var G__19778 = arguments.length;
-switch (G__19778) {
+var G__19922 = arguments.length;
+switch (G__19922) {
 case 2:
 return thi.ng.common.data.core.successive_nth.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -357,8 +357,8 @@ thi.ng.common.data.core.successive_nth.cljs$lang$maxFixedArity = 3;
  * => ([[10 20] 0] [[20 30] 1] [[30 40] 2])
  */
 thi.ng.common.data.core.successive_nth_indexed = (function thi$ng$common$data$core$successive_nth_indexed(){
-var G__19781 = arguments.length;
-switch (G__19781) {
+var G__19925 = arguments.length;
+switch (G__19925) {
 case 2:
 return thi.ng.common.data.core.successive_nth_indexed.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -393,8 +393,8 @@ thi.ng.common.data.core.successive_nth_indexed.cljs$lang$maxFixedArity = 3;
  * Applies `f` with `args` to all given `keys` in `type`.
  */
 thi.ng.common.data.core.apply_to_keys = (function thi$ng$common$data$core$apply_to_keys(){
-var argseq__5990__auto__ = ((((3) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(3)),(0))):null);
-return thi.ng.common.data.core.apply_to_keys.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),argseq__5990__auto__);
+var argseq__5993__auto__ = ((((3) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(3)),(0))):null);
+return thi.ng.common.data.core.apply_to_keys.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),argseq__5993__auto__);
 });
 
 thi.ng.common.data.core.apply_to_keys.cljs$core$IFn$_invoke$arity$variadic = (function (type,keys,f,args){
@@ -405,18 +405,18 @@ return cljs.core.assoc.call(null,acc,k,cljs.core.apply.call(null,f,cljs.core.get
 
 thi.ng.common.data.core.apply_to_keys.cljs$lang$maxFixedArity = (3);
 
-thi.ng.common.data.core.apply_to_keys.cljs$lang$applyTo = (function (seq19783){
-var G__19784 = cljs.core.first.call(null,seq19783);
-var seq19783__$1 = cljs.core.next.call(null,seq19783);
-var G__19785 = cljs.core.first.call(null,seq19783__$1);
-var seq19783__$2 = cljs.core.next.call(null,seq19783__$1);
-var G__19786 = cljs.core.first.call(null,seq19783__$2);
-var seq19783__$3 = cljs.core.next.call(null,seq19783__$2);
-return thi.ng.common.data.core.apply_to_keys.cljs$core$IFn$_invoke$arity$variadic(G__19784,G__19785,G__19786,seq19783__$3);
+thi.ng.common.data.core.apply_to_keys.cljs$lang$applyTo = (function (seq19927){
+var G__19928 = cljs.core.first.call(null,seq19927);
+var seq19927__$1 = cljs.core.next.call(null,seq19927);
+var G__19929 = cljs.core.first.call(null,seq19927__$1);
+var seq19927__$2 = cljs.core.next.call(null,seq19927__$1);
+var G__19930 = cljs.core.first.call(null,seq19927__$2);
+var seq19927__$3 = cljs.core.next.call(null,seq19927__$2);
+return thi.ng.common.data.core.apply_to_keys.cljs$core$IFn$_invoke$arity$variadic(G__19928,G__19929,G__19930,seq19927__$3);
 });
 thi.ng.common.data.core.reduce_pairs = (function thi$ng$common$data$core$reduce_pairs(){
-var G__19788 = arguments.length;
-switch (G__19788) {
+var G__19932 = arguments.length;
+switch (G__19932) {
 case 3:
 return thi.ng.common.data.core.reduce_pairs.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -437,10 +437,10 @@ return thi.ng.common.data.core.reduce_pairs.call(null,f1,f2,null,coll);
 
 thi.ng.common.data.core.reduce_pairs.cljs$core$IFn$_invoke$arity$4 = (function (f1,f2,acc,coll){
 if((cljs.core.count.call(null,coll) > (1))){
-var pairs = cljs.core.map.call(null,(function (p__19789){
-var vec__19790 = p__19789;
-var a = cljs.core.nth.call(null,vec__19790,(0),null);
-var b = cljs.core.nth.call(null,vec__19790,(1),null);
+var pairs = cljs.core.map.call(null,(function (p__19933){
+var vec__19934 = p__19933;
+var a = cljs.core.nth.call(null,vec__19934,(0),null);
+var b = cljs.core.nth.call(null,vec__19934,(1),null);
 return f2.call(null,a,b);
 }),thi.ng.common.data.core.successive_nth.call(null,(2),coll));
 if(cljs.core.truth_(acc)){
@@ -475,10 +475,10 @@ if(cljs.core.truth_(coll__$1)){
 if(cljs.core._EQ_.call(null,item,cljs.core.first.call(null,coll__$1))){
 return i;
 } else {
-var G__19792 = (i + (1));
-var G__19793 = cljs.core.next.call(null,coll__$1);
-i = G__19792;
-coll__$1 = G__19793;
+var G__19936 = (i + (1));
+var G__19937 = cljs.core.next.call(null,coll__$1);
+i = G__19936;
+coll__$1 = G__19937;
 continue;
 }
 } else {
@@ -523,11 +523,11 @@ thi.ng.common.data.core.wrap = (function thi$ng$common$data$core$wrap(a,b,s){
 return [cljs.core.str(a),cljs.core.str(s),cljs.core.str(b)].join('');
 });
 thi.ng.common.data.core.stringify_keys = (function thi$ng$common$data$core$stringify_keys(m){
-return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,(function (p__19796){
-var vec__19797 = p__19796;
-var k = cljs.core.nth.call(null,vec__19797,(0),null);
-var v = cljs.core.nth.call(null,vec__19797,(1),null);
-var e = vec__19797;
+return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,(function (p__19940){
+var vec__19941 = p__19940;
+var k = cljs.core.nth.call(null,vec__19941,(0),null);
+var v = cljs.core.nth.call(null,vec__19941,(1),null);
+var e = vec__19941;
 if((k instanceof cljs.core.Keyword)){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.name.call(null,k),v], null);
 } else {
@@ -567,8 +567,8 @@ thi.ng.common.data.core.demunge_flags_seq = (function thi$ng$common$data$core$de
 if(cljs.core.truth_(kw)){
 var flags = cljs.core.name.call(null,kw);
 return cljs.core.map.call(null,((function (flags){
-return (function (p1__19798_SHARP_){
-return ((0) <= flags.indexOf([cljs.core.str(p1__19798_SHARP_)].join('')));
+return (function (p1__19942_SHARP_){
+return ((0) <= flags.indexOf([cljs.core.str(p1__19942_SHARP_)].join('')));
 });})(flags))
 ,xs);
 } else {

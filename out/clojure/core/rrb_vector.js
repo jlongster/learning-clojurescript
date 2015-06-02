@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('clojure.core.rrb_vector');
 goog.require('cljs.core');
 goog.require('clojure.core.rrb_vector.protocols');
@@ -8,8 +8,8 @@ goog.require('clojure.core.rrb_vector.interop');
  * Concatenates the given vectors in logarithmic time.
  */
 clojure.core.rrb_vector.catvec = (function clojure$core$rrb_vector$catvec(){
-var G__20311 = arguments.length;
-switch (G__20311) {
+var G__20455 = arguments.length;
+switch (G__20455) {
 case 0:
 return clojure.core.rrb_vector.catvec.cljs$core$IFn$_invoke$arity$0();
 
@@ -31,8 +31,8 @@ return clojure.core.rrb_vector.catvec.cljs$core$IFn$_invoke$arity$4((arguments[(
 
 break;
 default:
-var argseq__6001__auto__ = (new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(4)),(0)));
-return clojure.core.rrb_vector.catvec.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__6001__auto__);
+var argseq__6004__auto__ = (new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(4)),(0)));
+return clojure.core.rrb_vector.catvec.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__6004__auto__);
 
 }
 });
@@ -61,16 +61,16 @@ clojure.core.rrb_vector.catvec.cljs$core$IFn$_invoke$arity$variadic = (function 
 return clojure.core.rrb_vector.protocols._splicev.call(null,clojure.core.rrb_vector.protocols._splicev.call(null,clojure.core.rrb_vector.protocols._splicev.call(null,v1,v2),clojure.core.rrb_vector.protocols._splicev.call(null,v3,v4)),cljs.core.apply.call(null,clojure.core.rrb_vector.catvec,vn));
 });
 
-clojure.core.rrb_vector.catvec.cljs$lang$applyTo = (function (seq20305){
-var G__20306 = cljs.core.first.call(null,seq20305);
-var seq20305__$1 = cljs.core.next.call(null,seq20305);
-var G__20307 = cljs.core.first.call(null,seq20305__$1);
-var seq20305__$2 = cljs.core.next.call(null,seq20305__$1);
-var G__20308 = cljs.core.first.call(null,seq20305__$2);
-var seq20305__$3 = cljs.core.next.call(null,seq20305__$2);
-var G__20309 = cljs.core.first.call(null,seq20305__$3);
-var seq20305__$4 = cljs.core.next.call(null,seq20305__$3);
-return clojure.core.rrb_vector.catvec.cljs$core$IFn$_invoke$arity$variadic(G__20306,G__20307,G__20308,G__20309,seq20305__$4);
+clojure.core.rrb_vector.catvec.cljs$lang$applyTo = (function (seq20449){
+var G__20450 = cljs.core.first.call(null,seq20449);
+var seq20449__$1 = cljs.core.next.call(null,seq20449);
+var G__20451 = cljs.core.first.call(null,seq20449__$1);
+var seq20449__$2 = cljs.core.next.call(null,seq20449__$1);
+var G__20452 = cljs.core.first.call(null,seq20449__$2);
+var seq20449__$3 = cljs.core.next.call(null,seq20449__$2);
+var G__20453 = cljs.core.first.call(null,seq20449__$3);
+var seq20449__$4 = cljs.core.next.call(null,seq20449__$3);
+return clojure.core.rrb_vector.catvec.cljs$core$IFn$_invoke$arity$variadic(G__20450,G__20451,G__20452,G__20453,seq20449__$4);
 });
 
 clojure.core.rrb_vector.catvec.cljs$lang$maxFixedArity = (4);
@@ -83,8 +83,8 @@ clojure.core.rrb_vector.catvec.cljs$lang$maxFixedArity = (4);
  * range.
  */
 clojure.core.rrb_vector.subvec = (function clojure$core$rrb_vector$subvec(){
-var G__20314 = arguments.length;
-switch (G__20314) {
+var G__20458 = arguments.length;
+switch (G__20458) {
 case 2:
 return clojure.core.rrb_vector.subvec.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -112,8 +112,8 @@ clojure.core.rrb_vector.subvec.cljs$lang$maxFixedArity = 3;
  * Creates a new vector containing the args.
  */
 clojure.core.rrb_vector.vector = (function clojure$core$rrb_vector$vector(){
-var G__20322 = arguments.length;
-switch (G__20322) {
+var G__20466 = arguments.length;
+switch (G__20466) {
 case 0:
 return clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$0();
 
@@ -135,71 +135,71 @@ return clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$4((arguments[(
 
 break;
 default:
-var argseq__6001__auto__ = (new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(4)),(0)));
-return clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__6001__auto__);
+var argseq__6004__auto__ = (new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(4)),(0)));
+return clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__6004__auto__);
 
 }
 });
 
 clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$0 = (function (){
-var arr__20323 = [];
-return (new clojure.core.rrb_vector.rrbt.Vector(0,(5),cljs.core.PersistentVector.EMPTY_NODE,arr__20323,null,(0)));
+var arr__20467 = [];
+return (new clojure.core.rrb_vector.rrbt.Vector(0,(5),cljs.core.PersistentVector.EMPTY_NODE,arr__20467,null,(0)));
 });
 
 clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$1 = (function (x1){
-var arr__20324 = [null];
-(arr__20324[(0)] = x1);
+var arr__20468 = [null];
+(arr__20468[(0)] = x1);
 
-return (new clojure.core.rrb_vector.rrbt.Vector(1,(5),cljs.core.PersistentVector.EMPTY_NODE,arr__20324,null,null));
+return (new clojure.core.rrb_vector.rrbt.Vector(1,(5),cljs.core.PersistentVector.EMPTY_NODE,arr__20468,null,null));
 });
 
 clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$2 = (function (x1,x2){
-var arr__20325 = [null,null];
-(arr__20325[(0)] = x1);
+var arr__20469 = [null,null];
+(arr__20469[(0)] = x1);
 
-(arr__20325[(1)] = x2);
+(arr__20469[(1)] = x2);
 
-return (new clojure.core.rrb_vector.rrbt.Vector(2,(5),cljs.core.PersistentVector.EMPTY_NODE,arr__20325,null,null));
+return (new clojure.core.rrb_vector.rrbt.Vector(2,(5),cljs.core.PersistentVector.EMPTY_NODE,arr__20469,null,null));
 });
 
 clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$3 = (function (x1,x2,x3){
-var arr__20326 = [null,null,null];
-(arr__20326[(0)] = x1);
+var arr__20470 = [null,null,null];
+(arr__20470[(0)] = x1);
 
-(arr__20326[(1)] = x2);
+(arr__20470[(1)] = x2);
 
-(arr__20326[(2)] = x3);
+(arr__20470[(2)] = x3);
 
-return (new clojure.core.rrb_vector.rrbt.Vector(3,(5),cljs.core.PersistentVector.EMPTY_NODE,arr__20326,null,null));
+return (new clojure.core.rrb_vector.rrbt.Vector(3,(5),cljs.core.PersistentVector.EMPTY_NODE,arr__20470,null,null));
 });
 
 clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$4 = (function (x1,x2,x3,x4){
-var arr__20327 = [null,null,null,null];
-(arr__20327[(0)] = x1);
+var arr__20471 = [null,null,null,null];
+(arr__20471[(0)] = x1);
 
-(arr__20327[(1)] = x2);
+(arr__20471[(1)] = x2);
 
-(arr__20327[(2)] = x3);
+(arr__20471[(2)] = x3);
 
-(arr__20327[(3)] = x4);
+(arr__20471[(3)] = x4);
 
-return (new clojure.core.rrb_vector.rrbt.Vector(4,(5),cljs.core.PersistentVector.EMPTY_NODE,arr__20327,null,null));
+return (new clojure.core.rrb_vector.rrbt.Vector(4,(5),cljs.core.PersistentVector.EMPTY_NODE,arr__20471,null,null));
 });
 
 clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$variadic = (function (x1,x2,x3,x4,xn){
 return cljs.core.into.call(null,clojure.core.rrb_vector.vector.call(null,x1,x2,x3,x4),xn);
 });
 
-clojure.core.rrb_vector.vector.cljs$lang$applyTo = (function (seq20316){
-var G__20317 = cljs.core.first.call(null,seq20316);
-var seq20316__$1 = cljs.core.next.call(null,seq20316);
-var G__20318 = cljs.core.first.call(null,seq20316__$1);
-var seq20316__$2 = cljs.core.next.call(null,seq20316__$1);
-var G__20319 = cljs.core.first.call(null,seq20316__$2);
-var seq20316__$3 = cljs.core.next.call(null,seq20316__$2);
-var G__20320 = cljs.core.first.call(null,seq20316__$3);
-var seq20316__$4 = cljs.core.next.call(null,seq20316__$3);
-return clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$variadic(G__20317,G__20318,G__20319,G__20320,seq20316__$4);
+clojure.core.rrb_vector.vector.cljs$lang$applyTo = (function (seq20460){
+var G__20461 = cljs.core.first.call(null,seq20460);
+var seq20460__$1 = cljs.core.next.call(null,seq20460);
+var G__20462 = cljs.core.first.call(null,seq20460__$1);
+var seq20460__$2 = cljs.core.next.call(null,seq20460__$1);
+var G__20463 = cljs.core.first.call(null,seq20460__$2);
+var seq20460__$3 = cljs.core.next.call(null,seq20460__$2);
+var G__20464 = cljs.core.first.call(null,seq20460__$3);
+var seq20460__$4 = cljs.core.next.call(null,seq20460__$3);
+return clojure.core.rrb_vector.vector.cljs$core$IFn$_invoke$arity$variadic(G__20461,G__20462,G__20463,G__20464,seq20460__$4);
 });
 
 clojure.core.rrb_vector.vector.cljs$lang$maxFixedArity = (4);

@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('gamma.emit.emit');
 goog.require('cljs.core');
 goog.require('gamma.ast');
@@ -6,9 +6,9 @@ gamma.emit.emit.function_QMARK_ = (function gamma$emit$emit$function_QMARK_(x){
 return gamma.ast.functions.call(null,gamma.ast.head.call(null,x));
 });
 gamma.emit.emit.operator_class = (function gamma$emit$emit$operator_class(x){
-var temp__4420__auto__ = gamma.ast.operators.call(null,gamma.ast.head.call(null,x));
-if(cljs.core.truth_(temp__4420__auto__)){
-var o = temp__4420__auto__;
+var temp__4421__auto__ = gamma.ast.operators.call(null,gamma.ast.head.call(null,x));
+if(cljs.core.truth_(temp__4421__auto__)){
+var o = temp__4421__auto__;
 return new cljs.core.Keyword(null,"class","class",-2030961996).cljs$core$IFn$_invoke$arity$1(o);
 } else {
 return null;
@@ -33,14 +33,14 @@ return new cljs.core.Keyword(null,"constructor","constructor",-1953928811);
 if(cljs.core.truth_(gamma.emit.emit.function_QMARK_.call(null,x))){
 return new cljs.core.Keyword(null,"function","function",-2127255473);
 } else {
-var temp__4420__auto__ = gamma.emit.emit.operator_class.call(null,x);
-if(cljs.core.truth_(temp__4420__auto__)){
-var c = temp__4420__auto__;
+var temp__4421__auto__ = gamma.emit.emit.operator_class.call(null,x);
+if(cljs.core.truth_(temp__4421__auto__)){
+var c = temp__4421__auto__;
 return c;
 } else {
-var temp__4420__auto____$1 = gamma.ast.head.call(null,x);
-if(cljs.core.truth_(temp__4420__auto____$1)){
-var h = temp__4420__auto____$1;
+var temp__4421__auto____$1 = gamma.ast.head.call(null,x);
+if(cljs.core.truth_(temp__4421__auto____$1)){
+var h = temp__4421__auto____$1;
 return h;
 } else {
 return new cljs.core.Keyword(null,"tag","tag",-1290361223).cljs$core$IFn$_invoke$arity$1(x);
@@ -53,12 +53,12 @@ return new cljs.core.Keyword(null,"tag","tag",-1290361223).cljs$core$IFn$_invoke
 });
 if(typeof gamma.emit.emit.emit !== 'undefined'){
 } else {
-gamma.emit.emit.emit = (function (){var method_table__5845__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
-var prefer_table__5846__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
-var method_cache__5847__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
-var cached_hierarchy__5848__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
-var hierarchy__5849__auto__ = cljs.core.get.call(null,cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword(null,"hierarchy","hierarchy",-1053470341),cljs.core.get_global_hierarchy.call(null));
-return (new cljs.core.MultiFn(cljs.core.symbol.call(null,"gamma.emit.emit","emit"),gamma.emit.emit.emit_dispatch,new cljs.core.Keyword(null,"default","default",-1987822328),hierarchy__5849__auto__,method_table__5845__auto__,prefer_table__5846__auto__,method_cache__5847__auto__,cached_hierarchy__5848__auto__));
+gamma.emit.emit.emit = (function (){var method_table__5848__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
+var prefer_table__5849__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
+var method_cache__5850__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
+var cached_hierarchy__5851__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
+var hierarchy__5852__auto__ = cljs.core.get.call(null,cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword(null,"hierarchy","hierarchy",-1053470341),cljs.core.get_global_hierarchy.call(null));
+return (new cljs.core.MultiFn(cljs.core.symbol.call(null,"gamma.emit.emit","emit"),gamma.emit.emit.emit_dispatch,new cljs.core.Keyword(null,"default","default",-1987822328),hierarchy__5852__auto__,method_table__5848__auto__,prefer_table__5849__auto__,method_cache__5850__auto__,cached_hierarchy__5851__auto__));
 })();
 }
 cljs.core._add_method.call(null,gamma.emit.emit.emit,new cljs.core.Keyword(null,"primitive","primitive",1884541424),(function (db,x){

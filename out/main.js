@@ -12,7 +12,7 @@ goog.addDependency("../gamma_driver/drivers/basic.js", ['gamma_driver.drivers.ba
 goog.addDependency("../clojure/browser/event.js", ['clojure.browser.event'], ['cljs.core', 'goog.events.EventTarget', 'goog.events.EventType', 'goog.events']);
 goog.addDependency("../clojure/browser/net.js", ['clojure.browser.net'], ['goog.net.xpc.CfgFields', 'goog.net.XhrIo', 'goog.json', 'goog.Uri', 'cljs.core', 'goog.net.EventType', 'goog.net.xpc.CrossPageChannel', 'goog.net.WebSocket', 'clojure.browser.event']);
 goog.addDependency("../cljs/repl.js", ['cljs.repl'], ['cljs.core']);
-goog.addDependency("../clojure/browser/repl.js", ['clojure.browser.repl'], ['goog.dom', 'goog.userAgent.product', 'cljs.core', 'clojure.browser.net', 'cljs.repl', 'clojure.browser.event']);
+goog.addDependency("../clojure/browser/repl.js", ['clojure.browser.repl'], ['goog.dom', 'goog.userAgent.product', 'cljs.core', 'goog.object', 'clojure.browser.net', 'cljs.repl', 'clojure.browser.event']);
 goog.addDependency("../react.inc.js", ['cljsjs.react'], []);
 goog.addDependency("../om/dom.js", ['om.dom'], ['cljs.core', 'goog.object', 'cljsjs.react']);
 goog.addDependency("../thi/ng/common/math/core.js", ['thi.ng.common.math.core'], ['cljs.core']);
@@ -63,4 +63,3 @@ goog.addDependency("../thi/ng/common/data/core.js", ['thi.ng.common.data.core'],
 goog.addDependency("../thi/ng/geom/core/utils.js", ['thi.ng.geom.core.utils'], ['thi.ng.geom.core', 'clojure.core.reducers', 'cljs.core', 'thi.ng.geom.core.vector', 'thi.ng.common.data.core', 'thi.ng.common.math.core']);
 goog.addDependency("../thi/ng/geom/core/matrix.js", ['thi.ng.geom.core.matrix'], ['thi.ng.geom.core.utils', 'thi.ng.geom.core', 'cljs.core', 'thi.ng.geom.core.vector', 'thi.ng.common.math.core', 'thi.ng.common.error']);
 goog.addDependency("../cljs_draw/core.js", ['cljs_draw.core'], ['goog.color', 'thi.ng.geom.core', 'gamma_driver.drivers.basic', 'clojure.browser.repl', 'cljs.core', 'om.dom', 'thi.ng.geom.core.vector', 'thi.ng.math.core', 'cljs.core.async', 'gamma.api', 'gamma_driver.api', 'cljs_draw.util', 'gamma_driver.protocols', 'om.core', 'gamma.program', 'thi.ng.geom.core.matrix']);
-goog.addDependency("../cljs_draw/core2.js", ['cljs_draw.core2'], ['thi.ng.geom.core', 'gamma_driver.drivers.basic', 'clojure.browser.repl', 'cljs.core', 'om.dom', 'cljs.core.async', 'gamma.api', 'cljs_draw.util', 'gamma_driver.protocols', 'om.core', 'gamma.program', 'thi.ng.geom.core.matrix']);

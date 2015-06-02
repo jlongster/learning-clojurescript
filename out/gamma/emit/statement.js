@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('gamma.emit.statement');
 goog.require('cljs.core');
 goog.require('gamma.emit.emit');
@@ -21,25 +21,25 @@ cljs.core._add_method.call(null,gamma.emit.emit.emit,new cljs.core.Keyword(null,
 return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"group","group",582596132),gamma.emit.emit.emit.call(null,db,db.call(null,cljs.core.first.call(null,gamma.ast.body.call(null,x)))),"=",gamma.emit.emit.emit.call(null,db,db.call(null,cljs.core.second.call(null,gamma.ast.body.call(null,x))))], null);
 }));
 cljs.core._add_method.call(null,gamma.emit.emit.emit,new cljs.core.Keyword(null,"if","if",-458814265),(function (db,x){
-var vec__20614 = gamma.ast.body.call(null,x);
-var test = cljs.core.nth.call(null,vec__20614,(0),null);
-var then = cljs.core.nth.call(null,vec__20614,(1),null);
-var else$ = cljs.core.nth.call(null,vec__20614,(2),null);
+var vec__20758 = gamma.ast.body.call(null,x);
+var test = cljs.core.nth.call(null,vec__20758,(0),null);
+var then = cljs.core.nth.call(null,vec__20758,(1),null);
+var else$ = cljs.core.nth.call(null,vec__20758,(2),null);
 return new cljs.core.PersistentVector(null, 10, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"group","group",582596132),"if(",gamma.emit.emit.emit.call(null,db,db.call(null,test)),")","{",new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"nest","nest",-314993663),(2),new cljs.core.Keyword(null,"break","break",126570225),gamma.emit.emit.emit.call(null,db,db.call(null,then))], null),"}",new cljs.core.Keyword(null,"break","break",126570225),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"nest","nest",-314993663),(2),"else {",new cljs.core.Keyword(null,"break","break",126570225),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"nest","nest",-314993663),(2),gamma.emit.emit.emit.call(null,db,db.call(null,else$))], null)], null),"}"], null);
 }));
 cljs.core._add_method.call(null,gamma.emit.emit.emit,new cljs.core.Keyword(null,"for","for",-1323786319),(function (x){
-var vec__20615 = gamma.ast.body.call(null,x);
-var init = cljs.core.nth.call(null,vec__20615,(0),null);
-var condition = cljs.core.nth.call(null,vec__20615,(1),null);
-var increment = cljs.core.nth.call(null,vec__20615,(2),null);
-var bod = cljs.core.nth.call(null,vec__20615,(3),null);
+var vec__20759 = gamma.ast.body.call(null,x);
+var init = cljs.core.nth.call(null,vec__20759,(0),null);
+var condition = cljs.core.nth.call(null,vec__20759,(1),null);
+var increment = cljs.core.nth.call(null,vec__20759,(2),null);
+var bod = cljs.core.nth.call(null,vec__20759,(3),null);
 return [cljs.core.str("for("),cljs.core.str(gamma.emit.emit.emit.call(null,init)),cljs.core.str(";"),cljs.core.str(gamma.emit.emit.emit.call(null,condition)),cljs.core.str(";"),cljs.core.str(gamma.emit.emit.emit.call(null,increment)),cljs.core.str(";){"),cljs.core.str(gamma.emit.emit.emit.call(null,bod)),cljs.core.str("}")].join('');
 }));
 cljs.core._add_method.call(null,gamma.emit.emit.emit,new cljs.core.Keyword(null,"if-else","if-else",979367526),(function (x){
-var vec__20616 = gamma.ast.body.call(null,x);
-var test = cljs.core.nth.call(null,vec__20616,(0),null);
-var then = cljs.core.nth.call(null,vec__20616,(1),null);
-var else$ = cljs.core.nth.call(null,vec__20616,(2),null);
+var vec__20760 = gamma.ast.body.call(null,x);
+var test = cljs.core.nth.call(null,vec__20760,(0),null);
+var then = cljs.core.nth.call(null,vec__20760,(1),null);
+var else$ = cljs.core.nth.call(null,vec__20760,(2),null);
 new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"group","group",582596132),"if","(",cljs.core.List.EMPTY], null);
 
 return [cljs.core.str("if("),cljs.core.str(gamma.emit.emit.emit.call(null,test)),cljs.core.str(")"),cljs.core.str("{"),cljs.core.str(gamma.emit.emit.emit.call(null,then)),cljs.core.str("}"),cljs.core.str("else"),cljs.core.str("{"),cljs.core.str(gamma.emit.emit.emit.call(null,else$)),cljs.core.str("}")].join('');

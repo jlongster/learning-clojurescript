@@ -57,10 +57,9 @@ goog.addDependency("../gamma_driver/protocols.js", ['gamma_driver.protocols'], [
 goog.addDependency("../gamma_driver/impl/bind.js", ['gamma_driver.impl.bind'], ['cljs.core']);
 goog.addDependency("../gamma_driver/api.js", ['gamma_driver.api'], ['gamma_driver.impl.draw', 'gamma_driver.impl.context', 'cljs.core', 'gamma_driver.protocols', 'gamma_driver.impl.bind', 'gamma_driver.impl.variable', 'gamma_driver.impl.resource']);
 goog.addDependency("../gamma_driver/drivers/basic.js", ['gamma_driver.drivers.basic'], ['cljs.core', 'gamma_driver.api', 'gamma_driver.protocols']);
-goog.addDependency("../clojure/browser/repl.js", ['clojure.browser.repl'], ['goog.dom', 'goog.userAgent.product', 'cljs.core', 'clojure.browser.net', 'cljs.repl', 'clojure.browser.event']);
+goog.addDependency("../clojure/browser/repl.js", ['clojure.browser.repl'], ['goog.dom', 'goog.userAgent.product', 'cljs.core', 'goog.object', 'clojure.browser.net', 'cljs.repl', 'clojure.browser.event']);
 goog.addDependency("../thi/ng/math/core.js", ['thi.ng.math.core'], ['cljs.core']);
 goog.addDependency("../fipp/engine.js", ['fipp.engine'], ['cljs.core', 'fipp.deque', 'clojure.string']);
 goog.addDependency("../gamma/program.js", ['gamma.program'], ['gamma.emit.tag', 'gamma.emit.statement', 'gamma.emit.operator', 'fipp.engine', 'cljs.core', 'gamma.emit.emit', 'gamma.api', 'gamma.compiler.core', 'gamma.emit.construct', 'gamma.emit.fun']);
 goog.addDependency("../thi/ng/geom/core/matrix.js", ['thi.ng.geom.core.matrix'], ['thi.ng.geom.core.utils', 'thi.ng.geom.core', 'cljs.core', 'thi.ng.geom.core.vector', 'thi.ng.common.math.core', 'thi.ng.common.error']);
 goog.addDependency("../cljs_draw/core.js", ['cljs_draw.core'], ['goog.color', 'thi.ng.geom.core', 'gamma_driver.drivers.basic', 'clojure.browser.repl', 'cljs.core', 'om.dom', 'thi.ng.geom.core.vector', 'thi.ng.math.core', 'cljs.core.async', 'gamma.api', 'gamma_driver.api', 'cljs_draw.util', 'gamma_driver.protocols', 'om.core', 'gamma.program', 'thi.ng.geom.core.matrix']);
-goog.addDependency("../cljs_draw/core2.js", ['cljs_draw.core2'], ['thi.ng.geom.core', 'gamma_driver.drivers.basic', 'clojure.browser.repl', 'cljs.core', 'om.dom', 'cljs.core.async', 'gamma.api', 'cljs_draw.util', 'gamma_driver.protocols', 'om.core', 'gamma.program', 'thi.ng.geom.core.matrix']);

@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('gamma.compiler.insert_variables');
 goog.require('cljs.core');
 goog.require('gamma.ast');

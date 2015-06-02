@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-3291 {}
+// Compiled by ClojureScript 0.0-3308 {}
 goog.provide('gamma.ast');
 goog.require('cljs.core');
 gamma.ast.head = (function gamma$ast$head(x){
@@ -24,50 +24,50 @@ var type = (((cljs.core._EQ_.call(null,true,x)) || (cljs.core._EQ_.call(null,fal
 return new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"tag","tag",-1290361223),new cljs.core.Keyword(null,"term","term",-1817390416),new cljs.core.Keyword(null,"head","head",-771383919),new cljs.core.Keyword(null,"literal","literal",1664775605),new cljs.core.Keyword(null,"value","value",305978217),x,new cljs.core.Keyword(null,"type","type",1174270348),type,new cljs.core.Keyword(null,"id","id",-1388402092),gamma.ast.gen_term_id.call(null)], null);
 });
 gamma.ast.term = (function gamma$ast$term(){
-var argseq__5990__auto__ = ((((1) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(1)),(0))):null);
-return gamma.ast.term.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__5990__auto__);
+var argseq__5993__auto__ = ((((1) < arguments.length))?(new cljs.core.IndexedSeq(Array.prototype.slice.call(arguments,(1)),(0))):null);
+return gamma.ast.term.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__5993__auto__);
 });
 
 gamma.ast.term.cljs$core$IFn$_invoke$arity$variadic = (function (h,args){
-return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"tag","tag",-1290361223),new cljs.core.Keyword(null,"term","term",-1817390416),new cljs.core.Keyword(null,"head","head",-771383919),h,new cljs.core.Keyword(null,"body","body",-2049205669),cljs.core.map.call(null,(function (p1__15213_SHARP_){
-if(cljs.core.truth_(gamma.ast.term_QMARK_.call(null,p1__15213_SHARP_))){
-return p1__15213_SHARP_;
+return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"tag","tag",-1290361223),new cljs.core.Keyword(null,"term","term",-1817390416),new cljs.core.Keyword(null,"head","head",-771383919),h,new cljs.core.Keyword(null,"body","body",-2049205669),cljs.core.map.call(null,(function (p1__15357_SHARP_){
+if(cljs.core.truth_(gamma.ast.term_QMARK_.call(null,p1__15357_SHARP_))){
+return p1__15357_SHARP_;
 } else {
-return gamma.ast.literal.call(null,p1__15213_SHARP_);
+return gamma.ast.literal.call(null,p1__15357_SHARP_);
 }
 }),args),new cljs.core.Keyword(null,"id","id",-1388402092),gamma.ast.gen_term_id.call(null)], null);
 });
 
 gamma.ast.term.cljs$lang$maxFixedArity = (1);
 
-gamma.ast.term.cljs$lang$applyTo = (function (seq15214){
-var G__15215 = cljs.core.first.call(null,seq15214);
-var seq15214__$1 = cljs.core.next.call(null,seq15214);
-return gamma.ast.term.cljs$core$IFn$_invoke$arity$variadic(G__15215,seq15214__$1);
+gamma.ast.term.cljs$lang$applyTo = (function (seq15358){
+var G__15359 = cljs.core.first.call(null,seq15358);
+var seq15358__$1 = cljs.core.next.call(null,seq15358);
+return gamma.ast.term.cljs$core$IFn$_invoke$arity$variadic(G__15359,seq15358__$1);
 });
 gamma.ast.primitive_types = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"bool","bool",1444635321),new cljs.core.Keyword(null,"int","int",-1741416922),new cljs.core.Keyword(null,"float","float",-1732389368)], null);
 gamma.ast.qualifiers = new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"storage","storage",1867247511),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"const","const",1709929842),new cljs.core.Keyword(null,"attribute","attribute",-2074029119),new cljs.core.Keyword(null,"uniform","uniform",496503348),new cljs.core.Keyword(null,"varying","varying",685535123)], null),new cljs.core.Keyword(null,"precision","precision",-1175707478),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"highp","highp",1022399361),new cljs.core.Keyword(null,"mediump","mediump",-1401096909),new cljs.core.Keyword(null,"lowp","lowp",-1550357978)], null),new cljs.core.Keyword(null,"invariant","invariant",-1658446508),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"in","in",-1531184865),new cljs.core.Keyword(null,"out","out",-910545517),new cljs.core.Keyword(null,"inout","inout",2140559998)], null)], null);
 gamma.ast.statements = new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"if","if",-458814265),new cljs.core.Keyword(null,"if-else","if-else",979367526),new cljs.core.Keyword(null,"continue","continue",-207346553),new cljs.core.Keyword(null,"break","break",126570225),new cljs.core.Keyword(null,"discard","discard",-1939593545)], null);
 gamma.ast.vector_class = (function gamma$ast$vector_class(primitive_type){
-var iter__5704__auto__ = (function gamma$ast$vector_class_$_iter__15220(s__15221){
+var iter__5707__auto__ = (function gamma$ast$vector_class_$_iter__15364(s__15365){
 return (new cljs.core.LazySeq(null,(function (){
-var s__15221__$1 = s__15221;
+var s__15365__$1 = s__15365;
 while(true){
-var temp__4422__auto__ = cljs.core.seq.call(null,s__15221__$1);
-if(temp__4422__auto__){
-var s__15221__$2 = temp__4422__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__15221__$2)){
-var c__5702__auto__ = cljs.core.chunk_first.call(null,s__15221__$2);
-var size__5703__auto__ = cljs.core.count.call(null,c__5702__auto__);
-var b__15223 = cljs.core.chunk_buffer.call(null,size__5703__auto__);
-if((function (){var i__15222 = (0);
+var temp__4423__auto__ = cljs.core.seq.call(null,s__15365__$1);
+if(temp__4423__auto__){
+var s__15365__$2 = temp__4423__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__15365__$2)){
+var c__5705__auto__ = cljs.core.chunk_first.call(null,s__15365__$2);
+var size__5706__auto__ = cljs.core.count.call(null,c__5705__auto__);
+var b__15367 = cljs.core.chunk_buffer.call(null,size__5706__auto__);
+if((function (){var i__15366 = (0);
 while(true){
-if((i__15222 < size__5703__auto__)){
-var length = cljs.core._nth.call(null,c__5702__auto__,i__15222);
-cljs.core.chunk_append.call(null,b__15223,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"tag","tag",-1290361223),new cljs.core.Keyword(null,"vector","vector",1902966158),new cljs.core.Keyword(null,"member-type","member-type",645139088),primitive_type,new cljs.core.Keyword(null,"length","length",588987862),length], null));
+if((i__15366 < size__5706__auto__)){
+var length = cljs.core._nth.call(null,c__5705__auto__,i__15366);
+cljs.core.chunk_append.call(null,b__15367,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"tag","tag",-1290361223),new cljs.core.Keyword(null,"vector","vector",1902966158),new cljs.core.Keyword(null,"member-type","member-type",645139088),primitive_type,new cljs.core.Keyword(null,"length","length",588987862),length], null));
 
-var G__15224 = (i__15222 + (1));
-i__15222 = G__15224;
+var G__15368 = (i__15366 + (1));
+i__15366 = G__15368;
 continue;
 } else {
 return true;
@@ -75,13 +75,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__15223),gamma$ast$vector_class_$_iter__15220.call(null,cljs.core.chunk_rest.call(null,s__15221__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__15367),gamma$ast$vector_class_$_iter__15364.call(null,cljs.core.chunk_rest.call(null,s__15365__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__15223),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__15367),null);
 }
 } else {
-var length = cljs.core.first.call(null,s__15221__$2);
-return cljs.core.cons.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"tag","tag",-1290361223),new cljs.core.Keyword(null,"vector","vector",1902966158),new cljs.core.Keyword(null,"member-type","member-type",645139088),primitive_type,new cljs.core.Keyword(null,"length","length",588987862),length], null),gamma$ast$vector_class_$_iter__15220.call(null,cljs.core.rest.call(null,s__15221__$2)));
+var length = cljs.core.first.call(null,s__15365__$2);
+return cljs.core.cons.call(null,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"tag","tag",-1290361223),new cljs.core.Keyword(null,"vector","vector",1902966158),new cljs.core.Keyword(null,"member-type","member-type",645139088),primitive_type,new cljs.core.Keyword(null,"length","length",588987862),length], null),gamma$ast$vector_class_$_iter__15364.call(null,cljs.core.rest.call(null,s__15365__$2)));
 }
 } else {
 return null;
@@ -90,14 +90,14 @@ break;
 }
 }),null,null));
 });
-return iter__5704__auto__.call(null,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [(2),(3),(4)], null));
+return iter__5707__auto__.call(null,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [(2),(3),(4)], null));
 });
 gamma.ast.vector_types = cljs.core.mapcat.call(null,gamma.ast.vector_class,gamma.ast.primitive_types);
 gamma.ast.matrix_types = cljs.core.map.call(null,(function (dim){
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"tag","tag",-1290361223),new cljs.core.Keyword(null,"matrix","matrix",803137200),new cljs.core.Keyword(null,"member-type","member-type",645139088),new cljs.core.Keyword(null,"float","float",-1732389368),new cljs.core.Keyword(null,"dimensions","dimensions",-254818097),dim], null);
 }),(2),(3),(4));
-gamma.ast.operators = cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,(function (p1__15225_SHARP_){
-return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"operator","operator",-1860875338).cljs$core$IFn$_invoke$arity$1(p1__15225_SHARP_),p1__15225_SHARP_],null));
+gamma.ast.operators = cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,(function (p1__15369_SHARP_){
+return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"operator","operator",-1860875338).cljs$core$IFn$_invoke$arity$1(p1__15369_SHARP_),p1__15369_SHARP_],null));
 }),new cljs.core.PersistentVector(null, 28, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"aget","aget",-149474981)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"selector","selector",762528866)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"increment","increment",-1558831484),new cljs.core.Keyword(null,"literal","literal",1664775605),"++",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"postfix","postfix",-571724593)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"decrement","decrement",-725286119),new cljs.core.Keyword(null,"literal","literal",1664775605),"--",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"postfix","postfix",-571724593)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"pre-increment","pre-increment",-1566257876),new cljs.core.Keyword(null,"literal","literal",1664775605),"++",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"prefix","prefix",-265908465)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"pre-decrement","pre-decrement",1269674757),new cljs.core.Keyword(null,"literal","literal",1664775605),"--",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"prefix","prefix",-265908465)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"not","not",-595976884),new cljs.core.Keyword(null,"literal","literal",1664775605),"!",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"prefix","prefix",-265908465)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"+-","+-",1426840219),new cljs.core.Keyword(null,"literal","literal",1664775605),"+-",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"*","*",-1294732318),new cljs.core.Keyword(null,"literal","literal",1664775605),"*",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.Keyword(null,"literal","literal",1664775605),"/",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"+","+",1913524883),new cljs.core.Keyword(null,"literal","literal",1664775605),"+",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"-","-",-2112348439),new cljs.core.Keyword(null,"literal","literal",1664775605),"-",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"<","<",-646864291),new cljs.core.Keyword(null,"literal","literal",1664775605),"<",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,">",">",-555517146),new cljs.core.Keyword(null,"literal","literal",1664775605),">",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"<=","<=",-395636158),new cljs.core.Keyword(null,"literal","literal",1664775605),"<=",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,">=",">=",-623615505),new cljs.core.Keyword(null,"literal","literal",1664775605),">=",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"==","==",-1874649676),new cljs.core.Keyword(null,"literal","literal",1664775605),"==",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"!=","!=",-1841737356),new cljs.core.Keyword(null,"literal","literal",1664775605),"!=",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"and","and",-971899817),new cljs.core.Keyword(null,"literal","literal",1664775605),"&&",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"or","or",235744169),new cljs.core.Keyword(null,"literal","literal",1664775605),"||",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"xor","xor",-1119942254),new cljs.core.Keyword(null,"literal","literal",1664775605),"^^",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"conditional-choice","conditional-choice",1872771601)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"set","set",304602554),new cljs.core.Keyword(null,"literal","literal",1664775605),"=",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"set+","set+",1784778737),new cljs.core.Keyword(null,"literal","literal",1664775605),"+=",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"set-","set-",-1958952622),new cljs.core.Keyword(null,"literal","literal",1664775605),"-=",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"set*","set*",-966220230),new cljs.core.Keyword(null,"literal","literal",1664775605),"*=",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"set-div","set-div",991399498),new cljs.core.Keyword(null,"literal","literal",1664775605),"/=",new cljs.core.Keyword(null,"class","class",-2030961996),new cljs.core.Keyword(null,"infix","infix",1991018113)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"operator","operator",-1860875338),new cljs.core.Keyword(null,"constructor","constructor",-1953928811)], null)], null)));
 gamma.ast.standard_functions = cljs.core.group_by.call(null,new cljs.core.Keyword(null,"name","name",1843675177),cljs.core.map.call(null,(function (x){
 return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"name","name",1843675177),x.call(null,(1)),new cljs.core.Keyword(null,"input","input",556931961),cljs.core.vec.call(null,cljs.core.take_nth.call(null,(2),x.call(null,(2)))),new cljs.core.Keyword(null,"output","output",-1105869043),x.call(null,(0)),new cljs.core.Keyword(null,"parameter","parameter",1978789597),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"T","T",175240877),new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"vec3","vec3",1116680488),null,new cljs.core.Keyword(null,"float","float",-1732389368),null,new cljs.core.Keyword(null,"vec4","vec4",631182126),null,new cljs.core.Keyword(null,"vec2","vec2",-762258640),null], null), null)], null)], null);
