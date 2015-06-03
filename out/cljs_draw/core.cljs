@@ -25,7 +25,7 @@
 
 (defonce app-state
   (atom {:colors ["#cccccc"]
-         :current-color "#000000"
+         :current-color "#cccccc"
          :background-color "#1b1b1b"
          :listening-for-color false
          :paint-meshes []
