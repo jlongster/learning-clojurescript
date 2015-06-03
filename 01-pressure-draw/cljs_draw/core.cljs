@@ -18,7 +18,7 @@
             [thi.ng.geom.core.matrix :as mat :refer [M44]])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
 
-(defonce conn (repl/connect "http://localhost:9000/repl"))
+;;(defonce conn (repl/connect "http://localhost:9000/repl"))
 (enable-console-print!)
 
 ;; app state
@@ -26,6 +26,7 @@
 (defonce app-state
   (atom {:colors ["#000000"]
          :current-color "#000000"
+         :background-color "#1b1b1b"
          :listening-for-color false
          :paint-meshes []
          :current-mesh nil
@@ -150,11 +151,19 @@
 
 (add-linear-brush
  :transparent
- {;;:blend {:from "ONE" :to "ONE"}
+ {:blend {:from "SRC_ALPHA" :to "ONE_MINUS_SRC_ALPHA"}
   :vertex-shader {(g/gl-position) default-vertex-position
                   v-value a-value}
   :fragment-shader
-  {(g/gl-frag-color) (g/vec4 u-color .8)}})
+  {(g/gl-frag-color) (g/vec4 u-color .5)}})
+
+(add-linear-brush
+ :transparent2
+ {:blend {:from "SRC_COLOR" :to "ONE"}
+  :vertex-shader {(g/gl-position) default-vertex-position
+                  v-value a-value}
+  :fragment-shader
+  {(g/gl-frag-color) (g/vec4 u-color .5)}})
 
 (add-linear-brush
  :spray
@@ -244,12 +253,16 @@
           :radial js/RadialStroke)]
     (new class color (name (:name brush)))))
 
+(defn stroke-started [point] nil)
+
 (defn start-stroke [point color brush]
   (let [[x y] point
         current-mesh (or (:current-mesh @app-state)
                          (make-mesh color brush))]
     (swap! app-state update-in [:stroke-history]
            conj (.getNumVertices current-mesh))
+
+    (stroke-started point)
     
     (if (= (type current-mesh) js/LinearStroke)
       (.setCurrentPos current-mesh x y x y)
@@ -271,14 +284,10 @@
   (and (math/delta= (nth v1 0) (nth v2 0))
        (math/delta= (nth v1 1) (nth v2 1))))
 
-(defn angle-of-vectors [v1 v2]
-  (.acos js/Math
-         (/ (geom/dot v1 v2)
-            (* (geom/mag v1) (geom/mag v2)))))
-
 ;; this function can be overriden at the REPL to dynamically change
 ;; the behavior of the current stroke
-(defn constrain-stroke [dir] dir)
+(defn constrain-stroke [point dir]
+  (geom/+ point dir))
 
 (defn add-linear-face [mesh p1 p2 p3 v1 v2 v3]
   (.addVertex mesh (nth p1 0) (nth p1 1) v1)
@@ -286,17 +295,17 @@
   (.addVertex mesh (nth p3 0) (nth p3 1) v3))
 
 (defn add-to-linear-stroke [point pressure mesh]
-  (let [width (* (.pow js/Math pressure 2) 30)
+  (let [width (* (.pow js/Math pressure 2) 55)
         current-pos (.getCurrentPos mesh)
         last-point1 (v/vec2 (nth current-pos 0) (nth current-pos 1))
         last-point2 (v/vec2 (nth current-pos 2) (nth current-pos 3))
         last-edge (geom/div (geom/- last-point2 last-point1) 2)
         last-middle (geom/+ last-point1 last-edge)
         
-        vec (constrain-stroke (geom/- (v/vec2 point) last-middle))
-        pos (geom/+ last-middle vec)]
-    (if (> (geom/mag vec) 5)
-      (let [normalized (geom/* (geom/normalize vec) width)
+        pos (constrain-stroke last-middle (geom/- point last-middle))
+        diff (geom/- pos last-middle)]
+    (if (> (geom/mag diff) 5)
+      (let [normalized (geom/* (geom/normalize diff) width)
             r1 (geom/rotate normalized (/ PI 2))
             r2 (geom/rotate normalized (/ PI -2))
             c1 (geom/+ pos r1)
@@ -326,8 +335,7 @@
   (let [radius (/ (* (.pow js/Math pressure 2) 30) 2)
         current-pos (.getCurrentPos mesh)
         last-point (v/vec2 (nth current-pos 0) (nth current-pos 1))
-        vec (constrain-stroke (geom/- point last-point))
-        pos (geom/+ last-point vec)
+        pos (constrain-stroke last-point (geom/- point last-point))
 
         c1 (geom/+ pos (v/vec2 (- radius) (- radius)))
         c2 (geom/+ pos (v/vec2 (- radius) radius))
@@ -364,7 +372,6 @@
                    brushes))
         pers (get-perspective-matrix w h)]
     (.viewport gl 0 0 (* w 2) (* h 2))
-    (.clearColor gl 1 1 1 1)
     (.clear gl (bit-or (.-COLOR_BUFFER_BIT gl) (.-DEPTH_BUFFER_BIT gl)))
     (.enable gl (.-BLEND gl))
     (.disable gl (.-DEPTH_TEST gl))
@@ -420,8 +427,15 @@
 
 (defn render []
   (let [ctx (:render-ctx @app-state)
+        bg-color (color/hexToRgb (:background-color @app-state))
         {:keys [gl driver compiled-programs pers textures]} ctx
         mv (geom/translate (mat/matrix44) [0 0 -1])]
+    (.clearColor
+     gl
+     (/ (nth bg-color 0) 255)
+     (/ (nth bg-color 1) 255)
+     (/ (nth bg-color 2) 255)
+     1)
     (.clear gl (.-COLOR_BUFFER_BIT gl))
     
     (doseq [mesh (:paint-meshes @app-state)]
@@ -675,10 +689,38 @@
          {:target (.getElementById js/document "mount")})
 
 
-(comment
-  ;; play with various settings here at the REPL
-  (set! constrain-stroke
-        (fn [dir]
-          (v/vec2 0 (nth dir 1))))
+(defn repl-swap! [name val]
+  (swap! app-state assoc name val)
+  nil)
 
-  (swap! app-state :current-brush :solid-radial))
+(comment
+  ;; save where the stroke started (needed for sin wave)
+  (set! stroke-started
+        (fn [point]
+          (swap! app-state assoc :start-point point)))
+
+  ;; make a sin wave
+  (set! constrain-stroke
+        (fn [point dir]
+          (let [p (geom/+ point (v/vec2 (nth dir 0) 0))]
+            (v/vec2 (nth p 0)
+                    (+ (nth (:start-point @app-state) 1)
+                       (* (.sin js/Math (/ (nth p 0) 50)) 30))
+                    ))))
+
+  ;; lock to the x-axis
+  (set! constrain-stroke
+        (fn [point dir]
+          (geom/+ point (v/vec2 (nth dir 0) 0))))
+
+  ;; add a brush that blends by lightening the color
+  (add-linear-brush
+   :transparent2
+   {:blend {:from "ONE" :to "ONE"}
+    :vertex-shader {(g/gl-position) default-vertex-position
+                    v-value a-value}
+    :fragment-shader
+    {(g/gl-frag-color) (g/vec4 u-color 1)}})
+
+  (repl-swap! :current-brush :transparent2)
+  (repl-swap! :background-color "#b0ccbb"))

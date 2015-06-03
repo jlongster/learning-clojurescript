@@ -1,5 +1,5 @@
 Building ...
-... done. Elapsed 0.226063894 seconds
+... done. Elapsed 0.248503722 seconds
 Watching paths: /Users/james/projects/cljs-draw/01-pressure-draw
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
@@ -59,10 +59,37 @@ Reading analysis cache for jar:file:/Users/james/.m2/repository/org/clojure/cloj
 Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/common/0.3.1/common-0.3.1.jar!/thi/ng/common/data/core.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core/utils.cljs
 Reading analysis cache for jar:file:/Users/james/.m2/repository/thi/ng/geom-core/0.0.783/geom-core-0.0.783.jar!/thi/ng/geom/core/matrix.cljs
-... done. Elapsed 2.892393277 seconds
+... done. Elapsed 5.341161733 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 1.059691021 seconds
+... done. Elapsed 1.159160875 seconds
 Change detected, recompiling ...
 Compiling 01-pressure-draw/cljs_draw/core.cljs
-... done. Elapsed 0.981631129 seconds
+... done. Elapsed 1.135647991 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.704063995 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.7818579 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.799017136 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.792623027 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.712637606 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.745943222 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.63163293 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.625966417 seconds
+Change detected, recompiling ...
+Compiling 01-pressure-draw/cljs_draw/core.cljs
+... done. Elapsed 0.652676034 seconds
