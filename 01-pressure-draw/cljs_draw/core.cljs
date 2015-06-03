@@ -24,7 +24,7 @@
 ;; app state
 
 (defonce app-state
-  (atom {:colors ["#000000"]
+  (atom {:colors ["#cccccc"]
          :current-color "#000000"
          :background-color "#1b1b1b"
          :listening-for-color false
